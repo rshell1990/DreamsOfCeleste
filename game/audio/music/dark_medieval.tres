@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MusicTrackResource" format=3 uid="uid://d0gt8jdyrb5k3"]
+
+[ext_resource type="Script" uid="uid://bjrc4bxva17kr" path="res://dreams_of_celeste_vn/scripts/sound/resources/music_track.gd" id="1_74b7e"]
+[ext_resource type="AudioStream" uid="uid://ccwf55if3a2pm" path="res://dreams_of_celeste_vn/audio/music/Dark Medieval Theme #1(Looped).wav" id="2_f4wv5"]
+
+[resource]
+script = ExtResource("1_74b7e")
+id = "dark_medieval"
+track = ExtResource("2_f4wv5")
+metadata/_custom_type_script = "uid://bjrc4bxva17kr"

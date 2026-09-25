@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DDOvaniSong" format=3 uid="uid://dxq4ty6ovq1wg"]
+
+[ext_resource type="Script" uid="uid://bihonmbuk7ipi" path="res://dreams_of_celeste_vn/scripts/overrides/dd_ovani_song.gd" id="1_1pecp"]
+[ext_resource type="AudioStream" uid="uid://xgfttmg31g4x" path="res://dreams_of_celeste_vn/audio/ovani/descent_(rt_3.989)/fantasy_vol4_descent_intensity_1.ogg" id="1_y1av8"]
+[ext_resource type="AudioStream" uid="uid://bam8yaxesan8g" path="res://dreams_of_celeste_vn/audio/ovani/descent_(rt_3.989)/fantasy_vol4_descent_intensity_2.ogg" id="2_nayvi"]
+[ext_resource type="AudioStream" uid="uid://d1qgd8r765q76" path="res://dreams_of_celeste_vn/audio/ovani/descent_(rt_3.989)/fantasy_vol4_descent_main.ogg" id="3_h1qf1"]
+[ext_resource type="AudioStream" uid="uid://cebu7rti4d57r" path="res://dreams_of_celeste_vn/audio/ovani/descent_(rt_3.989)/fantasy_vol4_descent_cut_30.ogg" id="4_6h2a5"]
+[ext_resource type="AudioStream" uid="uid://bqfgyi7jtmuv2" path="res://dreams_of_celeste_vn/audio/ovani/descent_(rt_3.989)/fantasy_vol4_descent_cut_60.ogg" id="5_csj37"]
+
+[resource]
+script = ExtResource("1_1pecp")
+id = "descent"
+Intensity1 = ExtResource("1_y1av8")
+Intensity2 = ExtResource("2_nayvi")
+Intensity3 = ExtResource("3_h1qf1")
+Loop30 = ExtResource("4_6h2a5")
+Loop60 = ExtResource("5_csj37")
+ReverbTail = 3.989
+metadata/_custom_type_script = "uid://bihonmbuk7ipi"

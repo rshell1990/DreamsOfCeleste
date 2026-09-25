@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AmbientTrackResource" format=3 uid="uid://wjoo0y673ido"]
+
+[ext_resource type="Script" uid="uid://c5bjcoetuk7pt" path="res://dreams_of_celeste_vn/scripts/sound/resources/ambient_track.gd" id="1_mlehg"]
+[ext_resource type="AudioStream" uid="uid://bt1gfvkn40w3y" path="res://dreams_of_celeste_vn/audio/ambience/Whispers Loop.wav" id="2_mlehg"]
+
+[resource]
+script = ExtResource("1_mlehg")
+id = "crowd-whispers"
+track = ExtResource("2_mlehg")
+metadata/_custom_type_script = "uid://c5bjcoetuk7pt"

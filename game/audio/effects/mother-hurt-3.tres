@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://bl2undwrecw"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_02tgw"]
+[ext_resource type="AudioStream" uid="uid://rr1tkrnujtqc" path="res://dreams_of_celeste_vn/audio/sfx/Female taking damage 3.wav" id="2_paqfs"]
+
+[resource]
+script = ExtResource("1_02tgw")
+id = "mother-hurt-3"
+track = ExtResource("2_paqfs")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

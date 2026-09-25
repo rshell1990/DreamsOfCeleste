@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AmbientTrackResource" format=3 uid="uid://bhguepggqhtqd"]
+
+[ext_resource type="Script" uid="uid://c5bjcoetuk7pt" path="res://dreams_of_celeste_vn/scripts/sound/resources/ambient_track.gd" id="1_jyef3"]
+[ext_resource type="AudioStream" uid="uid://1whju0071yuc" path="res://dreams_of_celeste_vn/audio/ambience/lake.mp3" id="2_88ol8"]
+
+[resource]
+script = ExtResource("1_jyef3")
+id = "lake"
+track = ExtResource("2_88ol8")
+metadata/_custom_type_script = "uid://c5bjcoetuk7pt"

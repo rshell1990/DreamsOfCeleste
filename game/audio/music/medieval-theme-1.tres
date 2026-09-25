@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MusicTrackResource" format=3 uid="uid://cma4la6aoaiwx"]
+
+[ext_resource type="Script" uid="uid://bjrc4bxva17kr" path="res://dreams_of_celeste_vn/scripts/sound/resources/music_track.gd" id="1_t5e1x"]
+[ext_resource type="AudioStream" uid="uid://bkj2wdwrcl56o" path="res://dreams_of_celeste_vn/audio/music/Medieval Theme 1.mp3" id="2_hpcet"]
+
+[resource]
+script = ExtResource("1_t5e1x")
+id = "medieval-theme-1"
+track = ExtResource("2_hpcet")
+metadata/_custom_type_script = "uid://bjrc4bxva17kr"

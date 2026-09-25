@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://83blonak7ury"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_hw51u"]
+[ext_resource type="AudioStream" uid="uid://dmmwepp10lenl" path="res://dreams_of_celeste_vn/audio/sfx/cry 3.wav" id="2_0wy0p"]
+
+[resource]
+script = ExtResource("1_hw51u")
+id = "mother-cry"
+track = ExtResource("2_0wy0p")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MusicTrackResource" format=3 uid="uid://dcd2wt0668th1"]
+
+[ext_resource type="Script" uid="uid://bjrc4bxva17kr" path="res://dreams_of_celeste_vn/scripts/sound/resources/music_track.gd" id="1_0jhcc"]
+[ext_resource type="AudioStream" uid="uid://c4ysg0rovdqap" path="res://dreams_of_celeste_vn/audio/music/N2-16.ogg" id="2_bj0qk"]
+
+[resource]
+script = ExtResource("1_0jhcc")
+id = "n2-16"
+track = ExtResource("2_bj0qk")
+metadata/_custom_type_script = "uid://bjrc4bxva17kr"

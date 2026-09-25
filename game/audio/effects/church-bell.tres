@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://fsddql2tq5l4"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_usasy"]
+[ext_resource type="AudioStream" uid="uid://dyv071jkvif26" path="res://dreams_of_celeste_vn/audio/sfx/SL Halloween Sfx Church Bell.wav" id="2_has3t"]
+
+[resource]
+script = ExtResource("1_usasy")
+id = "church-bell"
+track = ExtResource("2_has3t")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

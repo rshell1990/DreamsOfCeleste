@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://bmt72fqskq0h5"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_aq4a2"]
+[ext_resource type="AudioStream" uid="uid://dikefa8alvdbk" path="res://dreams_of_celeste_vn/audio/sfx/Serina Effort A.wav" id="2_aq4a2"]
+
+[resource]
+script = ExtResource("1_aq4a2")
+id = "intake-breath"
+track = ExtResource("2_aq4a2")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://blumx5dykgb0k"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_ax6nu"]
+[ext_resource type="AudioStream" uid="uid://cno1ar7rq1l51" path="res://dreams_of_celeste_vn/audio/sfx/Digging 22.wav" id="2_nbmj6"]
+
+[resource]
+script = ExtResource("1_ax6nu")
+id = "dig-3"
+track = ExtResource("2_nbmj6")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AmbientTrackResource" format=3 uid="uid://bputf04e531y2"]
+
+[ext_resource type="Script" uid="uid://c5bjcoetuk7pt" path="res://dreams_of_celeste_vn/scripts/sound/resources/ambient_track.gd" id="1_na2k7"]
+[ext_resource type="AudioStream" uid="uid://bhn7flm2beqjm" path="res://dreams_of_celeste_vn/audio/ambience/field_night.mp3" id="2_d8a2i"]
+
+[resource]
+script = ExtResource("1_na2k7")
+id = "field-night"
+track = ExtResource("2_d8a2i")
+metadata/_custom_type_script = "uid://c5bjcoetuk7pt"

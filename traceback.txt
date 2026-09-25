@@ -1,0 +1,36 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/devtools/devroom.rpy", line 10, in script
+    $ DEBUG_AddOneToAllClassSkills()
+  File "game/devtools/devroom.rpy", line 10, in <module>
+    $ DEBUG_AddOneToAllClassSkills()
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "game/engine/char_template/debug.rpy", line 40, in DEBUG_AddOneToAllClassSkills
+    for SkillID in Lib_BattleSkillTrees[WorldChar["AltForm_BattleClass"]][SkillBranch]:
+                   ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^              
+KeyError: 'parasiteBlack'
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "game/devtools/devroom.rpy", line 10, in script
+    $ DEBUG_AddOneToAllClassSkills()
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/devtools/devroom.rpy", line 10, in <module>
+    $ DEBUG_AddOneToAllClassSkills()
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "game/engine/char_template/debug.rpy", line 40, in DEBUG_AddOneToAllClassSkills
+    for SkillID in Lib_BattleSkillTrees[WorldChar["AltForm_BattleClass"]][SkillBranch]:
+                   ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^              
+KeyError: 'parasiteBlack'
+
+Windows-11-10.0.26200-SP0 AMD64
+Ren'Py 8.5.3.26051504
+Parasite Black 0.001
+Thu Sep 24 21:56:45 2026

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://cdmuiro1sdm34"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_2ud1k"]
+[ext_resource type="AudioStream" uid="uid://b7mprbqs7j61a" path="res://dreams_of_celeste_vn/audio/sfx/Heavy punch 7.wav" id="2_s75gd"]
+
+[resource]
+script = ExtResource("1_2ud1k")
+id = "belt-impact"
+track = ExtResource("2_s75gd")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

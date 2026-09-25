@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MusicTrackResource" format=3 uid="uid://cvhki5vh0tick"]
+
+[ext_resource type="Script" uid="uid://bjrc4bxva17kr" path="res://dreams_of_celeste_vn/scripts/sound/resources/music_track.gd" id="1_r18l8"]
+[ext_resource type="AudioStream" uid="uid://bx0hmyd08ya44" path="res://dreams_of_celeste_vn/audio/music/generated_placeholder/abruptly_awakened_at_night.mp3" id="2_r18l8"]
+
+[resource]
+script = ExtResource("1_r18l8")
+id = "abrupt-awakening"
+track = ExtResource("2_r18l8")

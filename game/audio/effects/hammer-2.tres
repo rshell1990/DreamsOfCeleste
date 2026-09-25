@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://bk6gb2xox0xhm"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_jw3or"]
+[ext_resource type="AudioStream" uid="uid://cdw2o6xsivlcc" path="res://dreams_of_celeste_vn/audio/sfx/pd_-_hammer_or_mace_maul_02.wav" id="2_jw3or"]
+
+[resource]
+script = ExtResource("1_jw3or")
+id = "hammer-2"
+track = ExtResource("2_jw3or")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

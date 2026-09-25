@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AmbientTrackResource" format=3 uid="uid://d14sde6ju48l7"]
+
+[ext_resource type="Script" uid="uid://c5bjcoetuk7pt" path="res://dreams_of_celeste_vn/scripts/sound/resources/ambient_track.gd" id="1_mbnk4"]
+[ext_resource type="AudioStream" uid="uid://brs6b3eanqamn" path="res://dreams_of_celeste_vn/audio/sfx/sfx_Raging_Fire.mp3" id="2_gyw6d"]
+
+[resource]
+script = ExtResource("1_mbnk4")
+id = "raging-fire"
+track = ExtResource("2_gyw6d")
+metadata/_custom_type_script = "uid://c5bjcoetuk7pt"

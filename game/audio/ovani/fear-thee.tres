@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DDOvaniSong" format=3 uid="uid://b7mtmxby5m2c3"]
+
+[ext_resource type="AudioStream" uid="uid://jvki7etxtsu1" path="res://dreams_of_celeste_vn/audio/ovani/Fear Thee (RT 2.34)/DarkAmbient Vol2 Fear Thee Intensity 1.ogg" id="1_nabtd"]
+[ext_resource type="AudioStream" uid="uid://dj8mpipr5mc8b" path="res://dreams_of_celeste_vn/audio/ovani/Fear Thee (RT 2.34)/DarkAmbient Vol2 Fear Thee Intensity 2.ogg" id="2_877ji"]
+[ext_resource type="AudioStream" uid="uid://bfflmx4lj7w28" path="res://dreams_of_celeste_vn/audio/ovani/Fear Thee (RT 2.34)/DarkAmbient Vol2 Fear Thee Main.ogg" id="3_16gr4"]
+[ext_resource type="AudioStream" uid="uid://cvy618rf582eb" path="res://dreams_of_celeste_vn/audio/ovani/Fear Thee (RT 2.34)/DarkAmbient Vol2 Fear Thee Cut 30.ogg" id="4_6pes7"]
+[ext_resource type="AudioStream" uid="uid://18t5gj8qefef" path="res://dreams_of_celeste_vn/audio/ovani/Fear Thee (RT 2.34)/DarkAmbient Vol2 Fear Thee Cut 60.ogg" id="5_yjcd7"]
+[ext_resource type="Script" uid="uid://bihonmbuk7ipi" path="res://dreams_of_celeste_vn/scripts/overrides/dd_ovani_song.gd" id="6_0xpey"]
+
+[resource]
+script = ExtResource("6_0xpey")
+id = "fear-thee"
+Intensity1 = ExtResource("1_nabtd")
+Intensity2 = ExtResource("2_877ji")
+Intensity3 = ExtResource("3_16gr4")
+Loop30 = ExtResource("4_6pes7")
+Loop60 = ExtResource("5_yjcd7")
+ReverbTail = 2.34
+metadata/_custom_type_script = "uid://bihonmbuk7ipi"

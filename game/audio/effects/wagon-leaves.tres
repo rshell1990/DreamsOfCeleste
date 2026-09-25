@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://7fr7fuj6y6rf"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_v8t4b"]
+[ext_resource type="AudioStream" uid="uid://ckw6rimq8nv7" path="res://dreams_of_celeste_vn/audio/sfx/Wagon Pass RL C.wav" id="2_v8t4b"]
+
+[resource]
+script = ExtResource("1_v8t4b")
+id = "wagon-leaves"
+track = ExtResource("2_v8t4b")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

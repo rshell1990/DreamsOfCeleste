@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://b5usu7u33jujc"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_6hmcf"]
+[ext_resource type="AudioStream" uid="uid://dv1ehbi383sqb" path="res://dreams_of_celeste_vn/audio/sfx/PM_DESIGNED_BONE_BREAKS_19.wav" id="2_6hmcf"]
+
+[resource]
+script = ExtResource("1_6hmcf")
+id = "bone-break"
+track = ExtResource("2_6hmcf")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

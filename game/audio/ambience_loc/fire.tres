@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AmbientTrackResource" format=3 uid="uid://dhq3yehp6ch21"]
+
+[ext_resource type="Script" uid="uid://c5bjcoetuk7pt" path="res://dreams_of_celeste_vn/scripts/sound/resources/ambient_track.gd" id="1_s317n"]
+[ext_resource type="AudioStream" uid="uid://cy8g73eeex2e8" path="res://dreams_of_celeste_vn/audio/sfx/fire_burning.ogg" id="2_dunm1"]
+
+[resource]
+script = ExtResource("1_s317n")
+id = "fire"
+track = ExtResource("2_dunm1")
+metadata/_custom_type_script = "uid://c5bjcoetuk7pt"

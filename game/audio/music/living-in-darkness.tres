@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MusicTrackResource" format=3 uid="uid://c4srg8q73unk6"]
+
+[ext_resource type="Script" uid="uid://bjrc4bxva17kr" path="res://dreams_of_celeste_vn/scripts/sound/resources/music_track.gd" id="1_e67ph"]
+[ext_resource type="AudioStream" uid="uid://duxudnte6c5ih" path="res://dreams_of_celeste_vn/audio/music/Living in Darkness.wav" id="2_wo6tt"]
+
+[resource]
+script = ExtResource("1_e67ph")
+id = "living-in-darkness"
+track = ExtResource("2_wo6tt")
+metadata/_custom_type_script = "uid://bjrc4bxva17kr"

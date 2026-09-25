@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://w6pvfgmfymml"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_0ik7n"]
+[ext_resource type="AudioStream" uid="uid://c64i5vjos6hpf" path="res://dreams_of_celeste_vn/audio/sfx/Coin_Falling_On_Table_05.ogg" id="2_ohjxd"]
+
+[resource]
+script = ExtResource("1_0ik7n")
+id = "coins-hit-table"
+track = ExtResource("2_ohjxd")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

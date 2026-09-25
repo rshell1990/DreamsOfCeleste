@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AmbientTrackResource" format=3 uid="uid://c75vri8rq7e5q"]
+
+[ext_resource type="Script" uid="uid://c5bjcoetuk7pt" path="res://dreams_of_celeste_vn/scripts/sound/resources/ambient_track.gd" id="1_hf8j2"]
+[ext_resource type="AudioStream" uid="uid://ccmbqa2ee5edr" path="res://dreams_of_celeste_vn/audio/ambience/Heavy Rain 2.wav" id="2_0mv08"]
+
+[resource]
+script = ExtResource("1_hf8j2")
+id = "heavy_rain"
+track = ExtResource("2_0mv08")
+metadata/_custom_type_script = "uid://c5bjcoetuk7pt"

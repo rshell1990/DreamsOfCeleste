@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://bj8egwc6pjltd"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_3ctyi"]
+[ext_resource type="AudioStream" uid="uid://brycr7kwvxlti" path="res://dreams_of_celeste_vn/audio/sfx/PM_RI_Source_31 Rocks Impact Hit Single Stone.wav" id="2_3ctyi"]
+
+[resource]
+script = ExtResource("1_3ctyi")
+id = "rock-clatter"
+track = ExtResource("2_3ctyi")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

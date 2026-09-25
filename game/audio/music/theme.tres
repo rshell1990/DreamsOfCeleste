@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MusicTrackResource" format=3 uid="uid://c2s8nqlfebir2"]
+
+[ext_resource type="Script" uid="uid://bjrc4bxva17kr" path="res://dreams_of_celeste_vn/scripts/sound/resources/music_track.gd" id="1_kuvdg"]
+[ext_resource type="AudioStream" uid="uid://b17f0o7l1iuy4" path="res://dreams_of_celeste_vn/audio/music/Main menu_theme (Celeste).mp3" id="2_su0no"]
+
+[resource]
+script = ExtResource("1_kuvdg")
+id = "theme"
+track = ExtResource("2_su0no")

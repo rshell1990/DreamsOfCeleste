@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://c7wbbh8hvbyou"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_3aalo"]
+[ext_resource type="AudioStream" uid="uid://c3uhdwsyqimkj" path="res://dreams_of_celeste_vn/audio/sfx/slap.ogg" id="2_xrrb2"]
+
+[resource]
+script = ExtResource("1_3aalo")
+id = "slap"
+track = ExtResource("2_xrrb2")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

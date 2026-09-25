@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://chqfv07nusj2x"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_p5wpc"]
+[ext_resource type="AudioStream" uid="uid://bof0g1u75jrpw" path="res://dreams_of_celeste_vn/audio/sfx/Digging 23.wav" id="2_4tmcq"]
+
+[resource]
+script = ExtResource("1_p5wpc")
+id = "dig-4"
+track = ExtResource("2_4tmcq")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

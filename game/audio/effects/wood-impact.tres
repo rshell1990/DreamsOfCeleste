@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://rirwm6sdkj5v"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_ib8b0"]
+[ext_resource type="AudioStream" uid="uid://cx73awaff71eq" path="res://dreams_of_celeste_vn/audio/sfx/SFX_-_thud_wood_02.ogg" id="2_4npfs"]
+
+[resource]
+script = ExtResource("1_ib8b0")
+id = "wood-impact"
+track = ExtResource("2_4npfs")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

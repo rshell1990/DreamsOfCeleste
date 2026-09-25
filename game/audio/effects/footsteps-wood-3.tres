@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://dmk68q5xg41l4"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_fr12c"]
+[ext_resource type="AudioStream" uid="uid://c536vdhtj0csn" path="res://dreams_of_celeste_vn/audio/sfx/Footsteps Wood (Walking) 3.wav" id="2_fr12c"]
+
+[resource]
+script = ExtResource("1_fr12c")
+id = "footsteps-wood-3"
+track = ExtResource("2_fr12c")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

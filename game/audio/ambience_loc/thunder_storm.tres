@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AmbientTrackResource" format=3 uid="uid://2qm64vdi56sj"]
+
+[ext_resource type="Script" uid="uid://c5bjcoetuk7pt" path="res://dreams_of_celeste_vn/scripts/sound/resources/ambient_track.gd" id="1_2m3l3"]
+[ext_resource type="AudioStream" uid="uid://clb74b36e7srd" path="res://dreams_of_celeste_vn/audio/ambience/Thunder Storm 2.wav" id="2_aoimc"]
+
+[resource]
+script = ExtResource("1_2m3l3")
+id = "thunder_storm"
+track = ExtResource("2_aoimc")
+metadata/_custom_type_script = "uid://c5bjcoetuk7pt"

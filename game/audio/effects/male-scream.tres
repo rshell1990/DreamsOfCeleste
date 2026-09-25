@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://hwolcpxpw8b7"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_1o6bm"]
+[ext_resource type="AudioStream" uid="uid://c3doki8ux8ppg" path="res://dreams_of_celeste_vn/audio/sfx/Male screams 10.wav" id="2_1o6bm"]
+
+[resource]
+script = ExtResource("1_1o6bm")
+id = "male-scream"
+track = ExtResource("2_1o6bm")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

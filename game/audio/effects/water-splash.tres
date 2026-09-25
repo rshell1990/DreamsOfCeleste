@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://c31pitwemo7i7"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_yxm8o"]
+[ext_resource type="AudioStream" uid="uid://d24odbnqkodex" path="res://dreams_of_celeste_vn/audio/sfx/Little Splash C.wav" id="2_yxm8o"]
+
+[resource]
+script = ExtResource("1_yxm8o")
+id = "water-splash"
+track = ExtResource("2_yxm8o")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

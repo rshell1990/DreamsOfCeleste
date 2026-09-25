@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://btg0rj7uy8vno"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_4jna4"]
+[ext_resource type="AudioStream" uid="uid://cop6j3ovr043n" path="res://dreams_of_celeste_vn/audio/sfx/Sack_Of_Coins_On_Table.ogg" id="2_ttfst"]
+
+[resource]
+script = ExtResource("1_4jna4")
+id = "coin-pouch"
+track = ExtResource("2_ttfst")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

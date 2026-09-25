@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://bmpt616lw2gbx"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_ao6c8"]
+[ext_resource type="AudioStream" uid="uid://b1wwd3sr5ixbb" path="res://dreams_of_celeste_vn/audio/sfx/Pick Up Wood B.wav" id="2_6da0u"]
+
+[resource]
+script = ExtResource("1_ao6c8")
+id = "pickup-scythe"
+track = ExtResource("2_6da0u")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

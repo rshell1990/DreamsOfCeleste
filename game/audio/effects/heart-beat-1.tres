@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://425436clpn6b"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_7srtp"]
+[ext_resource type="AudioStream" uid="uid://dxx6xteryuq6y" path="res://dreams_of_celeste_vn/audio/sfx/Heart beating 1.wav" id="2_6t3yy"]
+
+[resource]
+script = ExtResource("1_7srtp")
+id = "heart-beat-1"
+track = ExtResource("2_6t3yy")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

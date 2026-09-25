@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://cxypwvp0fw08f"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_s5tlm"]
+[ext_resource type="AudioStream" uid="uid://chacwyy3gpyhy" path="res://dreams_of_celeste_vn/audio/sfx/Clumsy Wood B.wav" id="2_s5tlm"]
+
+[resource]
+script = ExtResource("1_s5tlm")
+id = "wood-clatter"
+track = ExtResource("2_s5tlm")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

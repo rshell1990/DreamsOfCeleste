@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://cu806xcd28gv2"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_7h3hq"]
+[ext_resource type="AudioStream" uid="uid://bjd8xgnmvpl0t" path="res://dreams_of_celeste_vn/audio/sfx/Gathering Plants 2.wav" id="2_y0dyv"]
+
+[resource]
+script = ExtResource("1_7h3hq")
+id = "gather-plants"
+track = ExtResource("2_y0dyv")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

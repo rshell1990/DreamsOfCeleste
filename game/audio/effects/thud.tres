@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://cu1631sywae2q"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_raxl8"]
+[ext_resource type="AudioStream" uid="uid://b4snl8q5ksj33" path="res://dreams_of_celeste_vn/audio/sfx/thud_09.ogg" id="2_4svuv"]
+
+[resource]
+script = ExtResource("1_raxl8")
+id = "thud"
+track = ExtResource("2_4svuv")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AmbientTrackResource" format=3 uid="uid://qtle38hma6x0"]
+
+[ext_resource type="Script" uid="uid://c5bjcoetuk7pt" path="res://dreams_of_celeste_vn/scripts/sound/resources/ambient_track.gd" id="1_qq7so"]
+[ext_resource type="AudioStream" uid="uid://lydpii4r6boc" path="res://dreams_of_celeste_vn/audio/ambience/Fire_Loop_02.wav" id="2_pfltp"]
+
+[resource]
+script = ExtResource("1_qq7so")
+id = "strong-fire"
+track = ExtResource("2_pfltp")
+metadata/_custom_type_script = "uid://c5bjcoetuk7pt"

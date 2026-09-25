@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MusicTrackResource" format=3 uid="uid://l4hukcrcq4nm"]
+
+[ext_resource type="Script" uid="uid://bjrc4bxva17kr" path="res://dreams_of_celeste_vn/scripts/sound/resources/music_track.gd" id="1_cnw4c"]
+[ext_resource type="AudioStream" uid="uid://oy4l00nnr2lw" path="res://dreams_of_celeste_vn/audio/music/generated_placeholder/my_new_life.mp3" id="2_bd12b"]
+
+[resource]
+script = ExtResource("1_cnw4c")
+id = "my-new-life"
+track = ExtResource("2_bd12b")
+metadata/_custom_type_script = "uid://bjrc4bxva17kr"

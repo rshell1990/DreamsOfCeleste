@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://cr10hu60dba1l"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_ojp5x"]
+[ext_resource type="AudioStream" uid="uid://csj66n0oergr1" path="res://dreams_of_celeste_vn/audio/sfx/Fire bolt 16.wav" id="2_kr735"]
+
+[resource]
+script = ExtResource("1_ojp5x")
+id = "fire-start"
+track = ExtResource("2_kr735")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"

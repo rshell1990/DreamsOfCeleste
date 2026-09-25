@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://smbh1pck8mw"]
+
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_4bjhf"]
+[ext_resource type="AudioStream" uid="uid://d37upqlcd1uhd" path="res://dreams_of_celeste_vn/audio/sfx/Metallic item Breaks 3.wav" id="2_psdwt"]
+
+[resource]
+script = ExtResource("1_4bjhf")
+id = "pan-crash"
+track = ExtResource("2_psdwt")
+metadata/_custom_type_script = "uid://co046u7gvxu0y"
