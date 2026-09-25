@@ -2715,7 +2715,7 @@ label qst_JudgementDay_TrialStart:
     MARION @angry "It would serve her bidding and earn her prestige, in return, she actively has chose to hide it's secrets and protect it whenever she could!"
     MARION @angry "The two cases are inexplicably linked!"
     JUDGE_FALWIND "That be so... I must ask you keep the focus more towards those on trial, inquisitor from now on."
-    JUDGE_FALWIND "Captain Nyx's trial is a seperate matter."
+    JUDGE_FALWIND "Captain Nyx's trial is a separate matter."
     MARION @angry "Tsch..."
     MARION @smile "Of course, your honor."
     hide marion with easeoutright
@@ -2736,7 +2736,7 @@ label qst_JudgementDay_TrialStart:
             NYX @talk "And in a moment of desperation, or perhaps madness, I took a risk on the two of you."
             MARION @angry "She admits it!"
             JUDGE_FALWIND "Order! Inquisitor Marion!"
-            JUDGE_FALWIND "The defence is not done with it's line of questioning."
+            JUDGE_FALWIND "The defense is not done with it's line of questioning."
             MARION @angry "Tsch..."
             JUDGE_FALWIND "Captain Nyx, you do understand you are admitting to forgery and-"
             NYX @angry "If I could go back, I would make the exact same choices!"

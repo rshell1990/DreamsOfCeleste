@@ -2,12 +2,6 @@
 label devroom:
     $ QstStart(DevroomMenuQuest)
 #################
-    # this is like "test scope", you can add shit within these 
-    $ PartyAddChar("kiara")
-    $ CharAltFormUnlock("kiara")
-    $ PartyAddChar("erika")
-    $ TransformKiara(True)
-    $ DEBUG_AddOneToAllClassSkills()
 #################
     $ gui_parts = dict.fromkeys(gui_parts, True)
     $ LocSet("devroom")
@@ -24,20 +18,6 @@ label dev_barati_test:
     elif Barati_LastGameResult == "defeat":
         DEBUG "Last barati game lost"
     return
-
-label test_script_choice:
-    menu:
-        "test_script1":
-            jump test_script1
-        "test_script2":
-            jump test_script2
-        "test_script3":
-            jump test_script3
-        "test_script4":
-            jump test_script4
-        "return":
-            return
-
 label dev_battle_setup:
     if not PlayerItemQty("potion_heal_minor") >= 1:
         $ PlayerAddItem("potion_heal_minor", 4)
@@ -47,15 +27,11 @@ label dev_battle_setup:
     if _return is not True:
         # this statement is here only to ensure that a hot-reload won't undo your chars/gear setup
         "(good people of the imperial city, welcome to the arena!)"
-
-        $ TransformMC(True)
-        $ TransformMarkus(True)
-
         $ renpy.block_rollback() # <- stops you from fucking up your saved chars list
-        $ InfectionModule().isActive = True
-        $ InfectionModule().CurrentValue = 40
+        $ MadnessModule().isActive = True
+        $ MadnessModule().CurrentValue = 40
         $ StartBattle(BattleData(BackgroundImage = _return[0], CharIDList_Left = _return[1], CharIDList_Right = _return[2], AutoNightBackground = False))
-        $ InfectionModule().isActive = False
+        $ MadnessModule().isActive = False
         if LastBattleOutcome == "defeat":
             "(defeat)"
         if LastBattleOutcome == "victory":

@@ -860,285 +860,14 @@ init python:
         FocusRectSize = (170, 370)
     )
 
-    skinLib["borras"] = RegisterCharSkin("borras",
-        Portrait =  "images/characters/borras/portrait.webp",
-        Sprite =    "images/battle_skins/borras/battle_sprite_borras_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_borras_attack",
-                LengthInSeconds = 0.7,
-                WarmupTo = 0.35,
-                Transform_AttackDelay = 0.25,
-            )
-        },
-
-        Sounds = {
-            "BasicAttack_Impact":   ["audio/battle/battle_chars/borras/BasicAttackImpact.ogg"],
-            "Char_BeenHit":         ["audio/battle/battle_chars/borras/BeenHit.ogg"],
-            "Char_UseSkill":        ["audio/battle/battle_chars/borras/SkillUse.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/borras/Die.ogg"]
-        },
-
-        FocusRectSize = (200, 370)
-    )
-
-    skinLib["skin_duprey"] = RegisterCharSkin("skin_duprey",
-        Portrait =  "images/characters/duprey/portrait.webp",
-        Sprite =    "images/battle_skins/duprey/battle_sprite_duprey_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_duprey_attack",
-                LengthInSeconds = 0.6,
-                WarmupTo = 0.35,
-                Transform_AttackDelay = 0.25,
-            )
-        },
-
-        FocusRectSize = (205, 320)
-    )
-
-    skinLib["elena_human"] = RegisterCharSkin("elena_human",
-        Portrait = "images/characters/elena/portrait.webp",
-        Sprite = "images/battle_skins/elena/human/battle_sprite_elena_human_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_elena_human_attack",
-                LengthInSeconds = 0.6,
-                WarmupTo = 0.35,
-                Transform_AttackDelay = 0.25,
-            )
-        },
-
-        Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/elena_human/BeenHit.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/elena_human/Die.ogg"],
-            "Transform":            ["audio/battle/battle_chars/elena_human/WolfTransform.ogg"]
-        },
-
-        FocusRectSize = (190, 350)
-    )
-
-    skinLib["elena_wolf"] = RegisterCharSkin("elena_wolf",
-        Portrait =  "images/characters/elena/portrait_wolf.webp",
-        Sprite =    "images/battle_skins/elena/wolf/battle_sprite_elena_wolf_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_elena_wolf_attack",
-                LengthInSeconds = 0.6,
-                WarmupTo = 0.35,
-                Transform_AttackDelay = 0.25,
-            )
-        },
-
-        Sounds = {
-            "Transform":            ["audio/battle/battle_chars/elena_human/WolfTransform.ogg"]
-        },
-
-        FocusRectSize = (270, 320)
-    )
-
-    skinLib["kiara"] = RegisterCharSkin("kiara",
-        Portrait =  "images/characters/kiara/portrait.webp",
-        Sprite =    "images/battle_skins/kiara/human/battle_sprite_kiara_human_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_kiara_human_attack",
-                LengthInSeconds = 0.8,
-                WarmupTo = 0.25,
-                Transform_AttackDelay = 0.15,
-            )
-        },
-
-        Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/kiara/BeenHit.ogg"],
-            "Char_UseSkill":        ["audio/battle/battle_chars/kiara/SkillUse.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/kiara/Die.ogg"]
-        },
-
-        FocusRectSize = (180, 340)
-    )
-
-    skinLib["kiara_party"] = RegisterCharSkin("kiara_party",
-        Portrait =  "images/battle_skins/kiara/party/portrait.webp",
-        Sprite =    "images/battle_skins/kiara/party/battle_sprite_kiara_party_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_kiara_party_attack",
-                LengthInSeconds = 0.8,
-                WarmupTo = 0.25,
-                Transform_AttackDelay = 0.15,
-            )
-        },
-
-        Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/kiara/BeenHit.ogg"],
-            "Char_UseSkill":        ["audio/battle/battle_chars/kiara/SkillUse.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/kiara/Die.ogg"]
-        },
-
-        FocusRectSize = (180, 340)
-    )
-
-    skinLib["markus_p"] = RegisterCharSkin("markus_p",
-        Portrait =  "images/characters/markus/portrait_p.webp",
-        Sprite =    "images/battle_skins/markus/prologue/battle_sprite_markus_prologue_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable =       "battle_anim_markus_prologue_attack",
-                LengthInSeconds =   0.6,
-                WarmupTo =          0.45,
-                Transform_AttackDelay = 0.2,
-            )
-        },
-
-        Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/markus/BeenHit.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/markus/Die.ogg"]
-        },
-
-        FocusRectSize = (170, 350)
-    )
-
-    skinLib["markus"] = RegisterCharSkin("markus",
-        Portrait = "images/characters/markus/portrait.webp",
-        Sprite = "images/battle_skins/markus/postpara/battle_sprite_markus_postpara_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_markus_postpara_attack",
-                LengthInSeconds = 0.6,
-                WarmupTo = 0.35,
-                Transform_AttackDelay = 0.25,
-            )
-        },
-
-        Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/markus/BeenHit.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/markus/Die.ogg"],
-            
-            "Transform":            ["audio/cfx/transform.ogg"]
-        },
-
-        FocusRectSize = (170, 380)
-    )
-
-    skinLib["markus_fem_party"] = RegisterCharSkin("markus_fem_party",
-        Portrait =  "images/battle_skins/markus/fem_party/portrait.webp",
-        Sprite =    "images/battle_skins/markus/fem_party/battle_sprite_markus_fem_party_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_markus_fem_party_attack",
-                LengthInSeconds = 0.7,
-                WarmupTo = 0.35,
-                Transform_AttackDelay = 0.25,
-            )
-        },
-
-        Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/kiara/BeenHit.ogg"],
-            "Char_UseSkill":        ["audio/battle/battle_chars/kiara/SkillUse.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/kiara/Die.ogg"]
-        },
-
-        FocusRectSize = (170, 380)
-    )
-
-    skinLib["markus_transformed"] = RegisterCharSkin("markus_transformed",
-        Portrait =  "images/characters/markus/portrait_t.webp",
-        Sprite =    "images/battle_skins/markus/transformed/battle_sprite_markus_tf_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable =       "battle_anim_markus_tf_attack",
-                LengthInSeconds =   0.8,
-                WarmupTo =          0.45,
-                Transform_AttackDelay = 0.35,
-            ),
-            "attack_fire":BattleAnimation(
-                Displayable =       "battle_anim_markus_tf_attack_2",
-                LengthInSeconds =   0.9,
-                WarmupTo =          0.3,
-                ApplyTransform =    False,
-            )
-        },
-
-        Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/markus_transformed/BeenHit_1.ogg", "audio/battle/battle_chars/markus_transformed/BeenHit_2.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/markus_transformed/Die.ogg"],
-            "Char_UseSkill":        ["audio/battle/battle_chars/markus_transformed/SkillUse.ogg"],
-
-            "Transform":            ["audio/cfx/transform.ogg"]
-        },
-
-        SpriteOffset =  (0, 30),
-        FocusRectSize = (320, 440)
-    )
-
-    # prologue
-    skinLib["mc_p"] = RegisterCharSkin("mc_p",
-        Portrait = "images/characters/mc/portrait_p.webp",
-        Sprite = "images/battle_skins/mc/prologue/battle_sprite_mc_prologue_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_mc_prologue_attack",
-                LengthInSeconds = 0.7,
-                WarmupTo = 0.25,
-                Transform_AttackDelay = 0.2,
-            )
-        },
-
-        Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/mc/BeenHit.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/mc/Die.ogg"],
-
-            "BasicAttack_Swing":    ["audio/battle/battle_chars/mc/BasicAttackSwing.ogg"]
-        },
-
-        FocusRectSize = (170, 350)
-    )
-
-    # main
-    skinLib["mc"] = RegisterCharSkin("mc",
-        Portrait = "images/characters/mc/portrait.webp",
-        Sprite = "images/battle_skins/mc/post_para/battle_sprite_mc_static.webp",
-
-        Anims = {
-            "attack":BattleAnimation(
-                Displayable = "battle_anim_mc_postpara_attack",
-                LengthInSeconds = 0.65,
-                WarmupTo = 0.3,
-                Transform_AttackDelay = 0.2,
-            )
-        },
-
-        Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/mc/BeenHit.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/mc/Die.ogg"],
-
-            "BasicAttack_Swing":    ["audio/battle/battle_chars/mc/BasicAttackSwing.ogg"],
-            "Transform":            ["audio/cfx/transform.ogg"]
-        },
-
-        FocusRectSize = (210, 380)
-    )
-    
     # transformed
-    skinLib["mc_transformed"] = RegisterCharSkin("mc_transformed",
-        Portrait = "images/characters/mc/portrait_t.webp",
-        Sprite = "images/battle_skins/mc/transformed/battle_sprite_mc_tf_static.webp",
+    skinLib["celeste_transformed"] = RegisterCharSkin("celeste_transformed",
+        Portrait = "game/images/characters/celeste/portrait.webp",
+        Sprite = "game/images/battle_skins/celeste/transformed/battle_sprite_celeste_tf_static.webp",
 
         Anims = {
             "attack":BattleAnimation(
-                Displayable = "battle_anim_mc_tf_attack",
+                Displayable = "battle_anim_celeste_tf_attack",
                 LengthInSeconds = 0.7,
                 WarmupTo = 0.25,
                 Transform_AttackDelay = 0.2,
@@ -1146,19 +875,19 @@ init python:
         },
 
         Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/mc_transformed/char/BeenHit.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/mc_transformed/char/Die.ogg"],
-            "Char_UseSkill":        ["audio/battle/battle_chars/mc_transformed/char/skilluse1.ogg",
-                                    "audio/battle/battle_chars/mc_transformed/char/skilluse2.ogg",
-                                    "audio/battle/battle_chars/mc_transformed/char/skilluse3.ogg",
-                                    "audio/battle/battle_chars/mc_transformed/char/skilluse4.ogg",
-                                    "audio/battle/battle_chars/mc_transformed/char/skilluse5.ogg"],
-            "BasicAttack_Swing":    ["audio/battle/battle_chars/mc_transformed/basic_attack/swing.ogg"],
-            "BasicAttack_Impact":    ["audio/battle/battle_chars/mc_transformed/basic_attack/impact1.ogg",
-                                    "audio/battle/battle_chars/mc_transformed/basic_attack/impact2.ogg",
-                                    "audio/battle/battle_chars/mc_transformed/basic_attack/impact3.ogg",
-                                    "audio/battle/battle_chars/mc_transformed/basic_attack/impact4.ogg",
-                                    "audio/battle/battle_chars/mc_transformed/basic_attack/impact5.ogg"],
+            "Char_BeenHit":         ["audio/battle/battle_chars/celeste_transformed/char/BeenHit.ogg"],
+            "Char_Die":             ["audio/battle/battle_chars/celeste_transformed/char/Die.ogg"],
+            "Char_UseSkill":        ["audio/battle/battle_chars/celeste_transformed/char/skilluse1.ogg",
+                                    "audio/battle/battle_chars/celeste_transformed/char/skilluse2.ogg",
+                                    "audio/battle/battle_chars/celeste_transformed/char/skilluse3.ogg",
+                                    "audio/battle/battle_chars/celeste_transformed/char/skilluse4.ogg",
+                                    "audio/battle/battle_chars/celeste_transformed/char/skilluse5.ogg"],
+            "BasicAttack_Swing":    ["audio/battle/battle_chars/celeste_transformed/basic_attack/swing.ogg"],
+            "BasicAttack_Impact":    ["audio/battle/battle_chars/celeste_transformed/basic_attack/impact1.ogg",
+                                    "audio/battle/battle_chars/celeste_transformed/basic_attack/impact2.ogg",
+                                    "audio/battle/battle_chars/celeste_transformed/basic_attack/impact3.ogg",
+                                    "audio/battle/battle_chars/celeste_transformed/basic_attack/impact4.ogg",
+                                    "audio/battle/battle_chars/celeste_transformed/basic_attack/impact5.ogg"],
             "Transform":            ["audio/cfx/transform.ogg"]
         },
 

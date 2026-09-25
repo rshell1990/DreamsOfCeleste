@@ -26,7 +26,7 @@ init python:
                         StatusEffect = BattleStatusEff_Taunt(Duration = 1, SourceName = self.DisplayName, TauntedBy = self.Owner_BattleChar))],
                 Effects_OnSelf = [
                     BattleEffect_ApplyStatusOnAlly(
-                        StatusEffect = BattleStatusEff_DamageIn(DamageRecieved_Mod = self.DamageTakenBuff[self.Level], Duration = 1, SourceName = self.DisplayName, StatusEffectID = "bers_warcry_dmgin_buff"))])
+                        StatusEffect = BattleStatusEff_DamageIn(DamageReceived_Mod = self.DamageTakenBuff[self.Level], Duration = 1, SourceName = self.DisplayName, StatusEffectID = "bers_warcry_dmgin_buff"))])
             return
 
         def GetDesc(self, DescLevel = 1):

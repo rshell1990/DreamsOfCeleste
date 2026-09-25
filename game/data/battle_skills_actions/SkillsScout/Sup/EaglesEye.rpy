@@ -20,7 +20,7 @@ init python:
                 CastTarget = Target,
                 Effects_OnTarget = [
                     BattleEffect_ApplyStatusOnEnemy(
-                        StatusEffect = BattleStatusEff_DamageIn(Duration = 2, DamageRecieved_Mod = 1.5, SourceName = self.DisplayName, StatusEffectID = "scout_eagleeye_dmgin_debuff")),
+                        StatusEffect = BattleStatusEff_DamageIn(Duration = 2, DamageReceived_Mod = 1.5, SourceName = self.DisplayName, StatusEffectID = "scout_eagleeye_dmgin_debuff")),
                     BattleEffect_ApplyStatusOnEnemy(
                         StatusEffect = BattleStatusEff_StatMod_Armor(Duration = 2, StatMod_Armor = 0.5, StatusEffectID = "scout_eagleeye_armor_debuff", SourceName = self.DisplayName)),
                     BattleEffect_ApplyStatusOnEnemy(

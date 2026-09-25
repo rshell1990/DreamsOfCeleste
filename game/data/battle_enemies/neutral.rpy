@@ -699,35 +699,11 @@ init python:
         
         CharSkills = {"NeutralPoisonAttack":1, "NeutralGettingSick":1},
     )
-    
-    # a mob for story flashback shit
-    CharDefs["shyahtan"] = BuildCharTemplate(CharID = "shyahtan",
-        name = _("Shyahtan"),
-        IsMob = True,
-        BattleSkin =  "mc_transformed", 
-
-        base_health = 1220,
-
-        base_energy = 130,
-        base_damage = 20,
-
-        Strength = 10,
-        Endurance = 16,
-        Willpower = 10,
-        Agility = 12,
-        Dexterity = 16,
-        Luck = 15,
-
-        experience = ExpSetToLevel(32),
-
-        # skills are auto-set to maxed out mc-transformed skills below
-        CharSkills = {},
-    )
 
 init 3 python:
     # goes over all the skills in mc-transformed skill tree and adds all skills at max level to shyahtan
     # parasiteBlack skill tree isn't registered yet, so skip gracefully instead of crashing
-    for SkillBranch in ["offence", "defence", "support"]:
+    for SkillBranch in ["offense", "defense", "support"]:
         for SkillID in Lib_BattleSkillTrees.get("parasiteBlack", {}).get(SkillBranch, {}):
             store.CharDefs["shyahtan"]["CharSkills"][SkillID] = SkillLib[SkillID].Level_Max
 
@@ -756,7 +732,6 @@ init python:
         CharSkills = {"NeutralPoisonAttack":1, "NeutralGettingSick":1},
     )
 
-    # TODO to raven: chars from here and below dont have base_xp_value set, which makes them reward 0 xp    
     CharDefs["e_succubus"] = BuildCharTemplate(CharID = "e_succubus",
         name = _("Succubus"),
         IsMob = True,
@@ -774,7 +749,7 @@ init python:
         Luck = 7,
 
         experience = ExpSetToLevel(10),
-        
+        base_xp_value = 20,
         CharSkills = {
             "NeutralTheGatesOfSevenHells":1
         },
@@ -797,7 +772,7 @@ init python:
         Luck = 7,
 
         experience = ExpSetToLevel(12),
-        
+        base_xp_value = 20,
         CharSkills = {
             "NeutralTwist":1, "NeutralPreciseShot":1, "NeutralItCouldHaveBeenWorse":1,
         },
@@ -820,7 +795,7 @@ init python:
         Luck = 7,
 
         experience = ExpSetToLevel(12),
-        
+        base_xp_value = 20,
         CharSkills = {
             "NeutralTheGatesOfSevenHells":1, "NeutralTwist":1, "NeutralGettingSick":1, "NeutralSuperHeavyBlow":1,
         },
@@ -844,7 +819,8 @@ init python:
 
         auto_attr_allocation = "fighter",
 
-        #experience = ExpSetToLevel(10),
+        experience = ExpSetToLevel(10),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralPoisonAttack":1,
@@ -878,6 +854,7 @@ init python:
         auto_attr_allocation = "fighter",
 
         experience = ExpSetToLevel(12),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralPoisonAttack":1,
@@ -905,6 +882,7 @@ init python:
         auto_attr_allocation = "fighter",
 
         experience = ExpSetToLevel(11),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralPoisonAttack":1,
@@ -931,6 +909,7 @@ init python:
         auto_attr_allocation = "fighter",
 
         experience = ExpSetToLevel(15),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralPoisonAttack":1,
@@ -962,6 +941,7 @@ init python:
             auto_attr_allocation = "fighter",
 
             experience = ExpSetToLevel(14),
+            base_xp_value = 20,
 
             CharSkills = {
                 "NeutralFrighten":1,
@@ -988,6 +968,7 @@ init python:
             auto_attr_allocation = "fighter",
 
             experience = ExpSetToLevel(14),
+            base_xp_value = 20,
 
             CharSkills = {
                 "NeutralFrighten":1,
@@ -1014,6 +995,7 @@ init python:
         auto_attr_allocation = "fighter",
 
         experience = ExpSetToLevel(16),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralFrighten":1,
@@ -1040,6 +1022,7 @@ init python:
         auto_attr_allocation = "fighter",
 
         experience = ExpSetToLevel(12),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralHealThem":1,
@@ -1066,6 +1049,7 @@ init python:
         auto_attr_allocation = "fighter",
 
         experience = ExpSetToLevel(12),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralFrighten":1,
@@ -1092,6 +1076,7 @@ init python:
         auto_attr_allocation = "fighter",
 
         experience = ExpSetToLevel(11),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralFrighten":1,
@@ -1118,6 +1103,7 @@ init python:
         auto_attr_allocation = "fighter",
 
         experience = ExpSetToLevel(14),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralFrighten":1,
@@ -1145,6 +1131,7 @@ init python:
         auto_attr_allocation = "fighter",
 
         experience = ExpSetToLevel(14),
+        base_xp_value = 20,
 
         CharSkills = {
             "NeutralFrighten":1,

@@ -296,7 +296,7 @@ screen characters():
                     hbox:
                         xalign 0.5
                         spacing 10
-                        for SkillTabLabel, SkillTabID in zip([_("Offence"), _("Defence"), _("Support")], ["offence", "defence", "support"]):
+                        for SkillTabLabel, SkillTabID in zip([_("Offense"), _("Defense"), _("Support")], ["offense", "defense", "support"]):
                             vbox:
                                 label SkillTabLabel xalign 0.5
                                 frame:
@@ -332,7 +332,7 @@ screen characters():
                     hbox:
                         xalign 0.5
                         spacing 10
-                        for SkillTabLabel, SkillTabID in zip([_("Offence"), _("Defence"), _("Support")], ["offence", "defence", "support"]):
+                        for SkillTabLabel, SkillTabID in zip([_("Offense"), _("Defense"), _("Support")], ["offense", "defense", "support"]):
                             vbox:
                                 label SkillTabLabel xalign 0.5
                                 frame:

@@ -2,9 +2,9 @@
 # keys unused anymore must be removed
 default tmpvar = {}
 
-default player_party = ["mc"]
+default player_party = ["celeste"]
 
-default PlayerPos = WorldPosition("mc_house_bedroom")
+default PlayerPos = WorldPosition("house_livingroom")
 default questObjs = dict()
 
 default ShowDialogueHistoryButton = True
@@ -27,7 +27,7 @@ init -1 python:
 init 1 python:
     # this is a very bad way to do this tbh
     def setInitVariables():
-        store.PlayerPos = WorldPosition("mc_house_bedroom")
+        store.PlayerPos = WorldPosition("house_livingroom")
         WorldMapLocAdd("novaras_gates")
         SetGameDay(1)
         TimeSetTo(TIME_MORNING)
@@ -46,8 +46,7 @@ init 1 python:
 
         store.unlockedNotes = set()
 
-        store.player_name = _("Caspian") # Default value
-        store.player_party = ["mc"]
+        store.player_party = ["celeste"]
         store.PlayerCombatTeam = store.player_party
 
 ############ inventory and items-related 

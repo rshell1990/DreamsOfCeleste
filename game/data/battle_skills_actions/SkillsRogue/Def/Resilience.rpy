@@ -22,7 +22,7 @@ init python:
                 Effects_OnTarget = [
                     BattleEffect_RestoreHealth(RestoreValue = self.HealPerc[self.Level], RatioFromMax = True),
                     BattleEffect_ApplyStatusOnAlly(
-                        StatusEffect = BattleStatusEff_DamageIn(DamageRecieved_Mod = self.DamageResistanceBoost[self.Level], Duration = 2, SourceName = self.DisplayName, StatusEffectID = "rogueresilience_damageres")),
+                        StatusEffect = BattleStatusEff_DamageIn(DamageReceived_Mod = self.DamageResistanceBoost[self.Level], Duration = 2, SourceName = self.DisplayName, StatusEffectID = "rogueresilience_damageres")),
                     BattleEffect_ApplyStatusOnAlly(
                         StatusEffect = BattleStatusEff_StatMod_Dodge(Duration = 2, StatMod_DodgeRating = self.DodgeChanceBoost[self.Level], StatusEffectID = "rogueresilience_dodgebuff", SourceName = self.DisplayName))])
             return

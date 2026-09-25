@@ -26,7 +26,7 @@ init python:
                             StatusEffectID = "bers_berstime_dmgbuff")),
                     BattleEffect_ApplyStatusOnAlly(
                         StatusEffect = BattleStatusEff_DamageIn(
-                            DamageRecieved_Mod = 1.2,
+                            DamageReceived_Mod = 1.2,
                             Duration = 2, 
                             SourceName = self.DisplayName, 
                             StatusEffectID = "bers_berstime_dmgtakendebuff")),

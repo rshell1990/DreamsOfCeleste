@@ -173,7 +173,7 @@ init python:
     def Battle_GetIncomingDamageMod(BattleChar):
         DamageMod_In = 1.0
         for StatusEffect in BattleChar.StatusEffects:
-            DamageMod_In *= getattr(StatusEffect, "DamageRecieved_Mod", getattr(StatusEffect, "DamageReceived_Mod", 1.0))
+                DamageMod_In *= getattr(StatusEffect, "DamageReceived_Mod", 1.0)
         return round(max(DamageMod_In, 0.1), 1)
 
     def Battle_GetOutgoingDamageMod(BattleChar):

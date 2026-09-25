@@ -16,7 +16,7 @@ init python:
                 SourceSkillObj = self,
                 CastTarget = self.ValidTargets,
                 Effects_OnSelf = [
-                    BattleEffect_ApplyStatusOnAlly(StatusEffect = BattleStatusEff_DamageIn(DamageRecieved_Mod = 0.3, Duration = 2, SourceName = self.DisplayName, StatusEffectID = "neutral_greattaunt_dmgresbuff"))],
+                    BattleEffect_ApplyStatusOnAlly(StatusEffect = BattleStatusEff_DamageIn(DamageReceived_Mod = 0.3, Duration = 2, SourceName = self.DisplayName, StatusEffectID = "neutral_greattaunt_dmgresbuff"))],
                 Effects_OnTarget = [
                     BattleEffect_ApplyStatusOnEnemy(
                         StatusEffect = BattleStatusEff_Taunt(Duration = 2, SourceName = self.DisplayName, TauntedBy = self.Owner_BattleChar))])

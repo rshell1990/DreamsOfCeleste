@@ -17,8 +17,6 @@ screen main_menu():
             align (0.1,0.9)
             text "Dev mode"
             textbutton "(q) Quickstart" hovered TooltipSetUI("label: dev_quickstart") action Start("dev_quickstart") keysym "K_q"
-            textbutton "(a) Quickstart (post-prologue)" hovered TooltipSetUI("label: dev_quickstart_postprologue") action Start("dev_quickstart_postprologue") keysym "K_a"
-            textbutton "(w) Quickstart (Hamun, act 2 start)" hovered TooltipSetUI("label: dev_quickstart_hamun") action Start("dev_quickstart_hamun") keysym "K_w"
             textbutton "(d) Devroom" action Start("devroom") keysym "K_d"
     
     if Build_Kind == "nosteam":

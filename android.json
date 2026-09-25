@@ -3,14 +3,14 @@
     "google_play_key": null,
     "google_play_salt": null,
     "heap_size": "16",
-    "icon_name": "Parasite Black",
+    "icon_name": "Dreams of Celeste",
     "include_pil": false,
     "include_sqlite": false,
     "layout": null,
-    "name": "Parasite Black",
+    "name": "Dreams of Celeste",
     "numeric_version": "1241",
     "orientation": "sensorLandscape",
-    "package": "parasite.black",
+    "package": "dreams.of.celeste",
     "permissions": [
         "VIBRATE",
         "INTERNET"

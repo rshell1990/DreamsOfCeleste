@@ -38,7 +38,7 @@ init python:
                 Effects_OnTarget = [
                     BattleEffect_ApplyStatusOnAlly(
                         StatusEffect = BattleStatusEff_DamageIn(
-                            DamageRecieved_Mod = 0.6,
+                            DamageReceived_Mod = 0.6,
                             Duration = 1,
                             SourceName = self.DisplayName,
                             StatusEffectID = "defend_damagemod_buff")

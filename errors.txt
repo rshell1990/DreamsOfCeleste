@@ -1,0 +1,38 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 239: Line with id qst_Terminus_AtHouseGrabbedGold_01c1098e appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:239
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 241: Line with id qst_Terminus_AtHouseGrabbedGold_ca636c82 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:241
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 245: Line with id qst_Terminus_PathBlockMarkusHouse_7226f290 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:245
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 246: Line with id qst_Terminus_PathBlockMarkusHouse_3644f053 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:246
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 247: Line with id qst_Terminus_PathBlockMarkusHouse_d7e9e5d2 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:247
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 251: Line with id qst_Terminus_PathBlockMarkusHouse2_a9966929 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:251
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 252: Line with id qst_Terminus_PathBlockMarkusHouse2_f2338d07 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:252
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 256: Line with id qst_Terminus_PathBlockChurch_9e2c699f appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:256
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 257: Line with id qst_Terminus_PathBlockChurch_34e6c1bf appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:257
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 258: Line with id qst_Terminus_PathBlockChurch_78722971 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:258
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 262: Line with id qst_Terminus_PathBlockPalam_8255ded6 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:262
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 263: Line with id qst_Terminus_PathBlockPalam_4edfa23f appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:263
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 267: Line with id qst_Terminus_PathBlockSmithy_a1bae024 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:267
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 268: Line with id qst_Terminus_PathBlockSmithy_3da856ab appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:268
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 269: Line with id qst_Terminus_PathBlockSmithy_384b5404 appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:269
+
+File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 270: Line with id qst_Terminus_PathBlockSmithy_793baa0c appears twice. The other line is game/data/world_quests/main/Prologue/qst_Prologue.rpy:270
+
+Ren'Py Version: Ren'Py 8.5.3.26051504
+Fri Sep 25 11:23:11 2026

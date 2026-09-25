@@ -3,8 +3,8 @@ init 1 python:
     # stat effs such as DamageIn have varied status effect ID based on their causing skill.
     # bleed/poison/burn :: lose hp per turn
     # godmode           :: invincibility, attacks cant hit char
-    # immunity          :: cant recieve debuffs
-    # curse             :: cant recieve buffs
+    # immunity          :: cant receive debuffs
+    # curse             :: cant receive buffs
     # willpower         :: hp cant go below 1
     # counter           :: strike back with basic attack if attacked
     # taunt             :: attack single char with basic attacks only
@@ -25,9 +25,9 @@ init 1 python:
 ######################################################################
     # alter incoming damage modifier in %
     class BattleStatusEff_DamageIn(BattleStatusEff):
-        def __init__(self, DamageRecieved_Mod, Duration, SourceName = None, StatusEffectID = "damage_res"):
+        def __init__(self, DamageReceived_Mod, Duration, SourceName = None, StatusEffectID = "damage_res"):
             super().__init__(Duration = Duration, StatusEffectID = StatusEffectID, SourceName = SourceName)
-            if DamageRecieved_Mod > 1.0:
+            if DamageReceived_Mod > 1.0:
                 self.EffectName = _("Damage resistance debuff")
                 self.Icon = "images/battle_status_eff_icons/DamageInDebuff.webp"
                 self.EffectType = BATTLE_STATUS_EFFECT_TYPE.DEBUFF
@@ -36,24 +36,24 @@ init 1 python:
                 self.Icon = "images/battle_status_eff_icons/DamageInBuff.webp"
 
             ##################################################
-            self.DamageRecieved_Mod = DamageRecieved_Mod
+            self.DamageReceived_Mod = DamageReceived_Mod
 
         def GetDesc(self):
-            if self.DamageRecieved_Mod > 1.0:
-                DamagePercentage = round((self.DamageRecieved_Mod - 1.0) * 100)
+            if self.DamageReceived_Mod > 1.0:
+                DamagePercentage = round((self.DamageReceived_Mod - 1.0) * 100)
                 return tra(_("Damage resistance lowered by %s%%")) % DamagePercentage
             else:
-                DamagePercentage = round((1.0 - self.DamageRecieved_Mod) * 100)
+                DamagePercentage = round((1.0 - self.DamageReceived_Mod) * 100)
                 return tra(_("Damage resistance increased by %s%%")) % DamagePercentage
 
         def IsBetterThanAnotherEffect(self, Other):
             if self.EffectType == BATTLE_STATUS_EFFECT_TYPE.BUFF:
-                if self.DamageRecieved_Mod <= Other.DamageRecieved_Mod:
+                if self.DamageReceived_Mod <= Other.DamageReceived_Mod:
                     return True
                 else:
                     return False
             if self.EffectType == BATTLE_STATUS_EFFECT_TYPE.DEBUFF:
-                if self.DamageRecieved_Mod >= Other.DamageRecieved_Mod:
+                if self.DamageReceived_Mod >= Other.DamageReceived_Mod:
                     return True
                 else:
                     return False
@@ -205,7 +205,7 @@ init 1 python:
                 Battle_RemoveStatusEffect(self.Owner_BattleChar, "taunt") # isnt this suicidal
             return
 ######################################################################
-    # char under curse cant recieve buffs
+    # char under curse cant receive buffs
     class BattleStatusEff_Curse(BattleStatusEff):
         def __init__(self, Duration, SourceName = None):
             super().__init__(Duration = Duration, StatusEffectID = "curse", SourceName = SourceName)
@@ -215,7 +215,7 @@ init 1 python:
             self.EffectName = _("Cursed")
 
         def GetDesc(self):
-            return tra(_("Cursed character cannot recieve any buffs."))
+            return tra(_("Cursed character cannot receive any buffs."))
 
     # strike back
     class BattleStatusEff_Counter(BattleStatusEff):
@@ -230,12 +230,12 @@ init 1 python:
         def GetDesc(self):
             return tra(_("Character will counter attack against any damaging ability with their basic attack."))
 ######################################################################
-    # mc and markus
-    class BattleStatusEff_TransformedPara(BattleStatusEff):
+    # celeste
+    class BattleStatusEff_MadnessPara(BattleStatusEff):
         def __init__(self, Duration = -1):
-            super().__init__(Duration = Duration, StatusEffectID = "transformed_para")
+            super().__init__(Duration = Duration, StatusEffectID = "madness_para")
             self.Icon = "images/battle_status_eff_icons/Transform.webp"
-            self.EffectName = _("Parasite Form")
+            self.EffectName = _("Madness Form")
 
             self.AttrMod_StrengthMul = 1.5
             self.AttrMod_EnduranceMul = 1.5
@@ -250,40 +250,6 @@ init 1 python:
 
         def GetDesc(self):
             return tra(_("All the character's attributes are increased by 50%."))
-######################################################################
-    # elena
-    class BattleStatusEff_TransformedWolf(BattleStatusEff):
-        def __init__(self):
-            super().__init__(Duration = -1, StatusEffectID = "transformed_wolf")
-            self.Icon = "images/battle_status_eff_icons/Transform.webp"
-            self.EffectName = _("Wolf Form")
-
-            self.AttrMod_StrengthMul = 1.5
-            self.AttrMod_EnduranceMul = 0.75
-            self.AttrMod_AgilityMul = 1.5
-
-            self.Permanent = True
-
-            self.EffectType = BATTLE_STATUS_EFFECT_TYPE.NEUTRAL
-
-        def GetDesc(self):
-            return tra(_("In wolf form, Elena's strength and agility are increased by 50%, but her endurance is reduced by 25%."))
-######################################################################
-    # Kiara
-    class BattleStatusEff_TransformedDemorai(BattleStatusEff):
-        def __init__(self):
-            super().__init__(Duration = -1, StatusEffectID = "transformed_demorai")
-            self.Icon = "images/battle_status_eff_icons/Transform.webp"
-            self.EffectName = _("Demorai Form")
-
-            self.AttrMod_AgilityMul = 1.5
-
-            self.Permanent = True
-
-            self.EffectType = BATTLE_STATUS_EFFECT_TYPE.NEUTRAL
-
-        def GetDesc(self):
-            return tra(_("In demorai form, Kiara's agility is increased by 50%."))
 ######################################################################
     # buff dodge
     class BattleStatusEff_StatMod_Dodge(BattleStatusEff):

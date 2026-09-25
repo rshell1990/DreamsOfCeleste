@@ -1,4 +1,4 @@
-# its alot like complex, but night-tint is opt-in, and quest tracker is disabled 
+# its a lot like complex, but night-tint is opt-in, and quest tracker is disabled
 screen locBtn_Char(locTag, tag, idleSprite, hoverSprite, transObj, key = None, NightTint = False):
     if key is not None:
         if len(key[0]) == 3:

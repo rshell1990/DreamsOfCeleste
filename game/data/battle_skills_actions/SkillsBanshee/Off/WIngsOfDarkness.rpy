@@ -39,4 +39,4 @@ init python:
                 StrikeDamage = Battle_FormatDescVal(Battle_GetBCharDmgTupleAsText(self.Owner_BattleChar, self.DamageValue[DescLevel]))
             else:
                 StrikeDamage = Battle_FormatDescVal(Battle_GetPBCharDmgTupleAsText(self.Owner_PBCharID, self.DamageValue[DescLevel]))
-            return tra(_("Sacrifice 30%% of your current health and attack the enemy with a devastating blow, dealing %s damage. The blow cannot be dodged.\nAfter the attack, your accuracy will be reduced by 30%% for 2 turns.\nIf the enemy is killed by this attack, you recieve a Willpower buff for 1 turn. Units under the effect of Willpower buff cannot die.")) % StrikeDamage
+            return tra(_("Sacrifice 30%% of your current health and attack the enemy with a devastating blow, dealing %s damage. The blow cannot be dodged.\nAfter the attack, your accuracy will be reduced by 30%% for 2 turns.\nIf the enemy is killed by this attack, you receive a Willpower buff for 1 turn. Units under the effect of Willpower buff cannot die.")) % StrikeDamage

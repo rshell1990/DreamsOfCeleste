@@ -25,7 +25,7 @@ init python:
                             SourceName = self.DisplayName)),
                     BattleEffect_ApplyStatusOnAlly(
                         StatusEffect = BattleStatusEff_DamageIn(
-                            DamageRecieved_Mod = self.DamageReductionBuff[self.Level],
+                            DamageReceived_Mod = self.DamageReductionBuff[self.Level],
                             StatusEffectID = "inquisitor_defenderoftheweak_dmgtakenbuff",
                             Duration = 2, 
                             SourceName = self.DisplayName)),

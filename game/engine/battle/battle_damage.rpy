@@ -115,7 +115,7 @@ init python:
     def Battle_GetIncomingDamageMod(Target):
         DamageMod = 1.0
         for StatusEffect in getattr(Target, "StatusEffects", []):
-            DamageMod *= getattr(StatusEffect, "DamageReceived_Mod", getattr(StatusEffect, "DamageRecieved_Mod", 1.0))
+            DamageMod *= getattr(StatusEffect, "DamageReceived_Mod", 1.0)
         return DamageMod
     
     def Battle_BCharDamageRoll(AttackingBattleChar, Mod = 1.0):

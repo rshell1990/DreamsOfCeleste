@@ -170,7 +170,7 @@ label qst_guild_darkmage_wall_enter:
     $ TransformMarkus(False)
 
     "With tentacles thrust through the creature's eyes, it howled in pain as I dug in through the eye-sockets, blood poured out as it flailed to still desperately claw at me before tearing it's head apart vertically."
-    "The thing slumped down in front of me, pitiful sounds escaping its dying breathes as a pool of blood enveloped around the creature, and it finally stopped breathing."
+    "The thing slumped down in front of me, pitiful sounds escaping its dying breaths as a pool of blood enveloped around the creature, and it finally stopped breathing."
     scene bg_darkmage_lab
     show mc_transformed at left
     show cg_dark_mage_noarm at right

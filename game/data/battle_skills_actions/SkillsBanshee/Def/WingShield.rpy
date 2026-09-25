@@ -21,7 +21,7 @@ init python:
                 Effects_OnTarget = [
                     BattleEffect_ApplyStatusOnAlly(
                         StatusEffect = BattleStatusEff_DamageIn(
-                            DamageRecieved_Mod = self.DamageReductionPercentage[self.Level],
+                            DamageReceived_Mod = self.DamageReductionPercentage[self.Level],
                             Duration = 3,
                             SourceName = self.DisplayName, 
                             StatusEffectID = "banshee_wingshield_dmgtakenbuff"))])

@@ -20,7 +20,7 @@ init python:
                 Effects_OnTarget = [
                     BattleEffect_ApplyStatusOnAlly(
                         StatusEffect = BattleStatusEff_DamageIn(
-                            DamageRecieved_Mod = 1.3,
+                            DamageReceived_Mod = 1.3,
                             Duration = 2,
                             SourceName = self.DisplayName, 
                             StatusEffectID = "bers_finalspirit_dmgin_debuff")),

@@ -188,7 +188,7 @@ init python:
             # for restart only, will re-add this many items to corresp itempools
             self.ItemsRemovedDuringBattle = {0:{}, 1:{}}
 
-            # a list of [{item_id:qty}, {item_id:qty}], this DOESNT insantiate post battle loot items!
+            # a list of [{item_id:qty}, {item_id:qty}], this DOESNT instantiate post battle loot items!
             # these are instantiated (and discarded if necessary) on victory
             self.ItemsToBeDroppedOnVictory = []
 

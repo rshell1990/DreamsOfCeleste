@@ -1,4 +1,4 @@
-# I wonder if we need this anymore given the days of tweaking char sprites alot are past us now
+# I wonder if we need this anymore given the days of tweaking char sprites a lot are past us now
 # HOPEFULLY - tmm 03.05.2025
 # NEVERMIND we're still in need of these - tmm 05.01.2026
 

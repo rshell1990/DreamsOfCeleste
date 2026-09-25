@@ -11,7 +11,7 @@
 # world_non_exit_loc
 ## case 1: from any non-exit and non-travel location.
 # we see "world" tab.
-# we can click other world locations but we recieve the "wrong place" popup
+# we can click other world locations but we receive the "wrong place" popup
 
 # world_at_exit_loc
 ## case 2: from exit location. 
@@ -23,7 +23,7 @@
 ## case 2.1: from exit location, but we cannot leave (in narrative)
 # we see "world" tab initially. 
 # we can close the screen.
-# we can click other world locations but we recieve the "you cannot travel during narrative" popup
+# we can click other world locations but we receive the "you cannot travel during narrative" popup
 
 # travel_initiate
 ## case 3: from exit location, after clicking a loc

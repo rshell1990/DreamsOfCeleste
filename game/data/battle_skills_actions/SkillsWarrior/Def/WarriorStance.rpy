@@ -40,7 +40,7 @@ init python:
                                         SourceName = self.DisplayName))
             Battle_ApplyStatusEffect(TargetChar = self.Owner_BattleChar, 
                                     StatusEffect = BattleStatusEff_DamageIn(
-                                        DamageRecieved_Mod = self.DamageResBuff[self.Level] - 1.0,
+                                        DamageReceived_Mod = self.DamageResBuff[self.Level] - 1.0,
                                         Duration = 2,
                                         SourceName = self.DisplayName))
             return

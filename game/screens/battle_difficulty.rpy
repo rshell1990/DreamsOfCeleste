@@ -1,22 +1,20 @@
 screen BattleDifficultySelection():
-    default HoveredButton = 1
-
-    add "cg_space_hand1":
+    default HoveredButton = 0
+    add "cg_celeste_normal" fit "cover":
         if HoveredButton == 0:
             at DifficultyScreenBackground
         else:
             at DifficultyScreenBackgroundHide
-    add "cg_space_hand2":
+    add Transform("cg_celeste_normal", matrixcolor=TintMatrix("#9973CC")) fit "cover":
         if HoveredButton == 1:
             at DifficultyScreenBackground
         else:
             at DifficultyScreenBackgroundHide
-    add Transform("cg_space_hand2", matrixcolor = TintMatrix("#ff0000c0")):
+    add Transform("cg_celeste_normal", matrixcolor=BrightnessMatrix(-0.5)) fit "cover":
         if HoveredButton == 2:
             at DifficultyScreenBackground
         else:
             at DifficultyScreenBackgroundHide
-
     vbox:
         align (0.02, 0.4)
         vbox:

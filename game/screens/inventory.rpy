@@ -1,6 +1,6 @@
-########### WARNING THERES ALOT OF DUPE CODE IN THERE
-########### WARNING THERES ALOT OF COPIED CODE IN THERE
-########### WARNING THERES ALOT OF SAME CODE IN THERE
+########### WARNING THERES A LOT OF DUPE CODE IN THERE
+########### WARNING THERES A LOT OF COPIED CODE IN THERE
+########### WARNING THERES A LOT OF SAME CODE IN THERE
 
 screen inventory(charID = "mc"):
     on "show" action SetVariable("block_wait_dynamic", True)
@@ -9,15 +9,17 @@ screen inventory(charID = "mc"):
     modal True
 
     default Char_ID = charID # identifier of sel. char
-    default char_index = player_party.index(Char_ID) # index of player_party list
+    default char_index = player_party.index(Char_ID) if Char_ID in player_party else 0 # index of player_party list
     default SelItemID = None
 
     default CurrentPage = 0
 
-    default stat_attr_tab = "stats" # swaps between stat/attribute sections of char side    
+    default stat_attr_tab = "stats" # swaps between stat/attribute sections of char side
 
     default PartyInvXGrid = 7
     default PartyInvYGrid = 6
+    default page_size = PartyInvXGrid * PartyInvYGrid # items per inventory page
+    default total_pages = (len(player_inv) + page_size - 1) // page_size if player_inv else 0
 
     use close_outside("inventory")
     use outer_frame():
@@ -38,49 +40,14 @@ screen inventory(charID = "mc"):
                         allow_underfull True
                         xalign 0.5
                         # ItemID wraps 0-x, x-y, dep. on page
-                        for ItemID in sorted(player_inv, key = lambda x: all_items[x]["sort_order"])[CurrentPage * (PartyInvXGrid * PartyInvYGrid):CurrentPage * (PartyInvXGrid * PartyInvYGrid) + (PartyInvXGrid * PartyInvYGrid)]:
-                            fixed:
-                                fit_first True
-                                if SelItemID == ItemID:
-                                    add "images/gui/inventory_slots/slot_under.webp":
-                                        size gui.inventory_stored_item_size
-                                        matrixcolor TintMatrix((82, 55, 47))
-
-                                imagebutton:
-                                    idle  Transform(all_items[ItemID]["icon"], size = gui.inventory_stored_item_size, matrixcolor = IdentityMatrix())
-                                    hover Transform(all_items[ItemID]["icon"], size = gui.inventory_stored_item_size, matrixcolor = BrightnessMatrix(0.2))
-                                    if SelItemID != ItemID:
-                                        if ItemCanBeUsed(ItemID) or ItemCanBeDropped(ItemID) or GetCharEquippableQty(char_index, ItemID):
-                                            action SetLocalVariable("SelItemID", ItemID)
-                                        else:
-                                            action NullAction()
-                                    else:
-                                        action SetLocalVariable("SelItemID", None)
-
-                                    hovered TooltipSetUI(GetItemDesc(ItemID, player_inv[ItemID]))
-                                    unhovered TooltipClearUI()
-                                for party_Char_ID in player_party:
-                                    for slot_ID in EQP_SLOTS.ALL:
-                                        if worldChars[party_Char_ID][slot_ID] == ItemID:
-                                            if party_Char_ID == Char_ID:
-                                                add "images/gui/inventory_slots/slot_select.webp":
-                                                    size gui.inventory_stored_item_size
-                                                    matrixcolor TintMatrix((220, 120, 110))
-                                            else:
-                                                add "images/gui/inventory_slots/slot_select.webp":
-                                                    size gui.inventory_stored_item_size
-                                                    matrixcolor TintMatrix((200, 100, 90)) * OpacityMatrix(0.45)
-                                                
-                                        
-                                if player_inv[ItemID] > 1:
-                                    text str(player_inv[ItemID]):
-                                        align (0.95, 1.0)
+                        for ItemID in sorted(player_inv, key = lambda x: all_items[x]["sort_order"])[CurrentPage * page_size:CurrentPage * page_size + page_size]:
+                            use party_inv_item_cell(ItemID, char_index, Char_ID)
                 fixed:
                     xalign 0.5
                     xfill True
-                    if int(len(list(player_inv.keys())) / (PartyInvXGrid * PartyInvYGrid)) > 0:
+                    if total_pages > 0:
                         textbutton _("<< Prev. page"):
-                            action If(CurrentPage > 0, 
+                            action If(CurrentPage > 0,
                                     true = SetLocalVariable("CurrentPage", CurrentPage - 1))
                             xalign 0.0
                     hbox:
@@ -94,9 +61,9 @@ screen inventory(charID = "mc"):
                             if SelItemID is not None:
                                 if all_items[SelItemID]["on_use_story"] is not None:
                                     action [SetLocalVariable("SelItemID", None), Function(UseItemStory, Char_ID, SelItemID)]
-                    if int(len(list(player_inv.keys())) / (PartyInvXGrid * PartyInvYGrid)) > 0:
+                    if total_pages > 0:
                         textbutton _("Next page >>"):
-                            action If(CurrentPage < int((len(list(player_inv.keys())) - 1) / (PartyInvXGrid * PartyInvYGrid)), 
+                            action If(CurrentPage < total_pages - 1, 
                                     true = SetLocalVariable("CurrentPage", CurrentPage + 1))
                             xalign 1.0
                         
@@ -315,6 +282,48 @@ screen attribute_box(CharObj, AttrID, XSize = 220, Icon = False):
             else:
                 text str(CharObj[AttrID]):
                     xalign 0.5
+
+# one item slot of the party inventory grid: icon, selection highlight,
+# equipped-by-party overlay and stack count
+screen party_inv_item_cell(ItemID, char_index, Char_ID):
+    fixed:
+        fit_first True
+        if SelItemID == ItemID:
+            add "images/gui/inventory_slots/slot_under.webp":
+                size gui.inventory_stored_item_size
+                matrixcolor TintMatrix((82, 55, 47))
+
+        imagebutton:
+            idle  Transform(all_items[ItemID]["icon"], size = gui.inventory_stored_item_size, matrixcolor = IdentityMatrix())
+            hover Transform(all_items[ItemID]["icon"], size = gui.inventory_stored_item_size, matrixcolor = BrightnessMatrix(0.2))
+            if SelItemID != ItemID:
+                if ItemCanBeUsed(ItemID) or ItemCanBeDropped(ItemID) or GetCharEquippableQty(char_index, ItemID):
+                    action SetScreenVariable("SelItemID", ItemID)
+                else:
+                    action NullAction()
+            else:
+                action SetScreenVariable("SelItemID", None)
+
+            hovered TooltipSetUI(GetItemDesc(ItemID, player_inv[ItemID]))
+            unhovered TooltipClearUI()
+    use equipped_overlay_marks(ItemID, Char_ID)
+    if player_inv[ItemID] > 1:
+        text str(player_inv[ItemID]):
+            align (0.95, 1.0)
+
+# shows which party member (if any) currently has this item equipped
+screen equipped_overlay_marks(ItemID, Char_ID):
+    for party_Char_ID in player_party:
+        for slot_ID in EQP_SLOTS.ALL:
+            if worldChars[party_Char_ID][slot_ID] == ItemID:
+                if party_Char_ID == Char_ID:
+                    add "images/gui/inventory_slots/slot_select.webp":
+                        size gui.inventory_stored_item_size
+                        matrixcolor TintMatrix((220, 120, 110))
+                else:
+                    add "images/gui/inventory_slots/slot_select.webp":
+                        size gui.inventory_stored_item_size
+                        matrixcolor TintMatrix((200, 100, 90)) * OpacityMatrix(0.45)
 
 screen equipment_slot(char_index, SelItemID, slot_ID):
     fixed:
@@ -698,12 +707,20 @@ screen buy_item_stack(ItemID, ShopLM):
                     action Hide("buy_item_stack")
                     keysym config.keymap['gui_rest_menu']
 
-screen sell_item_stack(ItemID, ShopLM):
+init python:
+    def make_stack_confirm_action(Fn, Args, Amount, ScreenName, Kwargs = None):
+        # builds [confirm action with amount appended, hide screen]
+        if Kwargs is None:
+            Kwargs = {}
+        return [Function(Fn, *(list(Args) + [Amount]), **Kwargs), Hide(ScreenName)]
+
+# shared body for stack-sized confirm popups (sell, drop, ...)
+screen stack_transfer(ItemID, PromptText, transfer_amount_max, ConfirmFn, ConfirmArgs, HideScreenName,
+        ConfirmKwargs = {}, ShowBar = True, YAlign = 0.1, TotalValueFn = None, TotalValueLM = None,
+        InfoText = None, WarnText = None):
     modal True
 
-    
-    default transfer_amount_max = GetMaxToSell(ItemID, ShopLM)
-    default transfer_amount = max(1, int(transfer_amount_max/2))
+    default transfer_amount = max(1, int(transfer_amount_max / 2))
     key "w" action SetLocalVariable("transfer_amount", transfer_amount_max)
     key "s" action SetLocalVariable("transfer_amount", 1)
     key "a" action SetLocalVariable("transfer_amount", max(1, min(transfer_amount - 1, transfer_amount_max)))
@@ -713,91 +730,59 @@ screen sell_item_stack(ItemID, ShopLM):
     #add "images/gui/unsorted/black_under.webp"
     use outer_frame(800, 465, padd_top = 30):
         vbox:
-            ypos 0.1
+            yalign YAlign
             xalign 0.5
             spacing 10
             text all_items[ItemID]["name"]:
                 text_align .5
                 xalign 0.5
-            text tra(_("Sell %s?")) % transfer_amount:
-                    text_align .5
-                    xalign 0.5
-            add "images/gui/unsorted/splitter_line.webp":
-                xalign 0.5
-                xsize 0.75
-                ysize 20
-            bar:
-                xalign 0.5
-                value ScreenVariableValue("transfer_amount", transfer_amount_max - 1, style = "slider", offset = 1, step = 1)
-                range transfer_amount_max
-                xsize 600
-            text tra(_("Total value: %s")) % (GetShopSellToPrice(ItemID, ShopLM) * transfer_amount):
-                xalign 0.5
-                text_align .5
-            hbox:
-                xalign 0.5
-                spacing 5
-                textbutton _("Confirm (e)"):
-                    style "confirm_button"
-                    keysym ["K_RETURN", "K_e"]
-                    action Function(UI_SellItem, ShopLM, ItemID, transfer_amount), Hide("sell_item_stack")
-                textbutton _("Cancel (t)"):
-                    style "confirm_button"
-                    action Hide("sell_item_stack")
-                    keysym config.keymap['gui_rest_menu']
-            if GetEquippedQty(ItemID) > player_inv[ItemID] - transfer_amount:
-                text tra(_("Selling will unequip %s.")) % (abs(player_inv[ItemID] - GetEquippedQty(ItemID) - transfer_amount)):
-                    text_align .5
-                    xalign 0.5
-
-screen drop_item(ItemID):
-    modal True
-
-    default transfer_amount = max(1, int(player_inv[ItemID]/2))
-    default transfer_amount_max = player_inv[ItemID]
-    key "w" action SetLocalVariable("transfer_amount", transfer_amount_max)
-    key "s" action SetLocalVariable("transfer_amount", 1)
-    key "a" action SetLocalVariable("transfer_amount", max(1, min(transfer_amount - 1, transfer_amount_max)))
-    key "d" action SetLocalVariable("transfer_amount", max(1, min(transfer_amount + 1, transfer_amount_max)))
-    on "show" action TooltipClearUI()
-
-    #add "images/gui/unsorted/black_under.webp"
-    use outer_frame(800, 465, padd_top = 30, padd_bot = 30):
-        vbox:
-            yalign 0.5
-            xalign 0.5
-            spacing 10
-            text all_items[ItemID]["name"]:
-                text_align .5
-                xalign 0.5
-            text tra(_("Drop %s?")) % transfer_amount:
+            text tra(PromptText) % transfer_amount:
                 text_align .5
                 xalign 0.5
             add "images/gui/unsorted/splitter_line.webp":
                 xalign 0.5
                 xsize 0.75
                 ysize 20
-            if player_inv[ItemID] > 1:
+            if ShowBar:
                 bar:
                     xalign 0.5
                     value ScreenVariableValue("transfer_amount", transfer_amount_max - 1, style = "slider", offset = 1, step = 1)
                     range transfer_amount_max
                     xsize 600
-            text _("Dropped items cannot be recovered!"):
-                text_align .5
-                xalign 0.5
+            if TotalValueFn is not None:
+                text tra(_("Total value: %s")) % (TotalValueFn(ItemID, TotalValueLM) * transfer_amount):
+                    xalign 0.5
+                    text_align .5
             hbox:
                 xalign 0.5
                 spacing 5
                 textbutton _("Confirm (e)"):
                     style "confirm_button"
                     keysym ["K_RETURN", "K_e"]
-                    action Function(RemItemFrom, player_inv, ItemID, transfer_amount, FromPlayer = True), Hide("drop_item")
+                    action make_stack_confirm_action(ConfirmFn, ConfirmArgs, transfer_amount, HideScreenName, ConfirmKwargs)
                 textbutton _("Cancel (t)"):
                     style "confirm_button"
-                    action Hide("drop_item")
-                    keysym "K_t"
-            if GetEquippedQty(ItemID) > player_inv[ItemID] - transfer_amount:
-                text tra(_("Dropping will unequip %s.")) % (abs(player_inv[ItemID] - GetEquippedQty(ItemID) - transfer_amount)):
+                    action Hide(HideScreenName)
+                    keysym config.keymap['gui_rest_menu']
+            if InfoText is not None:
+                text InfoText:
                     text_align .5
                     xalign 0.5
+            if WarnText is not None:
+                if GetEquippedQty(ItemID) > player_inv[ItemID] - transfer_amount:
+                    text tra(WarnText) % (max(0, GetEquippedQty(ItemID) - (player_inv[ItemID] - transfer_amount))):
+                        text_align .5
+                        xalign 0.5
+
+screen sell_item_stack(ItemID, ShopLM):
+    modal True
+
+    use stack_transfer(ItemID, _("Sell %s?"), GetMaxToSell(ItemID, ShopLM), UI_SellItem, (ShopLM, ItemID), "sell_item_stack",
+        TotalValueFn = GetShopSellToPrice, TotalValueLM = ShopLM, YAlign = 0.1, WarnText = _("Selling will unequip %s."))
+
+screen drop_item(ItemID):
+    modal True
+
+    use stack_transfer(ItemID, _("Drop %s?"), player_inv[ItemID], RemItemFrom, (player_inv, ItemID), "drop_item",
+        ConfirmKwargs = {"FromPlayer": True}, ShowBar = player_inv[ItemID] > 1, YAlign = 0.5,
+        InfoText = _("Dropped items cannot be recovered!"), WarnText = _("Dropping will unequip %s."))

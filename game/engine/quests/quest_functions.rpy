@@ -87,7 +87,7 @@ init -1 python:
         elif isinstance(Quest, BaseQuest):
             return Quest
     
-    # created for trade screen this is more like utility, you shouldnt really do this kind of shit manually alot
+    # created for trade screen this is more like utility, you shouldnt really do this kind of shit manually a lot
     def QstGetByName(ClassName):
         return questObjs[ClassName]
 

@@ -29,7 +29,7 @@ init python:
                 Effects_OnSelf = [
                     BattleEffect_ApplyStatusOnAlly(
                         StatusEffect = BattleStatusEff_DamageIn(
-                            DamageRecieved_Mod = 0.3,
+                            DamageReceived_Mod = 0.3,
                             Duration = 2,
                             SourceName = self.DisplayName,
                             StatusEffectID = "inquisitor_firewall_dmgin_buff")),

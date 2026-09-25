@@ -27,7 +27,7 @@ init python:
                             StatusEffectID = "banshee_bargains_song_dmgout_buff")),
                     BattleEffect_ApplyStatusOnAlly(
                         StatusEffect = BattleStatusEff_DamageIn(
-                            DamageRecieved_Mod = 1.2,
+                            DamageReceived_Mod = 1.2,
                             Duration = 2, 
                             SourceName = self.DisplayName, 
                             StatusEffectID = "banshee_bargains_song_dmgin_dbuff"))])

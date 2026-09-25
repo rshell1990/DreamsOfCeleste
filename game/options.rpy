@@ -8,7 +8,7 @@
 # 3) run Renparse.exe, fix broken file paths if any
 # 4) make sure all images are .webp
 #    (and their corresponding file extension names in code)
-#    it not mandatory but it saves *alot* of space long-term
+#    it not mandatory but it saves *a lot* of space long-term
 # 5) make sure that SaveGameVersion is being set to this builds 
 #    (even if no save update stuff was required)
 #    serach for SAVE_UPDATE_ANCHOR in project
@@ -114,8 +114,8 @@ default preferences.afm_time = 15
 
 define config.scene = ClearScene
 
-define config.name = _("Parasite Black")
-define build.name = "ParasiteBlack"
+define config.name = _("Dreams of Celeste")
+define build.name = "DreamsOfCeleste"
 
 define config.allow_underfull_grids = True
 

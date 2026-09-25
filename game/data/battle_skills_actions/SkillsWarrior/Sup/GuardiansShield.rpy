@@ -27,7 +27,7 @@ init python:
                 Effects_OnSelf = [BattleEffect_ApplyStatusOnAlly(
                                         StatusEffect = BattleStatusEff_DamageIn(
                                             StatusEffectID = "warrior_shield_damageinbuff",
-                                            DamageRecieved_Mod = self.DamageResBuff[self.Level],
+                                            DamageReceived_Mod = self.DamageResBuff[self.Level],
                                             Duration = 2,
                                             SourceName = self.DisplayName))])
             Battle_GrantExtraTurn(self.Owner_BattleChar)

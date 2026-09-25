@@ -6,7 +6,7 @@ init -1 python:
     def CharSetPreg(CharID, Val):
         CharSetVar(CharID, "preg", Val)
         return
-    # to easily tell "that char is preg" in a visual sprite sense, also used alot in logic
+    # to easily tell "that char is preg" in a visual sprite sense, also used a lot in logic
     def CharIsVisiblyPreg(CharID):
         if _in_replay:
             return store.Sex_SharedPregFlag
