@@ -1,9 +1,9 @@
 init python:
     @AppendToAllQuests
-    class QstPrologue(BaseQuest):
+    class QstPrologue(LogicModule):
         GOALS = {
             0: QuestStage(_("Help with the farm"),     
-                ## trackTag = "btn_brother",
+                ## trackTag = "btn_nashar",
                 hintTxt = _("I need to help with the farm.")),
             1: QuestStage(_("Meet Brody at the lake"),
                 ## trackTag = "btn_lake",    
@@ -23,6 +23,12 @@ init python:
             self.FarmTended = False
             self.MetBrody = False
             self.GoHome = False
+
+        def locationMod(self):
+            btnMods = {}
+            if self.GotScythe == False:
+                btnMods["btn_farming_equipment"]
+            return btnMods
 
         def onEnter(self):  
             if GetLocID() == "house_livingroom":

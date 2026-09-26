@@ -1,30 +1,50 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/data/label_start.rpy", line 29, in script
-    $ Celeste.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
-  File "game/data/label_start.rpy", line 29, in <module>
-    $ Celeste.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
-      ^^^^^^^                                                                              
-NameError: name 'Celeste' is not defined
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in script
+    $ QstStart(QstPrologue)
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in <module>
+    $ QstStart(QstPrologue)
+      ~~~~~~~~^^^^^^^^^^^^^
+  File "game/engine/quests/quest_functions.rpy", line 20, in QstStart
+    _QstSubst(Quest).start(silent = Silent)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/engine/quests/quest_classes.rpy", line 124, in start
+    self._tryCall("onStart")
+    ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "game/engine/quests/quest_classes.rpy", line 70, in _tryCall
+    getattr(self, funName)(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 170, in onStart
+NameError: name 'DialogueAdara' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/data/label_start.rpy", line 29, in script
-    $ Celeste.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in script
+    $ QstStart(QstPrologue)
   File "renpy/ast.py", line 1193, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1276, in py_exec_bytecode
     exec(bytecode, globals, locals)
     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/data/label_start.rpy", line 29, in <module>
-    $ Celeste.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
-      ^^^^^^^                                                                              
-NameError: name 'Celeste' is not defined
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in <module>
+    $ QstStart(QstPrologue)
+      ~~~~~~~~^^^^^^^^^^^^^
+  File "game/engine/quests/quest_functions.rpy", line 20, in QstStart
+    _QstSubst(Quest).start(silent = Silent)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/engine/quests/quest_classes.rpy", line 124, in start
+    self._tryCall("onStart")
+    ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "game/engine/quests/quest_classes.rpy", line 70, in _tryCall
+    getattr(self, funName)(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 170, in onStart
+NameError: name 'DialogueAdara' is not defined
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.3.26051504
 Dreams of Celeste 0.001
-Fri Sep 25 12:07:33 2026
+Fri Sep 25 22:40:24 2026

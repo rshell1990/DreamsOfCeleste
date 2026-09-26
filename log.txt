@@ -1,35 +1,35 @@
-2026-09-25 17:07:19 UTC
+2026-09-26 03:38:44 UTC
 Windows-11-10.0.26200-SP0
 Ren'Py 8.5.3.26051504
 
-Early init took 76 ms
-Loading error handling took 45 ms
-Loading script took 627 ms
-Loading save slot metadata took 51 ms
+Early init took 75 ms
+Loading error handling took 33 ms
+Loading script took 485 ms
+Loading save slot metadata took 50 ms
 Loading persistent took 1 ms
 Failed to initialize steam: Exception('steamapi.InitFlat returned 1 (No appID found.  Either launch the game from Steam, or put the file steam_appid.txt containing the correct appID in your game folder.)')
-Running init code took 266 ms
-Loading analysis data took 18 ms
-Analyze and compile ATL took 14 ms
+Running init code took 312 ms
+Loading analysis data took 15 ms
+Analyze and compile ATL took 11 ms
 Reloading save slot metadata took 3 ms
 Backing up script files to 'C:\\Users\\Fitz\\AppData\\Roaming/RenPy/backups\\DreamsOfCeleste':
-Dump and make backups took 14 ms
+Dump and make backups took 13 ms
 Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 55 ms
+Making clean stores took 1 ms
+Initial gc took 52 ms
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object took 2 ms
 Init translation took 1 ms
-Cleaning stores took 1 ms
+Cleaning stores took 0 ms
 Load screen analysis took 0 ms
-Analyze screens took 27 ms
+Analyze screens took 26 ms
 Save screen analysis took 35 ms
 Save pyanalysis took 0 ms
 Save bytecode took 56 ms
 Running _start took 1 ms
-Interface start took 589 ms
+Interface start took 617 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1600, 900)
@@ -43,23 +43,43 @@ Screen sizes: virtual=(1920, 1080) physical=(1052, 592) drawable=(1052, 592)
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "game/data/label_start.rpy", line 29, in script
-    $ Celeste.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in script
+    $ QstStart(QstPrologue)
   File "renpy/ast.py", line 1193, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1276, in py_exec_bytecode
     exec(bytecode, globals, locals)
     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/data/label_start.rpy", line 29, in <module>
-    $ Celeste.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
-      ^^^^^^^                                                                              
-NameError: name 'Celeste' is not defined
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in <module>
+    $ QstStart(QstPrologue)
+      ~~~~~~~~^^^^^^^^^^^^^
+  File "game/engine/quests/quest_functions.rpy", line 20, in QstStart
+    _QstSubst(Quest).start(silent = Silent)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/engine/quests/quest_classes.rpy", line 124, in start
+    self._tryCall("onStart")
+    ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "game/engine/quests/quest_classes.rpy", line 70, in _tryCall
+    getattr(self, funName)(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 170, in onStart
+NameError: name 'DialogueAdara' is not defined
 
 While running game code:
-  File "game/data/label_start.rpy", line 29, in script
-    $ Celeste.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
-  File "game/data/label_start.rpy", line 29, in <module>
-    $ Celeste.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
-      ^^^^^^^                                                                              
-NameError: name 'Celeste' is not defined
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in script
+    $ QstStart(QstPrologue)
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in <module>
+    $ QstStart(QstPrologue)
+      ~~~~~~~~^^^^^^^^^^^^^
+  File "game/engine/quests/quest_functions.rpy", line 20, in QstStart
+    _QstSubst(Quest).start(silent = Silent)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/engine/quests/quest_classes.rpy", line 124, in start
+    self._tryCall("onStart")
+    ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "game/engine/quests/quest_classes.rpy", line 70, in _tryCall
+    getattr(self, funName)(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 170, in onStart
+NameError: name 'DialogueAdara' is not defined
