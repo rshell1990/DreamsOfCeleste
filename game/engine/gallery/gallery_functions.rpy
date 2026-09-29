@@ -100,6 +100,6 @@ init python:
         return
 
     def IsPlayerInGalleryScene():
-        if (store.PlayerInGallery == True) or (_in_replay == None):
+        if _in_replay is None:
             return False
-        return True
+        return not getattr(store, "PlayerInGallery", False)

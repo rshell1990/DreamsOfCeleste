@@ -343,13 +343,13 @@ screen satyrlauncher():
                             ypos 0.91
                             if selected["wishlist"] != "":
                                 button at zoom_button_link:
-                                    add "publisher_launcher/assets/steam_2.png"
+                                    add "publisher_launcher/assets/steam_2.webp"
                                     action If(has_internet, OpenURL(selected["wishlist"]), None)
                                     sensitive (has_internet == True)
                             if not launcher_steam_build:
                                 if selected["patreon"] != "":
                                     button at zoom_button_link:
-                                        add "publisher_launcher/assets/patreon.png"
+                                        add "publisher_launcher/assets/patreon.webp"
                                         action If(has_internet, OpenURL(selected["patreon"]), None)
                                         sensitive (has_internet == True)
                             vbox:
@@ -365,15 +365,15 @@ screen satyrlauncher():
                     ypos config.screen_height * 9 // 10   
                     hbox:
                         yalign 0.5
-                        add "publisher_launcher/assets/steam.png" fit "contain"  ysize 30
+                        add "publisher_launcher/assets/steam.webp" fit "contain"  ysize 30
                         textbutton "satyrgames" action If(has_internet, OpenURL("https://store.steampowered.com/publisher/satyrgames"), None) sensitive (has_internet == True) background None text_color "#ffffff" text_size 22 xpos 5 ypos -8 text_font launcher_font
                     hbox:
                         yalign 0.5
-                        add "publisher_launcher/assets/twitter.png" fit "contain"  ysize 30
+                        add "publisher_launcher/assets/twitter.webp" fit "contain"  ysize 30
                         textbutton "satyrgames" action If(has_internet, OpenURL("https://x.com/satyrgames"), None) sensitive (has_internet == True) background None text_color "#ffffff" text_size 22 xpos 5 ypos -8 text_font launcher_font
                     hbox:
                         yalign 0.5
-                        add "publisher_launcher/assets/email.png" fit "contain" ysize 30
+                        add "publisher_launcher/assets/email.webp" fit "contain" ysize 30
                         textbutton "contact@satyrgames.com" action If(has_internet, OpenURL("mailto:contact@satyrgames.com"), None) sensitive (has_internet == True) background None text_color "#ffffff" text_size 22 xpos 5 ypos -8 text_font launcher_font
 
 

@@ -30,9 +30,9 @@ init -1 python:
 
     # during development i sometimes need to press ctrl w/o weird shit happening so I just freed right ctrl -tmm
     if config.developer:
-        config.keymap["skip"] = ["K_LCTRL"]
+        config.keymap["skip"] = ["K_LCTRL", "K_LSHIFT", "K_RSHIFT"]
     else:
-        config.keymap["skip"] = ["K_LCTRL", "K_RCTRL"]
+        config.keymap["skip"] = ["K_LCTRL", "K_RCTRL", "K_LSHIFT", "K_RSHIFT"]
     config.keymap["fast_skip"] = [">", "shift_K_PERIOD"]
     config.keymap["full_inspector"] = ["alt_shift_K_i"]
     config.keymap["developer"] = ["shift_K_d"]

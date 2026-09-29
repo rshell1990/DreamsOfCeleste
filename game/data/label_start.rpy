@@ -33,13 +33,13 @@ label start:
 
     # intro picture
     scene black with Dissolve(1.0)
-    scene expression Transform("images/cgs/intro_picture.png", size = (config.screen_width, config.screen_height), fit = "cover") with Dissolve(1.0)
+    scene expression Transform("images/cgs/intro_picture.webp", size = (config.screen_width, config.screen_height), fit = "cover") with Dissolve(1.0)
     show expression Transform("images/vfx_sprites/vfx_light_haze.webp", size = (config.screen_width, config.screen_height), fit = "cover") as intro_smoke at intro_smoke_drift
     $ renpy.pause(3.0)
     scene black with Dissolve(1.0)
 
     # init vars
-    $ CELESTE.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
+    $ CELESTE.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.webp"
 
     # char creation
     scene black with dissolve

@@ -100,7 +100,7 @@ init python hide:
     build.classify("game/images/**.webm",   "images") # anim webms be images too
     build.classify("game/gui/**.webp",      "images")
     # launcher-related images(and a font)
-    build.classify("game/publisher_launcher/**.png", "images")
+    build.classify("game/publisher_launcher/**.webp", "images")
     build.classify("game/publisher_launcher/**.jpg", "images")
     build.classify("game/publisher_launcher/**.otf", "images")
     build.classify("game/publisher_launcher/**.webp", "images")

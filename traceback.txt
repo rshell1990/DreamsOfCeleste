@@ -1,50 +1,45 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in script
-    $ QstStart(QstPrologue)
-  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in <module>
-    $ QstStart(QstPrologue)
-      ~~~~~~~~^^^^^^^^^^^^^
-  File "game/engine/quests/quest_functions.rpy", line 20, in QstStart
-    _QstSubst(Quest).start(silent = Silent)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "game/engine/quests/quest_classes.rpy", line 124, in start
-    self._tryCall("onStart")
-    ~~~~~~~~~~~~~^^^^^^^^^^^
-  File "game/engine/quests/quest_classes.rpy", line 70, in _tryCall
-    getattr(self, funName)(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 170, in onStart
-NameError: name 'DialogueAdara' is not defined
+  File "game/engine/locations/coreLoop.rpy", line 52, in script call
+    call expression Story_NavLoop_PotentialEventLabels[0] from _call_expression_4
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 664, in script
+    show father @sad at cright
+Exception: Image 'father' does not accept attributes '@sad'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in script
-    $ QstStart(QstPrologue)
-  File "renpy/ast.py", line 1193, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1276, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 153, in <module>
-    $ QstStart(QstPrologue)
-      ~~~~~~~~^^^^^^^^^^^^^
-  File "game/engine/quests/quest_functions.rpy", line 20, in QstStart
-    _QstSubst(Quest).start(silent = Silent)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "game/engine/quests/quest_classes.rpy", line 124, in start
-    self._tryCall("onStart")
-    ~~~~~~~~~~~~~^^^^^^^^^^^
-  File "game/engine/quests/quest_classes.rpy", line 70, in _tryCall
-    getattr(self, funName)(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "game/data/world_quests/main/Prologue/qst_TheTerminus.rpy", line 170, in onStart
-NameError: name 'DialogueAdara' is not defined
+  File "game/engine/locations/coreLoop.rpy", line 52, in script call
+    call expression Story_NavLoop_PotentialEventLabels[0] from _call_expression_4
+  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 664, in script
+    show father @sad at cright
+  File "renpy/ast.py", line 1364, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ast.py", line 730, in show_imspec
+    renpy.config.show(
+    ~~~~~~~~~~~~~~~~~^
+        name, at_list=at_list, layer=layer, what=expression, zorder=zorder, tag=tag, behind=behind, atl=atl
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/exports/displayexports.py", line 486, in show
+    if not base.find_target() and renpy.config.missing_show:
+           ~~~~~~~~~~~~~~~~^^                               
+  File "renpy/display/image.py", line 444, in find_target
+    self.target = target._duplicate(a)
+                  ~~~~~~~~~~~~~~~~~^^^
+  File "renpy/display/displayable.py", line 278, in _duplicate
+    args.extraneous()
+    ~~~~~~~~~~~~~~~^^
+  File "renpy/display/displayable.py", line 118, in extraneous
+    raise Exception(
+    ...<4 lines>...
+    )
+Exception: Image 'father' does not accept attributes '@sad'.
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.3.26051504
 Dreams of Celeste 0.001
-Fri Sep 25 22:40:24 2026
+Tue Sep 29 12:26:19 2026

@@ -1,27 +1,154 @@
 define Celine = Character("Celine", image="celine_young")
 define Nashar = Character("Nashar", image="nashar")
 define Father = Character("Father", image="father")
-define Mother = Character("Mother", image="motherwithbaby")
+define Mother = Character("Mother", image="mother")
 define Boris = Character("Boris", image="boris")
-define fatherandbrotherfight = "images/cgs/Brothervsfather.png"
-define brothersisterhug = "images/cgs/Brother_And_Celeste.png"
-
+define Kayanna = Character("Kayanna", image="kayanna")
+define Knight = Character("Knight", image="knight")
+define Guard = Character("Guard", image="guard")
+define Guard2 = Character("Guard", image="guard2")
+define Ursula = Character("Ursula", image="ursula")
+define Hara = Character("Sister Hara", image="hara")
+define sister1 = Character("Unfamiliar Nun A", image="sister1")
+define sister2 = Character("Unfamiliar Nun B", image="sister2")
+define Brad = Character("Brad (Goon A)")
+define Danny = Character("Danny (Goon B)")
+define nunA = Character("Unfamiliar Nun A")
+define nunB = Character("Unfamiliar Nun B")
+define Harlok = Character("Harlok", image="harlok")
+image fatherandbrotherfight = "images/cgs/Brothervsfather.webp"
+image brothersisterhug = Transform(
+    "images/cgs/Brother_And_Celeste.webp",
+    size=(config.screen_width, config.screen_height),
+    fit="contain",
+)
 image black = Solid("#000")
-image CG_NailedCrow = "images/cgs/crowhammered.png"
-image cgAngryFather = "images/cgs/celestedad_angry.png"
-image father = "images/characters/father/celeste_father_neutral.png"
-image father_angry = "images/characters/father/normal/celeste_father_angry.png"
-image celine_young = "images/characters/celeste_young/celeste_10_yrs_neutral_face.png"
-image celine_young_crying = "images/characters/celeste_young/normal/celeste_10_yrs_crying.png"
-image nashar = "images/characters/nashar/celeste_brother_neutral.png"
-image nashar angry = "images/characters/nashar/normal/celeste_brother_angry.png"
-image celine_young_sad = "images/characters/celeste_young/normal/celeste_10_yrs_sad.png"
-image motherwithbaby = "images/characters/mother/celeste_mother_baby_neutral.png"
-image boris = "images/characters/boris/celeste_boris_neutral.png"
-image childhood_living_room_day = "data/world_locations/novaras/childhood_home/childhood_living_room_day.png"
+image CG_NailedCrow = "images/cgs/crowhammered.webp"
+image cgAngryFather = "images/cgs/celestedad_angry.webp"
+image father = "images/characters/father/celeste_father_neutral.webp"
+image father_angry = "images/characters/father/normal/celeste_father_angry.webp"
+image father_sad = "images/characters/father/normal/celeste_father_sad.webp"
+image celine_young = "images/characters/celeste_young/celeste_10_yrs_neutral_face.webp"
+image celine_young_crying = "images/characters/celeste_young/normal/celeste_10_yrs_crying.webp"
+image celine_young_sad = "images/characters/celeste_young/normal/celeste_10_yrs_sad.webp"
+image celine_teen = "images/characters/celeste_teen/celeste_15_yrs_neutral_face.webp"
+image nashar = "images/characters/nashar/celeste_brother_neutral.webp"
+image nashar angry = "images/characters/nashar/normal/celeste_brother_angry.webp"
+image boris = "images/characters/boris/boris_neutral_face.webp"
+image mother = "images/characters/mother/celeste_mother_neutral.webp"
+image motherwithbaby = "images/characters/mother/celeste_mother_baby_neutral.webp"
+image mother blackeye = "images/characters/mother/black_eye/celeste_mother_angry_black_eye.webp"
+image kayanna = "images/characters/kayanna/kayana_sylvaris_neutral_face_clothed.webp"
+image knight = Transform(
+    "images/characters/knight/knight.webp",
+    size=(int(config.screen_width * 0.32), int(config.screen_height * 0.8)),
+    fit="contain",
+)
+image guard = "images/characters/guard/guard_neutral.webp"
+image guard2 = "images/characters/guard/guard_neutral.webp"
+image ursula = "images/characters/ursula/ursula_neutral_face.webp"
+image hara = "images/characters/nuns/v1.webp"
+image sister1 = "images/characters/nuns/v2.webp"
+image sister2 = "images/characters/nuns/v3.webp"
+image nunA = "images/characters/nuns/v2.webp"
+image nunB = "images/characters/nuns/v3.webp"
+image harlok = "images/characters/harlok/harlok.webp"
+image harlokgoon = "images/characters/harlok_goon_a/bully_1.webp"
+image harlokgoon2 = "images/characters/harlok_goon_b/bully_2.webp"
+image celinebreakingharloksfoot = "images/cgs/DOC_CG_Celeste_BreakingHarloksLeg_daylight.webp"
+image childhood_living_room_day = "data/world_locations/novaras/childhood_home/childhood_living_room_day.webp"
+image childhood_living_room = "data/world_locations/novaras/childhood_home/childhood_living_room_day.webp"
+image childhood_living_room_night = "data/world_locations/novaras/childhood_home/childhood_living_room_night.webp"
+image parent_room = "data/world_locations/novaras/childhood_home/parent_room_day.webp"
+image parent_room_night = "data/world_locations/novaras/childhood_home/parent_room_night.webp"
+image childhood_attic_room = "data/world_locations/novaras/childhood_home/childhood_attic_room_day.webp"
+image childhood_attic_room_night = "data/world_locations/novaras/childhood_home/childhood_attic_room_night.webp"
+image childhood_home_outdoor = "data/world_locations/novaras/childhood_home/childhood_home_outdoor_day.webp"
+image childhood_home_outdoor_night = "data/world_locations/novaras/childhood_home/childhood_home_outdoor_night.webp"
+image childhood_home_outdoor_back = "data/world_locations/novaras/childhood_home/childhood_home_outdoor_back_day.webp"
+image childhood_home_outdoor_back_night = "data/world_locations/novaras/childhood_home/childhood_home_outdoor_back_night.webp"
+image childhood_barn = "data/world_locations/novaras/childhood_home/childhood_barn_day.webp"
+image childhood_barn_night = "data/world_locations/novaras/childhood_home/childhood_barn_night.webp"
+image lake = "data/world_locations/novaras/childhood_home/lake_day.webp"
+image lake_night = "data/world_locations/novaras/childhood_home/lake_night.webp"
+image separation = "images/cgs/separation.webp"
+image parentssleeping = "images/cgs/parents_sleeping.webp"
+image funeral = "images/cgs/funeral.webp"
+image nasharincoffin = "images/cgs/00006.webp"
+image closerlook = "images/cgs/00007.webp"
+image heldbynuns = "images/cgs/00010.webp"
+image ursulabargesin = "images/cgs/00012.webp"
+image haraontheground = "images/cgs/00013.webp"
+image wakeup = "images/cgs/00008.webp"
+image purpleeyes = "images/cgs/00011.webp"
+image stunned = "images/cgs/00002.webp"
+image parentsinbedburning = "images/cgs/DoC_CG_CelesteParents_Burning1.webp"
+image parentsinbedburning2 = "images/cgs/DoC_CG_CelesteParents_Burning2.webp"
+image houseburning = "images/cgs/farmhome_fire_night.webp"
+image celinewithbaby = "images/characters/celeste_young/celeste_10_yrs_baby_neutral_face.webp"
+image celeneagainstnuns = "images/cgs/00010.webp"
+image nunwithknife = "images/cgs/DOC_CG_SisterKatherine_Knife.webp"
+image nunknifedeath = "images/cgs/DOC_CG_SisterKatherine_death.webp"
+image nunsarounddeadnun = "images/cgs/00014.webp"
+image sixmonthslatertext = Text("Six months later", size=64)
 
 init python:
-    WorldLocation("house_livingroom", _("Childhood Home"), "childhood_living_room_day")
+    WorldLocation("house_livingroom", _("Childhood Home"), "childhood_living_room")
+    WorldLocation("parents_bedroom", _("Parents' Bedroom"), "parent_room")
+    WorldLocation("childhood_attic_room", _("Childhood Attic"), "childhood_attic_room")
+    WorldLocation("childhood_home_outdoor", _("Farm Courtyard"), "childhood_home_outdoor_back")
+    WorldLocation("childhood_barn", _("Barn"), "childhood_barn")
+    WorldLocation("childhood_lake", _("Lake"), "lake")
+
+    house_livingroom = wLocs["house_livingroom"]
+    house_livingroom.withBtn("leave_childhood_room", BtnChangeLoc(STR_NAV.LEAVE, "childhood_home_outdoor"))
+    house_livingroom.withBtn("childhood_to_parents_bedroom", BtnChangeLoc(STR_NAV.TO_BEDROOM, "parents_bedroom"))
+    house_livingroom.withBtn("childhood_to_attic", BtnChangeLoc(_("Go to the attic"), "childhood_attic_room"))
+    wLocs["parents_bedroom"].withBtn("parents_bedroom_to_livingroom", BtnChangeLoc(STR_NAV.TO_LIVING_ROOM, "house_livingroom"))
+    wLocs["childhood_attic_room"].withBtn("attic_to_livingroom", BtnChangeLoc(STR_NAV.TO_LIVING_ROOM, "house_livingroom"))
+    wLocs["childhood_home_outdoor"].withBtn("courtyard_to_livingroom", BtnChangeLoc(STR_NAV.TO_LIVING_ROOM, "house_livingroom"))
+    wLocs["childhood_home_outdoor"].withBtn("courtyard_to_barn", BtnChangeLoc(_("Go towards the barn"), "childhood_barn"))
+    wLocs["childhood_home_outdoor"].withBtn("courtyard_to_lake", BtnChangeLoc(_("Go to the lake"), "childhood_lake"))
+    wLocs["childhood_home_outdoor"].withBtn("courtyard_talk_nashar", BtnJumpLabel(_("Talk to Nashar"), "courtyard_talk_nashar"))
+    wLocs["childhood_barn"].withBtn("barn_grab_tools", BtnJumpLabel(_("Grab the farm tools"), "farming_equipment"))
+    wLocs["childhood_barn"].withBtn("barn_to_courtyard", BtnChangeLoc(_("Return to the courtyard"), "childhood_home_outdoor"))
+    wLocs["childhood_lake"].withBtn("lake_to_courtyard", BtnChangeLoc(_("Return to the courtyard"), "childhood_home_outdoor"))
+    wLocs["childhood_lake"].withBtn("lake_talk_boris", BtnJumpLabel(_("Talk to Boris"), "boris_lake"))
+    GotScythe = False
+
+screen loc_house_livingroom():
+    default locTag = "house_livingroom"
+    use locBtn_basic(locTag, "leave_childhood_room", "images/gui/buttons_loc/door.webp", Transform(pos=(0.9, 0.53)), IconAllTheTime=True)
+    use locBtn_basic(locTag, "childhood_to_parents_bedroom", "images/gui/buttons_loc/door.webp", Transform(pos=(0.16, 0.52)), IconAllTheTime=True)
+    use locBtn_basic(locTag, "childhood_to_attic", "images/gui/buttons_loc/door.webp", Transform(pos=(0.53, 0.28)), IconAllTheTime=True)
+
+screen loc_parents_bedroom():
+    default locTag = "parents_bedroom"
+    use locBtn_basic(locTag, "parents_bedroom_to_livingroom", "images/gui/buttons_loc/door.webp", Transform(pos=(0.92, 0.53)), IconAllTheTime=True)
+
+screen loc_childhood_attic_room():
+    default locTag = "childhood_attic_room"
+    use locBtn_basic(locTag, "attic_to_livingroom", "images/gui/buttons_loc/door.webp", Transform(pos=(0.92, 0.53)), IconAllTheTime=True)
+
+screen loc_childhood_home_outdoor():
+    default locTag = "childhood_home_outdoor"
+    use locBtn_basic(locTag, "courtyard_to_livingroom", "images/gui/buttons_loc/door.webp", Transform(pos=(0.51, 0.68)), IconAllTheTime=True)
+    use locBtn_basic(locTag, "courtyard_to_barn", "images/gui/buttons_loc/explore.webp", Transform(pos=(0.86, 0.48)), IconAllTheTime=True)
+    use locBtn_basic(locTag, "courtyard_to_lake", "images/gui/buttons_loc/travel.webp", Transform(pos=(0.15, 0.53)), IconAllTheTime=True)
+    if not IsGoalComplete(QstPrologue, 0):
+        use locBtn_Char(locTag, "courtyard_talk_nashar", "nashar", "nashar", Transform(anchor=(0.5, 1.0), pos=(0.7, 0.8), zoom=0.65))
+
+screen loc_childhood_barn():
+    default locTag = "childhood_barn"
+    if not GotScythe:
+        use locBtn_basic(locTag, "barn_grab_tools", "images/gui/buttons_loc/explore.webp", Transform(pos=(0.16, 0.82)), IconAllTheTime=True)
+    use locBtn_basic(locTag, "barn_to_courtyard", "images/gui/buttons_loc/door.webp", Transform(pos=(0.84, 0.82)), IconAllTheTime=True)
+
+screen loc_childhood_lake():
+    default locTag = "childhood_lake"
+    if not IsGoalComplete(QstPrologue, 1):
+        use locBtn_Char(locTag, "lake_talk_boris", "boris", "boris", Transform(anchor=(0.5, 1.0), pos=(0.3, 0.8), zoom=0.65))
+    use locBtn_basic(locTag, "lake_to_courtyard", "images/gui/buttons_loc/door.webp", Transform(pos=(0.9, 0.55)), IconAllTheTime=True)
 
 label qst_prologue_primer:
     scene CG_NailedCrow with flash
@@ -57,6 +184,7 @@ label qst_prologue_primer:
     hide nashar
     "As he raises his hand to strike you, there's a rush of feet behind you as your brother moves forward, wrestling the stick from Father's hardened hands."
     show fatherandbrotherfight with dissolve
+    hide fatherandbrotherfight
     Father "GET OFF ME, BOY!"
     Nashar "FATHER, STOP!"
     "He stands as a barrier between you and your father's wrath, managing to knock the stick away as it thuds and rolls across the floor."
@@ -79,9 +207,6 @@ label qst_prologue_primer:
             jump celineintro_result
 
 label celineintro_result:
-    "Father raises his hand to strike you once more, as he had done countless times before."
-    "Before the blow can connect, your older brother intercedes on your behalf, wrestling him down before he can strike."
-    Nashar "Father, No!"
     Father "WHAT THE HELL IS WRONG WITH YOU, BOY?"
     Father "The girl needs a beating! It's the only way!"
     Nashar "She's sick! She needs help!"
@@ -147,10 +272,10 @@ label celineintro_result:
     Nashar "We've talked about this before."
     Nashar "You can't... act on those feelings, understand?"
     Celine "I'm trying... {i}I don't want to let you down.{/i}"
-    "He pulls you into a hug."
     hide celine_young
     hide nashar
-    show brothersisterhug with dissolve
+    "He pulls you into a hug."
+    #show brothersisterhug
     show celine_young at left with dissolve
     show nashar at center with dissolve
     
@@ -169,17 +294,24 @@ label celineintro_result:
     Celine "Yes, Nashar"
     $ QstStart(QstPrologue)
     $ LocSet("house_livingroom")
+    $ LocEnter()
+    
+
+label courtyard_talk_nashar:
+    call qst_prologue_nashar
+    $ LocEnter()
 
 label qst_prologue_nashar:
     Nashar "Did you get the scythe, yet?"
     menu nasharfarming:
         "Yes, I got it.":
             if GotScythe:
-                $ GoalComplete(0)
+                $ GoalComplete(QstPrologue, 0)
                 Nashar "Alright, let's begin then..."
                 "The day slips by as you spend your time toiling in the field with your brother."
                 "It is tiring, hot work as the sun beats down on you both."
                 "As last, you finally finish."
+                jump qst_prologue_nashar_done
             jump qst_prologue_nashar
         "Not yet.":
             Nashar "Stop fooling around, Celine."
@@ -187,17 +319,11 @@ label qst_prologue_nashar:
     return
 
 label farming_equipment:
-    "You approach the farming equipment."
-    menu farming_equipment:
-        "Take the scythe.":
-            $ GotScythe = True
-            "You take the scythe."
-            "Now your brother will be waiting for you in the field"
-        "Leave it.":
-            "You decide to leave the scythe for now."
-    return
+    $ GotScythe = True
+    "You gather the farm tools."
+    $ LocEnter()
 
-label qst_prologue_nashar:
+label qst_prologue_nashar_done:
     Nashar "*Yawn*"
     Nashar "Alright, Thanks for the help, Celine"
     Nashar "Why don't you go play for a little while?"
@@ -205,10 +331,11 @@ label qst_prologue_nashar:
     Celine "Alright"
     Celine "(Maybe Boris is free?)"
     Celine "(He's usually over by the lake.)"
+return
 
 label boris_lake:
-    show boris center_left
-    show celine center_right
+    show boris at left
+    show celine_young at cright
     Boris "C-Celine"
     "The chubby boy stammers"
     "Boris is not a friend"
@@ -250,7 +377,7 @@ label boris_lake:
     Boris "I g-gotta focus on the fish!"
     Celine "Right..."
     "Time drifts by until, at last, it's time for you to go home."
-    advance time to evening
+    $ TimeAdvTo(TIME_LATEEVENING)
     Celine "I'd best be heading back now, Boris."
     Boris "S-So soon?"
     Boris "Umm..."
@@ -258,54 +385,60 @@ label boris_lake:
     Celine "Sure, Boris"
     Celine "I'll meet you here tomorrow after I'm done with my chores."
     Boris "A-Alright..."
+    hide celene_young with moveoutright
+    hide boris
+    $ GoalComplete(QstPrologue, 1)
+    $ GoalShow(QstPrologue, 2)
+    $ LocSet("childhood_lake")
+    $LocEnter()
 
 label return_home:
-    show mother at centerleft
+    show mother at cleft
     show father at right
     Mother "I CAN SMELL HER ON YOU!"
     Mother "I CAN SMELL THAT FUCKING WHORE!"
     Father "Have you gone mad, woman?!"
     "Your mother hurls a saucepan at your father, barely missing him as it slams against the wall with a crash."
-    sound "sfx/saucepan_crash.ogg"
-    father to centerleft with slideleft
+    play sound "audio/cfx/door_crash.ogg"
+    show father at cleft with slideleft
     hide mother
     hide father
     "Angerly, he storms toward your mother, who keeps hitting and beating at him as he drags her by the hair into the bedroom, slamming the door shut."
-    sound "sfx/door_slam.ogg"
-    sound "sfx/belt_whip.ogg"
-    sound "sfx/woman_screaming.ogg"
+    play sound "audio/cfx/door_slam.ogg"
+    play sound "audio/cfx/spank.ogg"
+    play sound "audio/cfx/female_long_scream.ogg"
     "You hear screaming, then the familiar *THUD* *THUD* *THUD* as your father beats her with his belt."
-    sound "sfx/belt_whip.ogg"
-    sound "sfx/woman_screaming.ogg"
-    sound "sfx/belt_whip.ogg"
-    sound "sfx/woman_screaming.ogg"
-    sound "sfx/belt_whip.ogg"
-    sound "sfx/woman_screaming.ogg"
+    play sound "audio/cfx/spank.ogg"
+    play sound "audio/cfx/female_long_scream.ogg"
+    play sound "audio/cfx/spank.ogg"
+    play sound "audio/cfx/female_long_scream.ogg"
+    play sound "audio/cfx/spank.ogg"
+    play sound "audio/cfx/female_long_scream.ogg"
     "Neither of them even acknowledge you've returned home."
     show celine_young at left
     "Why would they?"
     "After all..."
     "{i}You were used to this by now.{/i}"
-    show nashar at right with slidein
+    show nashar at right with moveinright
     Nashar "Celine, what was that--"
-    sound "sfx/belt_whip.ogg"
-    sound "sfx/woman_screaming.ogg"
-    sound "sfx/belt_whip.ogg"
-    sound "sfx/woman_screaming.ogg"
+    play sound "audio/cfx/spank.ogg"
+    play sound "audio/cfx/female_long_scream.ogg"
+    play sound "audio/cfx/spank.ogg"
+    play sound "audio/cfx/female_long_scream.ogg"
     Celine "Father and Mother are fighting again."
     "A horrified Nashar looks up toward their bedroom door, then at your completely disinterested face."
     Nashar "Come with me a second."
     "He reaches down to take your hand, pulling you into his room, where Maize is peacefully resting in a crib."
     hide celine_young
     hide nashar
-    $LocSet("childhood_attic_room_night")
+    $LocSet("childhood_attic_room")
     "Down on his knees, Nashar meets you at eye level."
-    show nashar at centerright with slidein
-    show celine_young at centerleft with slidein
+    show nashar at cright with moveinright
+    show celine_young at cleft with moveinleft
     Nashar "I need you to listen to me, and not to panic, okay?"
     Nashar "But you don't have to face it alone."
     Nashar "...I'm joining a real big adventure party soon."
-    show celine_young_crying at centerleft
+    show celine_young_crying at cleft
     Celine "You... you got into The Silver Dawn?"
     Nashar "Ha... Can you believe it?"
     Nashar "The greatest adventure party around, and I'm going to be in it!"
@@ -376,26 +509,27 @@ label return_home:
     "But as much as it pains him, its {i}you{/i} who is going to have to live without the only shield in your life..."
     "And so the rest of of the day limps on as your parents scream at each other throughout the night."
     scene black with fade
-    scene childhood_attic_room_night
+    $ TimeAdvTo(TIME_NIGHT)
+    $LocSet("childhood_attic_room")
     "Your brother reads you a bedtime story as he promised all the wonderful things he was going to do for you and Maize when he returned."
     "the great home just the three of you would live in."
     "Never going hungry again because someone was too drunk or angry to do the cooking."
     "And no more beatings anymore."
     "It all feels, strangely, like a dream within a dream."
-jump to label the_next_day
+jump the_next_day
 label the_next_day:
-    scene bg_TheNextDay with fade
-    scene childhood_attic_room_day
+    $LocSet("childhood_attic_room")
+    $ TimeAdvTo(TIME_MORNING)
     "The ornate stagecoach arrives outside, a small convoy of wagons covered in cloth following behind as the rain hammers down."
     "Even Father, already drunk, notices and snaps for your mother's attention."
-    show father centerleft
-    show mother left
+    show father at cleft
+    show mother at left
     show celine_young at right
     Father "She's here! Get the boy!"
     Mother "I thought she wouldn't arrive until after dark?"
     Father "Well, she's here now, so hurry."
     "Your mother sighs as she scurries off to go find your brother."
-    hide mother slidesoutleft with fade
+    hide mother with moveoutleft
     "The doors of the stagecoach open, and a figure inside, obscured by the rain, heads toward the door."
     "Your father's eyes glare down accusatorily at you."
     Father "Don't do anything stupid now, girl."
@@ -403,9 +537,9 @@ label the_next_day:
     Father "Your brother's going to earn us a lot of coin."
     "You hate him."
     "You hate your father so much."
-    sound "knock.ogg"
+    play sound "audio/cfx/door_knock.ogg"
     "Your father moves forward to answer the door."
-    sound "door.ogg"
+    play sound "audio/interactables/wooden_door_open_1.ogg"
     "The door swings open, creaking on its hinges, and {i}she{/i} enters slowly as your father takes a few nervous steps back."
     Father "W-welcome, Ms. Kayanna!"
     Father "You honor our home with your presence!"
@@ -422,7 +556,7 @@ label the_next_day:
     Kayanna "And your brother is where?"
     Father "T-The boys is just gathering up the last of his things."
     "Her eyes flicker toward your father for the briefest moment, but she says nothing."
-    slide right Kayana to rightcenter
+    show kayanna at cright with move
     "Instead, the woman kneels to meet you at eye level; her gaze seems to scan you over."
     Kayanna "Such magecraft potential in you."
     Kayanna "Celine, isn't it?"
@@ -431,8 +565,8 @@ label the_next_day:
     "The woman blinks, tilts her head, and the smile widens slightly."
     "She raises one talon-like finger and gently prods your nose with it."
     Kayanna "{i}I promise to give him back when I'm done.{/i}"
-    show celeste_mother_angry_black_eye at centerleft
-    show nasar at left
+    show mother blackeye at cleft
+    show nashar at left
     "Your brother enters the room, huffing, and puffing as he forces an awkward smile."
     Nashar "S-Sorry for making you wait, Ms. Kayanna!"
     "The woman rises back to her feet."
@@ -464,11 +598,11 @@ label the_next_day:
     "There was something about her."
     "Birds of a father, or something your brother once said."
     "{i}Why did you feel like you were looking into a mirror?{/i}"
-    hide celine_young slideleft
-    show father left slideleft
+    hide celine_young with moveoutleft
+    show father at left with moveinleft
     "You give chase. Your father reaches out to stop you, but its too late."
     Father "CELINE!"
-    scene chasingafteryourbrother
+    scene separation
     "The heavy rain pours down as, poorly dressed and barefoot, you run into the soaking mud."
     "The trail of wagons is already far ahead, but you try to run after them anyway."
     "You didn't want him to go."
@@ -482,7 +616,7 @@ label the_next_day:
     scene black with fade
     "The rain continues to pour, but you are left alone in the darkness, your heart aching for your brother."
     scene sixmonthslatertext with fade
-    scene buryingbrother
+    scene funeral
     "...Kayanna promised you she would return him when she was done."
     "And she did deliver---Your brother came home."
     "{i}... Too bad it was in a box.{/i}"
@@ -500,14 +634,15 @@ label the_next_day:
     "You look down toward Maize, crying in your arms."
     Celine "{i}Looks like it's just me and you now, Maize.{/i}"
     scene black with fade
-    jump label after_funeral
+    jump after_funeral
 label after_funeral:
-    scene childhood_attic_room_night
+    $ TimeAdvTo(TIME_NIGHT)
+    $LocSet("childhood_attic_room")
     "As the funeral comes to an end, your home is visited by a strange man later that evening."
     "Dismissed to your room, you watch from the crack in your door."
     show knight at left
     show mother at right
-    show father at rightcenter
+    show father at cright
     Knight "The Silver Dawn sends its condolences for your son."
     Mother "Oh gods..."
     Knight "They hope that their generous contributions toward the funeral costs have helped ease this difficult time for you both."
@@ -526,7 +661,7 @@ label after_funeral:
     Knight "Sir... {i}No one's hiding anything.{/i}"
     Knight "Your son was simply struggling in the end; the life of an adventurer is difficult."
     Knight "Most people don't come back the same."
-    show father_sad at rightcenter
+    show father @sad at cright
     Father "...But my boy isn't coming back, is he?"
     Father "He's buried in that fucking box out there!"
     Knight "I can't bring back your son."
@@ -559,7 +694,7 @@ label after_funeral:
     Knight "So... do we have a deal?"
     "Your parents share another look; your mother reluctantly nods as your father nods toward the man."
     Father "...Aye, we do."
-    scene flicks in and out red
+    scene black with flash
     "Your blood boils."
     "How... how could they do this?"
     "How could they betray your brother like this?"
@@ -570,8 +705,8 @@ label after_funeral:
     "Satified, he nods."
     Knight "Good."
     Knight "And the letters?"
-    father slidesleft to centerleft
-    father slidesright to centerright
+    show father at cleft with move
+    show father at cright with move
     "Your father hands them over silently."
     Knight "Spend the coins wisely."
     "The Knight turns to leave, pausing briefly to add;"
@@ -582,7 +717,8 @@ label after_funeral:
     "{i}You want to kill them all.{/i}"
     "Your blood is simmering hot, but as you move to push open the door---to {i}punish{/i} your parents for betraying you and your brother---you hear the soft crying of Maize behind you."
     scene black
-    scene childhood_attic_room_night
+    $ TimeAdvTo(TIME_NIGHT)
+    scene childhood_attic_room
     "You remember the promise to your brother, and hurry toward her, holding her in your arms as you sooth and rock her."
     hide mother
     hide father
@@ -596,12 +732,13 @@ label after_funeral:
     "{i}You need to know what happened to your brother.{/i}"
     hide celine_young
     scene black
-    jump label Prologue_Truth
+    jump Prologue_Truth
 
 label Prologue_Truth:
-    scene forest_day
-    show celine_young at centerright
-    show boris at centerleft
+    $ TimeAdvTo(TIME_MORNING)
+    $LocSet("forest")
+    show celine_young at cright
+    show boris at cleft
     Boris "C-Celine."
     Boris "W-Why did you ask to meet so suddenly?"
     "The young boy stutters."
@@ -615,15 +752,16 @@ label Prologue_Truth:
     hide celine_young
     hide boris
     scene black
-    sound digging_shovel_loop
+    play sound digging_shovel_loop
     "It took you and Boris more than two hours to dig up your brother's grave in the dead of night."
-    scene cemetery_night
+    $ TimeAdvTo(TIME_NIGHT)
+    $LocSet("cemetery")
     "The dim lantern you brought with you seems ready to go out at a moment's notice, and Boris looks particularly afraid, watching for anyone who might see what the two of you are doing."
-    show celine_young at centerright
-    show boris at centerleft
+    show celine_young at cright
+    show boris at cleft
     Boris "I can't believe you talked me into this!"
     Celine "Enough complaining."
-    sound shovelhittingwood
+    play sound shovelhittingwood
     "When the shovel finally hits the hard wood of the coffin, Boris looks toward you."
     Boris "I-It's here!"
     "You wedge and force the shovel between the lid and the coffin as Boris pleads."
@@ -642,45 +780,49 @@ label Prologue_Truth:
     "You look at your brother's corpse and notice how remarkably undamaged it is."
     "A fall from such heights to kill... and not the slightest broken bone."
     "You look closer, and there---you spot it."
+    scene closerlook
     "Resonating from a black wound"
     "{i}Magecraft{/i}"
     "Like an arrow to the heart---some pungent, dark thing having drained him of his life."
     "{i}It smells exactly like the magecraft resonating from that woman, Kayanna.{/i}"
     Boris "Celine... Urgh... Can we go now, please?"
     Boris "We're gonna get in so much trouble if we're caught!"
-    Screen flickers red
+    scene nasharincoffin with flash
     "The rage boils inside you."
     "That woman... That bitch."
     "{i}She took your brother from you.{/i}"
     Boris "Celine!"
-    scene cemetery_night
+    $ TimeAdvTo(TIME_NIGHT)
+    $LocSet("cemetery")
     "You close the lid on your brother's coffin."
     Celine "I've seen what I needed to."
-    show celine_young at centerright
-    show boris at centerleft
+    show celine_young at cright
+    show boris at cleft
     "The two of you climb out of the grave."
     Boris "D-Did you find what you were looking for?"
     Celine "Yes."
     "You take teh first few steps toward home when Boris calls weakly behind you."
     Boris "W-What will you do now?"
     Celine "...Go home, Boris."
-    hide celine_young slideright
+    hide celine_young with moveright
     "Saying nothing else, you make your way home with a burning fire in your heart."
     hide boris
     scene black with fade
-    jump label revengeonparents
+    jump revengeonparents
 label revengeonparents:
-    scene childhood_attic_room_night throbbing purple slowly
-    sound heartbeat
+    $ TimeAdvTo(TIME_NIGHT)
+    $LocSet("childhood_attic_room")
+    play sound heartbeat
     "...As you quietly enter through the still-unlocked front door, you realize your parents have gone to sleep"
     "Your father likely having drunk himself into another stupor."
-    "You stop by to check on Maize, sleeping peacefully in her crib, and then," Pause 2 seconds
+    "You stop by to check on Maize, sleeping peacefully in her crib, and then,"
+    $ renpy.pause(2.0)
     "{i}You make your way to your parent's room.{/i}"
-    scene parentssleeping with fade throbbing purple slowly
+    scene parentssleeping with fade
     "Asleep on the bed, with another half-drunk bottle in the cabinet beside your father, he snores as you watch the two of them sleep peacefully while your brother rots in the ground."
     "How... how could they betray him?"
     "Betray Maize?"
-    scene parentssleeping with fade throbbing purple
+    scene parentssleeping with fade
     "Betray you."
     "What kind of monsters sell out their own son for a few coins?"
     "The rage builds, and with a trembling voice you speak."
@@ -688,50 +830,52 @@ label revengeonparents:
     "Your mother's eyes hazily open, and as they do, she shakes your father awake."
     Mother "Celine? What are you---"
     Celine "{i}You cannot move.{/i}"
-    scene celineparentsroomnormal fade celineparentsroompurpleeyes
+    scene stunned tinted purple
     "Your mother is pinned to the bed by some invisible force---"
     "Now she's awake all right, as her eyes widen with fear."
     Father "WHAT IN THE HELLS DO YOU THINK YOU'RE DOING, G-"
     "Your father moves to get up and stop you, but you turn your gaze to him."
     Celine "STAY."
-    scene parentsinbedstunned with fade throbbing purple slowly
+    scene stunned
     "Your father, too is now unable to move."
     "The two of them struggle against the invisible pressure exerted against them."
     "It's strange... for all their menace and venom, how helpless they seem to you right now."
     Father "C-Celine!"
     Father "What do you think you're doing?"
-    scene celineparentsroompurpleeyes
+    scene stunned 
     Celine "How could you?"
     Celine "How could you let them get away with it?"
     Mother "C-Celine, dear... What are you---"
     Celine "SILENCE!"
-    scene celineparentsroompurpleeyes tinted purple
+    scene stunned tinted purple with fade
     Father "..."
     Mother "..."
     Celine "He was the only one who truly loved me in this family."
     Celine "{i}And you...{/i}"
-    scene celineparentsroompurpleeyes tinted purple shake
+    scene stunned
     Celine "ALL IT TOOK WAS A FEW COINS TO BUY YOUR SILENCE?"
     Celine "TO ABANDON YOUR ONLY SON?"
-    scene parentsinbedstunned
+    scene stunned tinted purple with fade
     "Your parents do their best to squirm in the bed."
     "They're panicking now --- they realize something terrible is going to happen."
     "{i}... What fun.{/i}"
-    scene celineparentsroompurpleeyes tinted purple
+    scene stunned with fade
     Celine "...Now it's my turn to abandon you both."
     "You raise your hand, setting the bed alight as they panic and squirm, still unable to do anything other then twitch."
     scene parentsinbedburning
     Celine "Goodbye... Mother..."
     Celine "Father."
+    scene parentsinbedburning2
     "As the fire begins to consume the whole bed --- The flame crawling up your father's leg as he remains unable to break free from your power --- your turn to leave."
     scene black with fade
     "Heading quickly into Maize's room, you qently pick up your baby sister before heading out of the house."
     scene houseburning
-    sound firecrackling
+    play sound firecrackling
     Guard "Get some more buckets, damn it!"
     show celinewithbaby at center
     Guard "Girl is there anyone still inside?"
-    scene parentsinbedburning with flash then back to houseburning
+    scene parentsinbedburning with flash
+    scene houseburning
     Celine "...No one worth saving."
     "The guard pulls back --- you cannot tell beneath the helmet his expression, but it must be one of confusion and shock."
     "He decides to ignore you, rushing over to try and help the others put out the fire."
@@ -739,37 +883,31 @@ label revengeonparents:
     "The sounds of the fire and the chaos outside fade into the background as you focus on her."
     "For the first time in what feels like forever, there is a moment of peace."
     Celine "Don't worry, Maize, I won't let anyone hurt you ever again."
-    jump label oneweeklater
+    jump oneweeklater
 label oneweeklater:
-    scene cg_oneweeklater fade to 
-    show guard at left
-    show Ursula at right
-    Guard "...You can come in now, girl"
+    #scene cg_oneweeklater with fade
+    show guard2 at left
+    show ursula at right
+    Guard2 "...You can come in now, girl"
     show celine_young at center
     "You enter the run-down office as a kind sister in red smiles at you with her hands clasped together."
     Ursula "Hello."
     Ursula "I am Sister Ursula."
     Ursula "You must be Celine."
-    menu firsttimeatofficemenu:
+    jump firsttimeatofficemenu
+label firsttimeatofficemenu:
+    menu:
         "What is this place?":
             Ursula "This is the goddess Bellefrom's orphanage."
             Ursula "The Sisters of Bellefrom look after children like yourself who have no other family."
-            jump firstimeatofficemenu
+            jump firsttimeatofficemenu
         "Where is my sister--- Where's Maize?":
             Ursula "Maize is being cared for by the other sisters."
             Ursula "Don't worry, she's safe."
             Celine "I want to see her."
             Ursula "In time, Celine."
-            jump firstimeatofficemenu
+            jump firsttimeatofficemenu
         "What happens now?":
-            Ursula "You'll be staying here for a while now"
-            Ursula "At least, until you come of age."
-            Ursula "Or, if a family chooses to adopt you"
-            Celine "I want to leave."
-            Ursula "I'm sorry, child."
-            Ursula "There's nowhere else for you to go."
-            Ursula "You must stay here for now."
-            Celine "I WANT TO GO!"
             jump wantingtoleave
 label wantingtoleave:
     Ursula "You'll be staying here for a while now"
@@ -780,20 +918,19 @@ label wantingtoleave:
     Ursula "There's nowhere else for you to go."
     Ursula "You must stay here for now."
     Celine "I WANT TO GO!"
-    slide the guard to center with move
-    slide the guard to left with move
+    show guard2 at left with move
     "The guard smacks you on the back of the head from behind, causing you to stumble forward."
     Guard "Be silent, girl."
     "Sister Ursula rushes to your side, raising her hand toward the guard."
-    slide ursula to center with move
+    show ursula at center with move
     Ursula "Guard!"
     Ursula "Please... That will be all."
     "The guard, who seemed ready to hit you again, pulls back."
     Guard "Very well, Sister."
     Guard "I shall leave this matter in your care."
     "With a slight bow, the guard turns to leave as Sister Ursula tends to you."
-    hide guard
-    slide ursula to right with move
+    hide guard2
+    show ursula at right with move
     Ursula "Are you alright, child?"
     Celine "I'm fine."
     Celine "He hits like a girl anyway."
@@ -835,12 +972,12 @@ label years_later:
     Celine "Yes, Sister."
     Celine "...When can I see Maize?"
     Ursula "Soon. Your sister is doing well. Leave her be, Celine."
-    $LocSet(Orphanage_Hallway)
+    $LocSet("orphanage_hallway")
     $QstStart(Prologue2)
     $GoalShow(Prologue2, 1)
-TUTORIAL STAT Page
-Tutorial TALENTS PAGE
-label courtyard
+##TUTORIAL STAT Page
+##Tutorial TALENTS PAGE
+label courtyard:
     "As you step out into the main courtyard, you hear the usual chatter of the irritating younger children running around."
     "The older ones give uneasy, glancing looks toward you when they see you."
     "You don't have many friends."
@@ -850,9 +987,9 @@ return
 label chores:
     "You grab a bucket and cloth, heading out to clean the doors and windows as instructed by Sister Ursula."
     menu startchoresmenu:
-        "Start chores."
+        "Start chores.":
             jump chores_task
-        "Not yet."
+        "Not yet.":
             return
 label chores_task:
     $GoalComplete(Prologue2, 1)
@@ -862,7 +999,7 @@ label chores_task:
     "Suddenly, you feel the sharp sting of a small rock hitting your back"
     "You drop the cloth instantly, the bucket tipping over as you turn to look at the skinny, angry little shit with another rock in his hand."
     show harlok at center with movein
-    show harlokgoon at rightcenter with movein
+    show harlokgoon at cright with movein
     show harlokgoon2 at right with movein
     "His two little minions stand beside him."
     Harlok "Opps! Would you look at that."
@@ -876,10 +1013,10 @@ label chores_task:
     Harlok "Or what, you crazy bitch?"
     Celine "{i}I won't ask again{/i}."
     menu fightoneorthreemenu:
-        "If either of you two idiots help him, {i}I'll smother you in your sleep{/i}." requiredstat STR 5
+        "If either of you two idiots help him, {i}I'll smother you in your sleep{/i}." (Req_Strength = 5):
             jump fight_harlok
-        "..."
-            jump fightharlokandgoons
+        "...":
+            jump fight_harlok
 
 label fight_harlok:
     "Harlok's two goons stop laughing; they know you're serious."
@@ -891,7 +1028,7 @@ label fight_harlok:
     Brad (Goon A) "Y-You know what she's like, Harlok!"
     Danny (Goon B) "S-Sorry, she's crazy bro!"
     Harlok "Shit..."
-    show harlok at centerleft with movein
+    show harlok at cleft with movein
     "Harlok marches toward you, ready to swing a punch!"
     "his two goons retreat, remembering your threat."
     hide celine_teen
@@ -920,8 +1057,8 @@ label after_fight_harlok:
     "{i}Perhaps even you went a little too far this time.{/i}"
     Ursula "Get in there!"
     "Sister Ursula shoves you forward, slamming the door behind her."
-    show celine_teen @smug at leftcenter
-    show ursula at centerright with movein
+    show celine_teen @smug at cleft
+    show ursula at cright with movein
     Ursula "What in the hells were you thinking?!"
     Celine "He started it!"
     show ursula at center with movein
@@ -933,7 +1070,7 @@ label after_fight_harlok:
     Ursula "He may not be able to walk again!"
     Celine "So what? I was just supposed to let him beat me up?!"
     Ursula "There's a difference between fending for yourself, girl, and scaring everyone to death!"
-    Ursula "{i}Do you realize the other sisters think you might be possessed?{/i}" 
+    Ursula "{i}Do you realize the other sisters think you might be possessed?{/i}"
     Celine "YOU THINK I WANT THIS?!"
     Ursula "..."
     Celine "You think I always feel like I need eyes in the back of my skull?"
@@ -963,7 +1100,7 @@ label after_fight_harlok:
     scene black with fade
     jump orphanage_girls_quarters
 label orphanage_girls_quarters:
-    $locset = "orphanage_girls_quarters"
+    $LocSet("orphanage_girls_quarters")
     show celine_teen at center
     "What a wretched joke."
     "It was that little shit who started it!"
@@ -974,7 +1111,7 @@ label orphanage_girls_quarters:
 jump middleofthenight
 
 label middleofthenight:
-    set time of day to "night"
+    $ TimeAdvTo("night")
     Hara(???) "Celine."
     Hara(???) "..."
     Hara(???) "...CELINE!"
@@ -992,11 +1129,12 @@ label middleofthenight:
     Hara (Sister Hara) "Shh."
     Hara (Sister Hara) "The others are still asleep."
     "Sister Hara reaches for your hand as she almost drags you away."
-    show hara at centerright with movein
-    hide hara with moveoutleft && hide celine_teen with moveoutleft
+    show hara at cright with movein
+    hide hara with moveoutleft
+    hide celine_teen with moveoutleft
     "You didn't even have time to put your shoes on!"
-    $locset = "orphanage_girls_hallway"
-    show celine_teen at centerright with movein
+    $LocSet("orphanage_girls_hallway")
+    show celine_teen at cright with movein
     show hara at center with movein
     Celine "Sister!"
     Celine "Where are we going?"
@@ -1016,12 +1154,12 @@ label Basement:
     scene atlastyoureachthebottom with fade #at last, you reach the bottom floor.
     "An open, chamber, filled with sacks of wheat and other foods stored down here in the cold dark."
     "Standing there, each holding torches and a blade, are two other sisters."
-    show sister1 at rightc with movein
+    show sister1 at cright with movein
     show sister2 at right with movein
-    show sisterhara at left with movein
+    show hara at left with movein
     show celine_teen @shocked at center with movein
-    Celine "What's going on?
-    "You take a nervous step back to turn and leave, seeing Sister Hara block your path.
+    Celine "What's going on?"
+    "You take a nervous step back to turn and leave, seeing Sister Hara block your path."
     Hara (Sister Hara) "Celine"
     Hara (Sister Hara) "{i}There is a demon within you, child.{/i}"
     "Your eyes widen as you catch the glint of the blades they carry."
@@ -1041,15 +1179,18 @@ label Basement:
     show celine_teen at left with move
     Celine "STAY BACK!"
     "Now your heart is pounding. Like a cornered animal, you look for somewhere to run."
-    change background with purple shader then back to normal
+    #scene atlastyoureachthebottom with flash
     Hara (Sister Hara) "Celine, please---"
     Celine "GET AWAY FROM ME!"
-    hide celine_teen && hide hara && hide nunA && hide nunB
+    hide celine_teen
+    hide hara
+    hide nunA
+    hide nunB
     $BattleStart("Sister Hara, nunA, nunB")
     jump after_nunfight
 label after_nunfight:
     scene black with fade
-    scene bg_celenewithnuns
+    scene heldbynuns
     nunA (Unfamiliar Nun A) "By the gods, Sister Hara! Pin her Down! I'll make the cut!"
     "As Sister Hara reaches to grab and pin your arms from behind, you squirm and writhe, screaming for them to let you go."
     Hara (Sister Hara) "I'm sorry, Celine! I'm sorry!"
@@ -1057,11 +1198,11 @@ label after_nunfight:
     "As the other sister closes in, grabbing one of your struggling arms to place the knife, you feel the surge of darkness swell within."
     "Something raw, something dangerous."
     "Something even you didn't know you could do."
-    tint bg_celenewithnuns with purple shader
+    scene purpleeyes with vpunch
     Celine "{i}Sister.{/i}"
     "The sister looks up toward you as your eyes glow purple, mana overflowing."
     Celine "{i}Kill yourself{/i}"
-    scene bg_ursulabargesin
+    scene ursulabargesin
     Ursula "WHAT IN THE NAME OF AL'VAZAH IS GOING ON HERE?!"
     "Sister Hara releases you at once as the second sister retreats."
     "Sister Ursula storms over to grab you."
@@ -1090,4 +1231,4 @@ label after_nunfight:
     scene nunsarounddeadnun
     "You look at your hands, seeing the splash of blood on them."
     "{i}What... what have you done?{/i}"
-    GoalComplete
+    $GoalComplete(Prologue2, 2)

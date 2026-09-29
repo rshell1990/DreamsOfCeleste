@@ -25,15 +25,39 @@ init python:
             self.GoHome = False
 
         def locationMod(self):
-            btnMods = {}
-            if self.GotScythe == False:
-                btnMods["btn_farming_equipment"]
-            return btnMods
+            return LocButtonMod()
 
         def onEnter(self):  
-            if GetLocID() == "house_livingroom":
-                if self.progress == 1:
-                    return TriggeredEvent("qst_prologue_gohome")
+            if GetLocID() == "house_livingroom" and IsGoalComplete(QstPrologue, 1):
+                return TriggeredEvent("return_home")
+
+        def onComplete(self):
+            store.ShowLevelUpFloatingText = True
+
+            AutoTimeFreeze(False)
+
+    @AppendToAllQuests
+    class QstPrologue2(LogicModule):
+        GOALS = {
+            0: QuestStage(_("Clean windows and doors"),
+                ## trackTag = "btn_do_chores",
+                hintTxt = _("Do your chores in the courtyard.")),
+        }
+        TITLE = _("Prologue-Teenage Years")
+        DESCRIPTION = _("Do your chores in the courtyard.")
+
+        def __init__(self):
+            super().__init__()
+            self.XpReward = 50
+            self.DoChores = False
+
+        def locationMod(self):
+            return LocButtonMod()
+
+        def onEnter(self):  
+            if GetLocID() == "orphanage_courtyard":
+                if self.DoChores:
+                    return TriggeredEvent("qst_prologue2_dochores")
 
         def onComplete(self):
             store.ShowLevelUpFloatingText = True
