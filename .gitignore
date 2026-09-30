@@ -179,3 +179,14 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+game/_mcp/status.json
+game/cache/bytecode-312.rpyb
+game/cache/py3analysis.rpyb
+game/cache/screens.rpyb
+log.txt
+traceback.txt
+game/saves/persistent
+game/saves/auto-1-LT1.save
+game/saves/_tracesave-10-LT1.save
+game/saves/_reload-2-LT1.save
+game/saves/1-1-LT1.save

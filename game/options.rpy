@@ -81,7 +81,7 @@ define config.developer = "auto"
 
 # Windows: %APPDATA\RenPy\<config.save_directory>, Mac: $HOME/Library/RenPy/<config.save_directory>, Linux: $HOME/.renpy/<config.save_directory>
 # save_directory must not be set for crossplatform cloud saving to work (steam release)
-define config.save_directory = "ParasiteBlack" if Build_Kind == "nosteam" else None 
+define config.save_directory = "DreamsofCeleste" if Build_Kind == "nosteam" else None 
 define config.quicksave_slots = 6
 
 define config.console = config.developer

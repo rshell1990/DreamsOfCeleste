@@ -217,5 +217,14 @@ init -2 python:
 init -1 python:
     allQuests = []
     def AppendToAllQuests(QuestClass):
+        QuestName = QuestClass.__name__
+        allQuests[:] = [Quest for Quest in allQuests if Quest.__name__ != QuestName]
         allQuests.append(QuestClass)
+
+        QuestInstances = getattr(store, "questObjs", None)
+        if QuestInstances is not None and QuestName in QuestInstances:
+            QuestObj = QuestInstances[QuestName]
+            if QuestObj.__class__ is not QuestClass:
+                QuestObj.__class__ = QuestClass
+
         return QuestClass

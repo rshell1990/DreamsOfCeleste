@@ -27,6 +27,14 @@ label save_state_update_shared:
     $ SAVEFIX_UpdateAllLogicModuleFields()
     return
 
+label after_load:
+    if not DEBUG_SkipSaveUpdate:
+        if DEBUG_ForceSaveUpdate or SaveGameWasNeverUpdated or SaveGameVersion != config.version:
+            call save_state_update_shared
+            $ SaveGameVersion = config.version
+            $ SaveGameWasNeverUpdated = False
+    return
+
 init python:
     # for that rare case where people had galleyUnlocks as different type
     if not isinstance(persistent.galleryUnlocks, dict):
@@ -65,8 +73,11 @@ init python:
     def SAVEFIX_QstCreateMissing():
         ## new instances
         for QuestClass in allQuests:
-            if QuestClass.__name__ not in questObjs or not isinstance(questObjs[QuestClass.__name__], QuestClass):
-                questObjs[QuestClass.__name__] = QuestClass()
+            QuestName = QuestClass.__name__
+            if QuestName not in questObjs:
+                questObjs[QuestName] = QuestClass()
+            elif questObjs[QuestName].__class__ is not QuestClass:
+                questObjs[QuestName].__class__ = QuestClass
         return
 
     def SAVEFIX_InitializeMissingWorldChars():

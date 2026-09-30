@@ -183,7 +183,11 @@ image funeral = "images/cgs/funeral.webp"
 image novaras_graveyard_night = "images/world_bgs/novaras_city/church_graveyard/bg_graveyard_night.webp"
 image nasharincoffin = "images/cgs/00006.webp"
 image closerlook = "images/cgs/00007.webp"
-image heldbynuns = "images/cgs/00010.webp"
+image heldbynuns = Transform(
+    "images/cgs/00010.webp",
+    size=(config.screen_width, config.screen_height),
+    fit="cover",
+)
 image ursulabargesin = Transform(
     "images/cgs/00012.webp",
     size=(config.screen_width, config.screen_height),
@@ -455,14 +459,12 @@ screen loc_orphanage_girls_hallway():
     add Solid("#00000000")
 
 label qst_prologue_primer:
-    scene CG_NailedCrow with flash
-    $ renpy.pause(0.5)
-    play sound "audio/cfx/flock_of_crows.ogg"
+    play sound "audio/cfx/crowcaw.ogg"
     scene CG_NailedCrow_wing_left with flash
-    $ renpy.pause(0.5)
-    play sound "audio/cfx/flock_of_crows.ogg"
+    $ renpy.pause(1)
+    play sound "audio/cfx/crowcaw.ogg"
     scene CG_NailedCrow_wing_right with flash
-    $ renpy.pause(0.5)
+    $ renpy.pause(1)
     scene CG_NailedCrow with dissolve
     Father "Celeste!"
     "Father's hands drag and pull your small, frail body toward the front door as you frantically resist, to no avail."
@@ -485,8 +487,6 @@ label qst_prologue_primer:
     play sound "audio/cfx/running_steps.ogg"
     show nashar at center with slideright
     hide celeste_young
-    hide father
-    hide nashar
     "As he raises his hand to strike you, there's a rush of feet behind you as your brother moves forward, wrestling the stick from Father's hardened hands."
     show fatherandbrotherfight with dissolve
     Father "GET OFF ME, BOY!"
@@ -634,6 +634,8 @@ label farming_equipment:
     $ LocEnter()
 
 label qst_prologue_nashar_done:
+    show nashar at center
+    show celeste_young at left
     Nashar "*Yawn*"
     Nashar "Alright, Thanks for the help, Celeste"
     Nashar "Why don't you go play for a little while?"
@@ -695,7 +697,7 @@ label boris_lake:
     Celeste "Sure, Boris"
     Celeste "I'll meet you here tomorrow after I'm done with my chores."
     Boris "A-Alright..."
-    hide celene_young with moveoutright
+    hide celeste_young with moveoutright
     hide boris
     $ GoalComplete(QstPrologue, 1)
     $ GoalShow(QstPrologue, 2)
@@ -715,15 +717,13 @@ label return_home:
     hide father
     "Angerly, he storms toward your mother, who keeps hitting and beating at him as he drags her by the hair into the bedroom, slamming the door shut."
     play sound "audio/cfx/door_slam.ogg"
-    play sound "audio/cfx/spank.ogg"
-    play sound "audio/cfx/female_long_scream.ogg"
+    queue sound "audio/cfx/whip.ogg"
+    queue sound "audio/cfx/female_short_scream.ogg"
     "You hear screaming, then the familiar *THUD* *THUD* *THUD* as your father beats her with his belt."
-    play sound "audio/cfx/spank.ogg"
-    play sound "audio/cfx/female_long_scream.ogg"
-    play sound "audio/cfx/spank.ogg"
-    play sound "audio/cfx/female_long_scream.ogg"
-    play sound "audio/cfx/spank.ogg"
-    play sound "audio/cfx/female_long_scream.ogg"
+    queue sound "audio/cfx/whip.ogg"
+    queue sound "audio/cfx/whip.ogg"
+    queue sound "audio/cfx/whip.ogg"
+    queue sound "audio/cfx/female_short_scream.ogg"
     "Neither of them even acknowledge you've returned home."
     show celeste_young at left
     "Why would they?"
@@ -731,10 +731,9 @@ label return_home:
     "{i}You were used to this by now.{/i}"
     show nashar at right with moveinright
     Nashar "Celeste, what was that--"
-    play sound "audio/cfx/spank.ogg"
-    play sound "audio/cfx/female_long_scream.ogg"
-    play sound "audio/cfx/spank.ogg"
-    play sound "audio/cfx/female_long_scream.ogg"
+    play sound "audio/cfx/whip.ogg"
+    queue sound "audio/cfx/spank.ogg"
+    queue sound "audio/cfx/female_short_scream.ogg"
     Celeste "Father and Mother are fighting again."
     "A horrified Nashar looks up toward their bedroom door, then at your completely disinterested face."
     Nashar "Come with me a second."
@@ -1454,7 +1453,7 @@ label middleofthenight:
     Hara "...CELESTE!"
     "The voice wakes you, and you dazedly see one of the sisters standing over your bed."
     Celeste "...Sister Hara?"
-    show hara at center with movein
+    show hara at center_f with movein
     Hara "You're to come with me, Celeste."
     "You rise from your bed."
     show celeste_teen at right
@@ -1466,7 +1465,7 @@ label middleofthenight:
     Hara "Shh."
     Hara "The others are still asleep."
     "Sister Hara reaches for your hand as she almost drags you away."
-    show hara at cright with movein
+    show hara at cright_f with movein
     hide hara with moveoutleft
     hide celeste_teen with moveoutleft
     "You didn't even have time to put your shoes on!"

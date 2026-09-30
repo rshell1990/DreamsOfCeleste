@@ -1,34 +1,34 @@
-2026-09-30 05:29:51 UTC
+2026-09-30 13:26:01 UTC
 Windows-11-10.0.26200-SP0
 Ren'Py 8.5.3.26051504
 
-Early init took 78 ms
-Loading error handling took 34 ms
-Loading script took 542 ms
-Loading save slot metadata took 50 ms
-Loading persistent took 2 ms
-Running init code took 156 ms
-Loading analysis data took 22 ms
+Early init took 77 ms
+Loading error handling took 35 ms
+Loading script took 416 ms
+Loading save slot metadata took 38 ms
+Loading persistent took 1 ms
+Running init code took 181 ms
+Loading analysis data took 14 ms
 Analyze and compile ATL took 13 ms
-Reloading save slot metadata took 4 ms
+Reloading save slot metadata took 2 ms
 Backing up script files to 'C:\\Users\\Fitz\\AppData\\Roaming/RenPy/backups\\DreamsOfCeleste':
-Dump and make backups took 16 ms
+Dump and make backups took 14 ms
 Cleaning cache took 0 ms
-Making clean stores took 2 ms
-Initial gc took 91 ms
+Making clean stores took 1 ms
+Initial gc took 46 ms
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object took 2 ms
-Init translation took 1 ms
+Init translation took 2 ms
 Cleaning stores took 0 ms
 Load screen analysis took 1 ms
-Analyze screens took 30 ms
-Save screen analysis took 37 ms
-Save pyanalysis took 16 ms
-Save bytecode took 50 ms
-Running _start took 2 ms
-Interface start took 570 ms
+Analyze screens took 27 ms
+Save screen analysis took 35 ms
+Save pyanalysis took 0 ms
+Save bytecode took 53 ms
+Running _start took 1 ms
+Interface start took 572 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1600, 900)
@@ -38,9 +38,5 @@ Vendor: 'ATI Technologies Inc.'
 Renderer: 'Radeon RX550/550 Series'
 Version: '4.6.0 Compatibility Profile Context 22.11.2.221130'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1600, 'current_h': 900, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1049, 590) drawable=(1049, 590)
+Screen sizes: virtual=(1920, 1080) physical=(1419, 798) drawable=(1419, 798)
 Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 57 ms
-Analyze screens took 0 ms
-Running _start took 3 ms
