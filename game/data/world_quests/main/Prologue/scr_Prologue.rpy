@@ -495,33 +495,40 @@ label qst_prologue_primer:
     Father "you've done it now, girl"
     Celine "Let me go!"
     "Your protests fall on deaf ears, yet you still continue to scream and struggle against his grip."
-    Celine "I haven't done anything!"
+    Celeste "I haven't done anything!"
+    play sound "audio/cfx/crowcaw.ogg"
+    scene CG_NailedCrow with dissolve
     "...Well, that was a lie, wasn't it?"
     scene CG_NailedCrow with dissolve
     Father "LIAR!"
+    play sound "audio/cfx/door_slam.ogg"
     scene childhood_living_room_day
     play sound "audio/cfx/thud.ogg"
     "With a loud thud, he kicks the door open and swings your small body forward."
     show celine_young at center
     "You crash onto the cold, dirty floor, grazing your knee as you try to stand back up."
-    show father at right with easeinright
+    show celeste_young at cleft
+    show father at cright with easeinright
     "In his hands, Father grips the blood-stained stick --something you were all too familiar with by now."
-    show father angry at right
+    show father angry at cright
     "It looks like it's going to get a fresh coat of red today."
     play sound "audio/cfx/running_steps_half.ogg"
     show nashar at center with slideright
     hide celine_young
     hide father
     hide nashar
+    show celeste_young at left with easeinleft
     "As he raises his hand to strike you, there's a rush of feet behind you as your brother moves forward, wrestling the stick from Father's hardened hands."
+    hide nashar
+    hide father
     show fatherandbrotherfight with dissolve
     Father "GET OFF ME, BOY!"
     Nashar "FATHER, STOP!"
     "He stands as a barrier between you and your father's wrath, managing to knock the stick away as it thuds and rolls across the floor."
     hide fatherandbrotherfight
-    show father angry at right
+    show father angry at cright
     show nashar angry at center
-    show celine_young at left
+    show celeste_young at cleft
     Nashar "What in the hells is going on?"
     Father "Again, I caught her torturing animals!"
     menu celinelieortruth:
@@ -556,18 +563,17 @@ label celineintro_result:
     "Father scowls as he always does, cheeks flushed red from the half-empty bottle of mead."
     Father "And maybe we'd all be better for it!"
     "Your brother is furious, his teeth gnashing together as he moves closer toward your father."
-    show nashar at cright with slideright
     "A familiar, common sight in the Gwenovair household."
     "Behind you, you hear the soft wailing of Maize, your baby sister."
-    show celine_young at center with dissolve
+    show celeste_young at center with dissolve
     "In a moment your mother appears, Maize in her arms as she scowls at all of you."
     show motherwithbaby at left with easeinleft
     Mother "What in the seven hells is going on in here?"
     Father "Ask the boy. He's the one who keeps trying to stop me from doing what needs to be done."
     Nashar "You've beaten her a hundred times before, and it hasn't fixed a damn thing!"
     Father "Bah! Enough of this, I'm heading to the damn tavern!"
-    hide father
     hide father with moveoutright
+    play sound "audio/cfx/door_slam.ogg"
     Mother "Dear!"
     Mother "DEAR!"
     show celine_young at left with dissolve
