@@ -1,15 +1,15 @@
 init -2 python:
     def PlayerHasPerk(Perk_ID):
-        return Perk_ID in worldChars["mc"]["perks"]
+        return Perk_ID in worldChars[MC_ID]["perks"]
 
     def PlayerAddPerk(Perk_ID, Soft = False):
         if Perk_ID not in Lib_Perks.keys():
             raise Exception("perk ID %s not found in Lib_Perks" % Perk_ID)
         if Soft == False:
-            if Perk_ID in worldChars["mc"]["perks"]:
+            if Perk_ID in worldChars[MC_ID]["perks"]:
                 raise Exception("tried to add already present perk ID %s, this shouldnt happen ever" % Perk_ID)
         if not PlayerHasPerk(Perk_ID):
-            store.worldChars["mc"]["perks"].append(Perk_ID)
+            store.worldChars[MC_ID]["perks"].append(Perk_ID)
 
         if Perk_ID == "energized":
             InfectionModule().UniqueDailyChars = 3

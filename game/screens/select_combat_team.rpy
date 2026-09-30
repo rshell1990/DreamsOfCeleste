@@ -41,7 +41,7 @@ screen select_combat_team(MaximumCharsForTeam = 4, RightBeforeBattle = False):
                                 idle Frame(worldChars[char_ID]["portrait"])
                                 hover Frame(Transform(worldChars[char_ID]["portrait"], matrixcolor = BrightnessMatrix(0.15)))
                                 if char_ID in NewPlayerTeam:
-                                    if char_ID != "mc":
+                                    if char_ID != MC_ID:
                                         action RemoveFromSet(NewPlayerTeam, char_ID)
                                 elif len(NewPlayerTeam) < MaximumCharsForTeam:
                                     action AddToSet(NewPlayerTeam, char_ID)

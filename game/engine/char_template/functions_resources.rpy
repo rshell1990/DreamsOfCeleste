@@ -26,7 +26,7 @@ init -2 python:
         return
 
     def DamagePlayer(Value, Silent = False, Lethal = True): 
-        DamageChar("mc", Value, Silent = Silent, Lethal = Lethal)
+        DamageChar(MC_ID, Value, Silent = Silent, Lethal = Lethal)
         return
 
     def DamageParty(Value, Silent = False, Lethal = True):
@@ -47,7 +47,7 @@ init -2 python:
 
         # notify
         if Silent == False:
-            if CharID == "mc":
+            if CharID == MC_ID:
                 if NewVal == 0:
                     AddNotif(tra(_("You took some damage and nearly died!")), Kind = "story_damage_mc")
                 else:
@@ -56,12 +56,12 @@ init -2 python:
                 if CharID in player_party:
                     if NewVal == 0:
                         AddNotif(tra(_("%s took some damage and nearly died!")) % worldChars[CharID]["name"], Kind = "story_damage_nonmc")
-                    else:    
+                    else:
                         AddNotif(tra(_("%s took %s damage!")) % (worldChars[CharID]["name"], NewVal), Kind = "story_damage_nonmc")
-        
-        # jump to 
-        if CharID == "mc":
-            if worldChars["mc"]["Health"] <= 0:
+
+        # jump to
+        if CharID == MC_ID:
+            if worldChars[MC_ID]["Health"] <= 0:
                 if Lethal:
                     renpy.jump("defeat_generic")
         return

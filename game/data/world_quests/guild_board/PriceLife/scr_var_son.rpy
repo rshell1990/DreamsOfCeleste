@@ -274,18 +274,18 @@ label qst_guild_price_life_son_sex_offer:
             MC @smile "Take your time."
             hide trayan with easeoutright
             'Trayan hurried off, and as he did so, I began to undress for the evening.' #MC half naked
-            $ CharSetClothes("mc", "pants")
+            $ CharSetClothes(MC_ID, "pants")
             show mc at blurin, cright_f with easeoutright
-            'A short while later, there was a gentle knock at the door once again as Trayan returned.' #Trayan in lingerie 
+            'A short while later, there was a gentle knock at the door once again as Trayan returned.' #Trayan in lingerie
             $ CharSetClothes("trayan", "ling")
             show trayan at cleft with easeinleft
             TRAYAN @blush "H-Hello ..."
             $ AutoMus(False)
             $ PlayMusicRandom("mus_sex")
             TRAYAN @blush "I heard um, you were hoping to fuck something tonight."
-            TRAYAN @blush "... M-Maybe that something could be me?" 
+            TRAYAN @blush "... M-Maybe that something could be me?"
             scene black with dissolve
-            $ CharSetClothes("mc", "normal")
+            $ CharSetClothes(MC_ID, "normal")
             $ CharSetClothes("trayan", "normal")
 
             'Grabbing a hold of Trayan by the shoulders, he let out a little gasp as I threw him onto the bed, stripping off the last of my clothes.' #Cut to Trayan blowjob

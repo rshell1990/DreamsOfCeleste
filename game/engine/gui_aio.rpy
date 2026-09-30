@@ -87,7 +87,12 @@ define config.history_length = 60
 define config.thumbnail_width =     384 # 20% of 1920/1080
 define config.thumbnail_height =    216
 
-define gui.game_menu_background = Transform("images/gui/menu_bg_ingame.webp", matrixcolor = OpacityMatrix(0.85))
+define gui.game_menu_background = Transform(
+    "images/gui/menu_bg_ingame.webp",
+    size=(config.screen_width, config.screen_height),
+    fit="cover",
+    matrixcolor=OpacityMatrix(0.85),
+)
 
 transform _main_menu_bg_throb:
     "images/gui/menu_bg_ingame.webp"

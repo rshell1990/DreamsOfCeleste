@@ -276,7 +276,7 @@ label qst_guild_price_life_daughter_sex_offer:
             MC @smile "Take your time."
             hide callie with easeoutright
             'Callie hurried off, and as she did so, I began to undress for the evening.'
-            $ CharSetClothes("mc", "pants")
+            $ CharSetClothes(MC_ID, "pants")
             show mc at blurin, cright_f with easeoutright
             'A short while later, there was a gentle knock at the door once again as Callie returned.'
             $ CharSetClothes("callie", "ling")
@@ -286,7 +286,7 @@ label qst_guild_price_life_daughter_sex_offer:
             CALLIE @blush "I heard that I was just your type."
             CALLIE @blush "How convenient, because you're definitely mine."
             scene black with dissolve
-            $ CharSetClothes("mc", "normal")
+            $ CharSetClothes(MC_ID, "normal")
             $ CharSetClothes("callie", "normal")
             'Grabbing a hold of Callie by the shoulders, she let out a little gasp as I threw her onto the bed, stripping off the last of my clothes.'
             CALLIE "So eager!"

@@ -5,7 +5,7 @@ init python:
         if not CharInParty(char_ID):
             store.player_party.append(char_ID)
             # Update the character"s XP in order to catch up with the MC
-            if char_ID != "mc":
+            if char_ID != MC_ID:
                 AddExperienceToMatchPlayer(char_ID)
                 RecalcSkillAndAttrPoints(char_ID)
             if not Silent:

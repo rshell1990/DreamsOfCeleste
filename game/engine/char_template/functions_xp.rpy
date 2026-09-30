@@ -1,7 +1,7 @@
 init -2 python:
 ### get level via id or char
     def GetPlayerLevel():
-        return GetCharLevelFromID("mc")
+        return GetCharLevelFromID(MC_ID)
 
     def GetCharLevelFromID(CharID):
         # if its a mob, grab chardef xp value
@@ -28,7 +28,7 @@ init -2 python:
             if XpValue <= allLvls[Lvl]:
                 return Lvl
 
-### these are for setting a level in char def, 
+### these are for setting a level in char def,
 # might misfire if used somewhere else
     def ExpSetToLevel(TargetLvl):
         return store.allLvls[TargetLvl]
@@ -36,21 +36,21 @@ init -2 python:
     def ExpShowLevelAsUnknown():
         return -1
 
-    
+
 
 
 ### functions for adding xp
     # use top two when possible
     def AddExp(CharID, Amount):
-        if CharID == "mc":
+        if CharID == MC_ID:
             AddExpPlayer(Amount)
         else:
             Char = worldChars[CharID]
             AddExpDirect(Char, Amount)
 
     def AddExpPlayer(Amount):
-        AddExpDirect(worldChars["mc"], Amount)
-        for CharID in [Char for Char in player_party if Char != "mc" ]:
+        AddExpDirect(worldChars[MC_ID], Amount)
+        for CharID in [Char for Char in player_party if Char != MC_ID ]:
             AddExperienceToMatchPlayer(CharID)
         return
 
@@ -60,7 +60,7 @@ init -2 python:
             return
         old_lvl = GetCharLevelFromChar(Char)
         Char["experience"] += int(Amount)
-        if Char == worldChars["mc"]:
+        if Char == worldChars[MC_ID]:
             ShowTutorialPopup("experience")
 
         new_lvl = GetCharLevelFromChar(Char)
@@ -72,7 +72,7 @@ init -2 python:
                 levels_from_4_onwards = new_lvl - max(3, old_lvl)
                 Char["AltForm_SkillPoints"] += max(0, levels_from_4_onwards)
 
-            if Char == worldChars["mc"]:
+            if Char == worldChars[MC_ID]:
                 HealParty(Silent = True) # <- level ups heal party
                 if new_lvl >= 2:
                     ShowTutorialPopup("first_level_up")
@@ -102,7 +102,7 @@ init -2 python:
     def AddExperienceToMatchPlayer(CharID):
         if "experience" in worldChars[CharID]:
             # literally calcs diff and adds it
-            Val = worldChars["mc"]["experience"] - worldChars[CharID]["experience"]
+            Val = worldChars[MC_ID]["experience"] - worldChars[CharID]["experience"]
             AddExp(CharID, Val)
         return
 

@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/data/world_quests/main/Prologue/qst_Prologue.rpy", line 31: invalid syntax
-    if GetLocID() == "house_livingroom" && goalcomplete(1):
-                                             ^
+File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 12: expected '=' not found.
+    define Sister Hara = Character("Sister Hara", image="hara")
+                  ^
+
+File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 1310: expected statement.
+    Sister Hara (Sister Hara) "Shh."
+                ^
+
+File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 1311: expected statement.
+    Sister Hara (Sister Hara) "The others are still asleep."
+                ^
 
 Ren'Py Version: Ren'Py 8.5.3.26051504
-Tue Sep 29 12:09:39 2026
+Tue Sep 29 23:51:15 2026

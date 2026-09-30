@@ -44,7 +44,7 @@ init -1 python:
         if not StoryCharHasStatusEff(char_ID, "Poison"):
             return
 
-        if char_ID == "mc":
+        if char_ID == MC_ID:
             AddNotif(_("You are cured of poison!"))
         else:
             AddNotif(_("%s is cured of poison!") % worldChars[char_ID]["name"])
@@ -69,7 +69,7 @@ init -1 python:
         # notif
         if Silent == False:
             if EffectID == "Poison":
-                if CharID == "mc":
+                if CharID == MC_ID:
                     AddNotif(_("You are poisoned!"), Kind = "poison_story")
                 else:
                     AddNotif(_("%s is poisoned!") % Char["name"], Kind = "poison_story")
@@ -79,7 +79,7 @@ init -1 python:
             if Duration > StoryStatusEffects[CharID][EffectID]:
                 StoryStatusEffects[CharID][EffectID] = Duration
         else:
-            StoryStatusEffects[CharID][EffectID] = Duration 
+            StoryStatusEffects[CharID][EffectID] = Duration
 
         Assert(1.0 >= StoredHealthRatio >= 0.0, "Heal ratio must be within 0.0-1.0")
         Char["Health"] = round(Char["HealthMax"] * StoredHealthRatio)
@@ -124,7 +124,7 @@ init -1 python:
         if EffectID == "Poison" and CharID:
             if CharID in worldChars and worldChars[CharID]["Health"] > 1:
                 DamageChar(CharID, 10, Lethal = False)
-                if CharID == "mc":
+                if CharID == MC_ID:
                     AddNotif(tra(_("The poison damages you!")), Kind = "story_damage_mc")
                 else:
                     if CharID in player_party:

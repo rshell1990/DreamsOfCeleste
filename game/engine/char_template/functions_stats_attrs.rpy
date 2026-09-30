@@ -254,7 +254,7 @@ init -2 python:
 
 ######## check if can raise attribute over x of any other
     def CanRaiseAttribute(Char_ID, OrigAttrID):
-        if Char_ID == "mc":
+        if Char_ID == MC_ID:
             AttributesToCheck = ["Strength", "Endurance", "Willpower", "Agility", "Dexterity", "Luck", "Charisma", "Barter"]
         else:
             # non-mc chars shouldnt worry bout charisma or barter for allocation
@@ -267,11 +267,11 @@ init -2 python:
                 return False
         return True
 
-    
+
 ## same but goes other way, for char creation
     def CanReduceAttribute(Char_ID, OrigAttrID):
         # first get a list of all attrs
-        if Char_ID == "mc":
+        if Char_ID == MC_ID:
             AttributesToCheck = ["Strength", "Endurance", "Willpower", "Agility", "Dexterity", "Luck", "Charisma", "Barter"]
         else:
             # non-mc chars shouldnt worry bout charisma or barter for allocation
@@ -287,7 +287,7 @@ init -2 python:
         return True
 
     def LowerHighestAttributeIfNecessary(CharID, OrigAttrID):
-        if CharID == "mc":
+        if CharID == MC_ID:
             AttributesToCheck = ["Strength", "Endurance", "Willpower", "Agility", "Dexterity", "Luck", "Charisma", "Barter"]
         else:
             # non-mc chars shouldnt worry bout charisma or barter for allocation

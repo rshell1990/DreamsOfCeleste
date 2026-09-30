@@ -87,31 +87,31 @@ screen choice(items):
 
                     if Req_Charm > 0:
                         $ AddLeft = "{image=[ICON.DRAMA]} " + tra(_("Charisma %s: ")) % Req_Charm
-                        if worldChars["mc"]["derived_Charisma"] < Req_Charm:
+                        if worldChars[MC_ID]["derived_Charisma"] < Req_Charm:
                             $ enabled = False
                             $ hint = "\n{size=-5}(" + tra(_("You are not charming enough")) + "){/size}"
 
                     if Req_Agi > 0:
                         $ AddLeft = tra(_("Agility %s: ")) % Req_Agi
-                        if worldChars["mc"]["derived_Agility"] < Req_Agi:
+                        if worldChars[MC_ID]["derived_Agility"] < Req_Agi:
                             $ enabled = False
                             $ hint = "\n{size=-5}(" + tra(_("You are not agile enough")) + "){/size}"
-                    
+
                     if Req_Dex > 0:
                         $ AddLeft = tra(_("Dexterity %s: ")) % Req_Dex
-                        if worldChars["mc"]["derived_Dexterity"] < Req_Dex:
+                        if worldChars[MC_ID]["derived_Dexterity"] < Req_Dex:
                             $ enabled = False
                             $ hint = "\n{size=-5}(" + tra(_("You are not dextrous enough")) + "){/size}"
-                    
+
                     if Req_Barter > 0:
                         $ AddLeft = "{image=[ICON.BARTER]} " + tra(_("Barter %s: ")) % Req_Barter
-                        if worldChars["mc"]["derived_Barter"] < Req_Barter:
+                        if worldChars[MC_ID]["derived_Barter"] < Req_Barter:
                             $ enabled = False
                             $ hint = "\n{size=-5}(" + tra(_("Your barter skill is not high enough")) + "){/size}"
 
                     if Req_Strength > 0:
                         $ AddLeft = tra(_("Strength %s: ")) % Req_Strength
-                        if worldChars["mc"]["derived_Strength"] < Req_Strength:
+                        if worldChars[MC_ID]["derived_Strength"] < Req_Strength:
                             $ enabled = False
                             $ hint = "\n{size=-5}(" + tra(_("You are not strong enough")) + "){/size}"
                     

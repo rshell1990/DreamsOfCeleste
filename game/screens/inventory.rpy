@@ -2,7 +2,7 @@
 ########### WARNING THERES A LOT OF COPIED CODE IN THERE
 ########### WARNING THERES A LOT OF SAME CODE IN THERE
 
-screen inventory(charID = "mc"):
+screen inventory(charID = MC_ID):
     on "show" action SetVariable("block_wait_dynamic", True)
     on "hide" action SetVariable("block_wait_dynamic", False)
     tag ingame_menu
@@ -63,11 +63,11 @@ screen inventory(charID = "mc"):
                                     action [SetLocalVariable("SelItemID", None), Function(UseItemStory, Char_ID, SelItemID)]
                     if total_pages > 0:
                         textbutton _("Next page >>"):
-                            action If(CurrentPage < total_pages - 1, 
+                            action If(CurrentPage < total_pages - 1,
                                     true = SetLocalVariable("CurrentPage", CurrentPage + 1))
                             xalign 1.0
-                        
-                        
+
+
             null width 5
             vbox: #### char section
                 xalign 0.5
@@ -95,7 +95,7 @@ screen inventory(charID = "mc"):
                         keysym "K_c"
                         hovered TooltipSetUI(tra(_("Next character")) + " (c)")
                         unhovered TooltipClearUI()
-                        
+
                 # xp bar
                 hbox:
                     xalign 0.5
@@ -129,7 +129,7 @@ screen inventory(charID = "mc"):
                             align (0.5, 0.5)
                             idle Transform(worldChars[Char_ID]["portrait"], matrixcolor = IdentityMatrix())
                             hover Transform(worldChars[Char_ID]["portrait"], matrixcolor = BrightnessMatrix(0.15))
-                            if Char_ID != "mc":
+                            if Char_ID != MC_ID:
                                 if PlayerCanSpeakToPartyChars():
                                     keyboard_focus True
                                     action [Hide("inventory", transition = Dissolve(0.15)), Function(PartyTalkToChar, Char_ID)]
@@ -141,7 +141,7 @@ screen inventory(charID = "mc"):
                                 unhovered TooltipClearUI()
                             else:
                                 keyboard_focus False
-    
+
                     vbox:
                         for slot_ID in ["eqp_neck", "eqp_ring2", "eqp_hand2"]:
                             use equipment_slot(char_index, SelItemID, slot_ID)
@@ -172,7 +172,7 @@ screen inventory(charID = "mc"):
                             xalign 0.5
                             value AnimatedValue(worldChars[Char_ID]["Health"], worldChars[Char_ID]["HealthMax"], delay = 0.15)
                         # EP OR mana bar, curr/max
-                        bar: 
+                        bar:
                             xalign 0.5
                             if worldChars[Char_ID]["is_mage"]:
                                 style "bar_blue_256"
@@ -188,11 +188,11 @@ screen inventory(charID = "mc"):
                         if worldChars[Char_ID]["is_mage"]:
                             text "%s/%s" % (worldChars[Char_ID]["Mana"], worldChars[Char_ID]["ManaMax"]):
                                 color "#2219aa"
-                                align (0.5, 0.5)    
+                                align (0.5, 0.5)
                         else:
                             text "%s/%s" % (worldChars[Char_ID]["Energy"], worldChars[Char_ID]["EnergyMax"]):
                                 color "#22880e"
-                                align (0.5, 0.5)    
+                                align (0.5, 0.5)
                 null height 10
                 # buttons to swap between stats/attr tabs
                 hbox:
@@ -234,7 +234,7 @@ screen inventory(charID = "mc"):
                         vbox:
                             use attribute_box(worldChars[Char_ID], "Agility")
                             use attribute_box(worldChars[Char_ID], "Dexterity")
-                            if Char_ID == "mc":
+                            if Char_ID == MC_ID:
                                 use attribute_box(worldChars[Char_ID], "Charisma")
                                 use attribute_box(worldChars[Char_ID], "Barter")
 

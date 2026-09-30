@@ -3,6 +3,7 @@ init python:
     CharDefs["celeste"] = BuildCharTemplate(CharID = "celeste",
         name = _("Celeste"),
         portrait = "images/characters/celeste/portrait.webp",
+        BattleSkin = "mc_prologue",
         RelTextIDs = {"initial"},
         ExtraData = {"clothes":"normal"})
     

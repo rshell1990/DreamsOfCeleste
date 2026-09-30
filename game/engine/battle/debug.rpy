@@ -33,7 +33,7 @@ label insta_battle:
         $ DEBUG_AddOneToAllClassSkills()
         $ TransformMarkus(True)
         $ StartBattle(BattleData(BackgroundImage = renpy.random.choice(battle_setup_battle_maps),
-                            CharIDList_Left = ["mc", "markus", "elena", "ves"],
+                            CharIDList_Left = [MC_ID, "markus", "elena", "ves"],
                             CharIDList_Right = ["e_slimelark", "e_slimelark", "e_slimelark", "e_slimelark"]))
         $ TransformMarkus(False)
 
@@ -45,7 +45,7 @@ label insta_battle:
             count = store.RngInt(2, 4) if hasattr(store, "RngInt") else renpy.random.randint(2, 4)
             right_list = [tmpvar[renpy.random.choice(valid_keys)]["char_id"] for _ in range(count)] if valid_keys else []
         $ StartBattle(BattleData(BackgroundImage = renpy.random.choice(battle_setup_battle_maps),
-                            CharIDList_Left = ["mc", "markus", "e_bear", "myu"],
+                            CharIDList_Left = [MC_ID, "markus", "e_bear", "myu"],
                             CharIDList_Right = right_list))
         $ TransformMarkus(False)
 

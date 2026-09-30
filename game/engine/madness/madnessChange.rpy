@@ -69,8 +69,8 @@ init python:
 
         ### this just consequetively multiplies based off player's gear. what can go wrong right?
         for SlotID in EQP_SLOTS.ALL:
-            if worldChars["mc"][SlotID] is not None:
-                ItemID = worldChars["mc"][SlotID]
+            if worldChars[MC_ID][SlotID] is not None:
+                ItemID = worldChars[MC_ID][SlotID]
                 if all_items[ItemID]["sex_Madness_loss_modifier"] != 0.0:
                     ResultValue *= all_items[ItemID]["sex_Madness_loss_modifier"]
 

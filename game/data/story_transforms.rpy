@@ -6,39 +6,57 @@ image white:
     "black"
     matrixcolor BrightnessMatrix(1.0)
 
+### transitions used by scr_Prologue.rpy that aren't Ren'Py built-ins
+define movein = move
+define slideright = MoveTransition(0.5)
+define slideleft = MoveTransition(0.5)
+
 # standard slots to display chars
 transform left:
     xcenter 0.13
+    yalign 1.0
     xzoom 1.0
 transform cleft: # closer-to-center-left
     xcenter 0.325
+    yalign 1.0
     xzoom 1.0
 transform center:
     xcenter 0.5
+    yalign 1.0
     xzoom 1.0
 transform cright: # closer-to-center-right
     xcenter 0.675
+    yalign 1.0
     xzoom 1.0
 transform right:
     xcenter 0.87
+    yalign 1.0
     xzoom 1.0
 
 # flip X variants
 transform left_f:
     xcenter 0.13
+    yalign 1.0
     xzoom -1.0
 transform cleft_f: # closer-to-center-left
     xcenter 0.325
+    yalign 1.0
     xzoom -1.0
 transform center_f:
     xcenter 0.5
+    yalign 1.0
     xzoom -1.0
 transform cright_f: # closer-to-center-right
     xcenter 0.675
+    yalign 1.0
     xzoom -1.0
 transform right_f:
     xcenter 0.87
+    yalign 1.0
     xzoom -1.0
+
+transform nashar_bends_down:
+    yoffset 240
 
 transform shake:
     subpixel True

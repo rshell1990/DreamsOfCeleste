@@ -79,9 +79,19 @@ init -1 python:
                 if renpy.has_image(TargetTag + "_night"):
                     ShowNightImg = True
             if ShowNightImg:
-                renpy.show("bg_dynamic", what = Transform(TargetTag + "_night", matrixcolor = None))
+                renpy.show("bg_dynamic", what = Transform(
+                    TargetTag + "_night",
+                    size = (config.screen_width, config.screen_height),
+                    fit = "cover",
+                    matrixcolor = None,
+                ))
             else:
-                renpy.show("bg_dynamic", what = Transform(TargetTag, matrixcolor = self.DayNightMatrix))
+                renpy.show("bg_dynamic", what = Transform(
+                    TargetTag,
+                    size = (config.screen_width, config.screen_height),
+                    fit = "cover",
+                    matrixcolor = self.DayNightMatrix,
+                ))
 
             renpy.show_screen("location_light_overlay", self.tag, _layer = "vfx")
             return

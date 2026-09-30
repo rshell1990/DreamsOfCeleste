@@ -14,7 +14,8 @@ init python:
         if IsMob:
             StoryChar = PBCharacter(CharID)
         else:
-            if CharID in ("mc", "markus") and QstIsOver(QstFromAnotherWorld):
+            QstFromAnotherWorld = getattr(store, "QstFromAnotherWorld", None)
+            if CharID in (MC_ID, "markus") and QstFromAnotherWorld is not None and QstIsOver(QstFromAnotherWorld):
                 worldChars[CharID]["AltForm_Unlocked"] = True
             StoryChar = copy.deepcopy(world_chars[CharID])
 

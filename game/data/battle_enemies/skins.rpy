@@ -918,6 +918,56 @@ init python:
         FocusRectSize = (219, 332)
     )
 
+    skinLib["mc_prologue"] = RegisterCharSkin("mc_prologue",
+        Portrait = "images/characters/celeste_teen/celeste_15_yrs_neutral_face.webp",
+        Sprite = Transform("images/characters/celeste_teen/celeste_15_yrs_neutral_face.webp", zoom = 0.2),
+
+        Sounds = {
+            "Char_BeenHit":         ["audio/battle/battle_chars/mc/BeenHit.ogg"],
+            "Char_Die":             ["audio/battle/battle_chars/mc/Die.ogg"],
+            "BasicAttack_Swing":    ["audio/battle/battle_chars/mc/BasicAttackSwing.ogg"],
+            "Transform":            ["audio/cfx/transform.ogg"]
+        },
+
+        FocusRectSize = (219, 332)
+    )
+
+    skinLib["harlok_still"] = RegisterCharSkin("harlok_still",
+        Portrait = "images/characters/harlok/harlok.webp",
+        Sprite = Transform("images/characters/harlok/harlok.webp", zoom = 0.2, xzoom = -1.0),
+        FocusRectSize = (219, 332)
+    )
+
+    skinLib["harlok_goon_a_still"] = RegisterCharSkin("harlok_goon_a_still",
+        Portrait = "images/characters/harlok_goon_a/bully_1.webp",
+        Sprite = Transform("images/characters/harlok_goon_a/bully_1.webp", zoom = 0.2, xzoom = -1.0),
+        FocusRectSize = (219, 332)
+    )
+
+    skinLib["harlok_goon_b_still"] = RegisterCharSkin("harlok_goon_b_still",
+        Portrait = "images/characters/harlok_goon_b/bully_2.webp",
+        Sprite = Transform("images/characters/harlok_goon_b/bully_2.webp", zoom = 0.2, xzoom = -1.0),
+        FocusRectSize = (219, 332)
+    )
+
+    skinLib["orphanage_hara_still"] = RegisterCharSkin("orphanage_hara_still",
+        Portrait = "images/characters/nuns/v1.webp",
+        Sprite = Transform("images/characters/nuns/v1.webp", zoom = 0.2, xzoom = -1.0),
+        FocusRectSize = (219, 332)
+    )
+
+    skinLib["orphanage_sister1_still"] = RegisterCharSkin("orphanage_sister1_still",
+        Portrait = "images/characters/nuns/v2.webp",
+        Sprite = Transform("images/characters/nuns/v2.webp", zoom = 0.2, xzoom = -1.0),
+        FocusRectSize = (219, 332)
+    )
+
+    skinLib["orphanage_sister2_still"] = RegisterCharSkin("orphanage_sister2_still",
+        Portrait = "images/characters/nuns/v3.webp",
+        Sprite = Transform("images/characters/nuns/v3.webp", zoom = 0.2, xzoom = -1.0),
+        FocusRectSize = (219, 332)
+    )
+
     # new armor
     skinLib["mc_party"] = RegisterCharSkin("mc_party",
         Portrait =  "images/battle_skins/mc/party/portrait.webp",

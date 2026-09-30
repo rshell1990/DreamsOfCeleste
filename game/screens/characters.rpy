@@ -7,10 +7,10 @@ screen characters():
 
     modal True
 
-    default Char_ID = "mc"
+    default Char_ID = MC_ID
     # all the on-level-up-changes are done to char itself
     # on revert, leave, or tab change - a stored copy overwrites a worldchar[id]
-    default CharCopy = copy.deepcopy(worldChars["mc"])
+    default CharCopy = copy.deepcopy(worldChars[MC_ID])
 
     default tab_page = "sheet" # "sheet", "skills", "perks", "AltFormSkills". sheet is where you distr. attributes, rest is self-explan
     on "hide" action SetDict(worldChars, Char_ID, copy.deepcopy(CharCopy))
@@ -29,9 +29,9 @@ screen characters():
                         align (0.0, 0.5)
                         if player_party.index(Char_ID) > 0:
                             action [SetDict(worldChars, Char_ID, copy.deepcopy(CharCopy)),
-                                    SetLocalVariable("CharCopy", copy.deepcopy(worldChars[player_party[player_party.index(Char_ID) - 1]])), 
+                                    SetLocalVariable("CharCopy", copy.deepcopy(worldChars[player_party[player_party.index(Char_ID) - 1]])),
                                     SetLocalVariable("Char_ID", player_party[player_party.index(Char_ID) - 1]),
-                                    If(player_party[player_party.index(Char_ID) - 1] != "mc" and tab_page == "perks", true = SetLocalVariable("tab_page", "sheet")),
+                                    If(player_party[player_party.index(Char_ID) - 1] != MC_ID and tab_page == "perks", true = SetLocalVariable("tab_page", "sheet")),
                                     If(worldChars[player_party[player_party.index(Char_ID) - 1]]["HasAltForm"] == False and tab_page == "AltFormSkills", true = SetLocalVariable("tab_page", "sheet"))]
                 label "%s" % worldChars[Char_ID]["name"] align (0.5, 0.5)
                 if GetPartySize() > 1:
@@ -39,9 +39,9 @@ screen characters():
                         align (1.0, 0.5)
                         if player_party.index(Char_ID) + 1 < GetPartySize():
                             action [SetDict(worldChars, Char_ID, copy.deepcopy(CharCopy)),
-                                    SetLocalVariable("CharCopy", copy.deepcopy(worldChars[player_party[player_party.index(Char_ID) + 1]])), 
+                                    SetLocalVariable("CharCopy", copy.deepcopy(worldChars[player_party[player_party.index(Char_ID) + 1]])),
                                     SetLocalVariable("Char_ID", player_party[player_party.index(Char_ID) + 1]),
-                                    If(player_party[player_party.index(Char_ID) + 1] != "mc" and tab_page == "perks", true = SetLocalVariable("tab_page", "sheet")),
+                                    If(player_party[player_party.index(Char_ID) + 1] != MC_ID and tab_page == "perks", true = SetLocalVariable("tab_page", "sheet")),
                                     If(worldChars[player_party[player_party.index(Char_ID) + 1]]["HasAltForm"] == False and tab_page == "AltFormSkills", true = SetLocalVariable("tab_page", "sheet"))]
             null height 5
             hbox:
@@ -96,8 +96,8 @@ screen characters():
                                         SetDict(worldChars, Char_ID, copy.deepcopy(CharCopy)),
                                         ]
                 #### perks tab btn
-                if Char_ID == "mc":
-                    if len(GetNextPerkBunch()) > 0 or len(worldChars["mc"]["perks"]) > 0:
+                if Char_ID == MC_ID:
+                    if len(GetNextPerkBunch()) > 0 or len(worldChars[MC_ID]["perks"]) > 0:
                         if len(GetNextPerkBunch()) > 0:
                             textbutton _("Perks (New)"):
                                 selected tab_page == "perks"
@@ -131,7 +131,7 @@ screen characters():
                                 null height 10
                                 for AttributeID in ["Strength", "Endurance", "Willpower", "Agility", "Dexterity", "Luck", "Charisma", "Barter"]:
                                     # mc-only attributes
-                                    if AttributeID in ["Charisma", "Barter"] and Char_ID != "mc":
+                                    if AttributeID in ["Charisma", "Barter"] and Char_ID != MC_ID:
                                         continue
                                     hbox:
                                         spacing 5    
@@ -217,7 +217,7 @@ screen characters():
                                     align (0.5, 0.5)
                                     idle Transform(worldChars[Char_ID]["portrait"], matrixcolor = IdentityMatrix())
                                     hover Transform(worldChars[Char_ID]["portrait"], matrixcolor = BrightnessMatrix(0.15))
-                                    if Char_ID != "mc":
+                                    if Char_ID != MC_ID:
                                         if PlayerCanSpeakToPartyChars():
                                             keyboard_focus True
                                             action [Hide("characters", transition = Dissolve(0.15)), Function(PartyTalkToChar, Char_ID)]
@@ -285,7 +285,7 @@ screen characters():
                         text "{i}" + tra(_("You have attribute points to distribute to this character.")) + "{/i}" size 20 at eye_catching_flash color "#fd7b5b" xalign 0.5
                     if worldChars[Char_ID]["skillPoints"] > 0 or (worldChars[Char_ID]["HasAltForm"] and worldChars[Char_ID]["AltForm_SkillPoints"] > 0):
                         text "{i}" + tra(_("You have skill points to distribute to this character.")) + "{/i}" size 20 at eye_catching_flash color "#fd7b5b" xalign 0.5
-                    if Char_ID == "mc" and len(GetNextPerkBunch()) > 0:
+                    if Char_ID == MC_ID and len(GetNextPerkBunch()) > 0:
                         text "{i}" + tra(_("You have perk points to distribute to this character.")) + "{/i}" size 20 at eye_catching_flash color "#fd7b5b" xalign 0.5
 
 
@@ -408,7 +408,7 @@ screen characters():
                                     vbox:
                                         xfill True
                                         spacing 10
-                                        for Perk_ID in worldChars["mc"]["perks"]:
+                                        for Perk_ID in worldChars[MC_ID]["perks"]:
                                             vbox:
                                                 xfill True
                                                 label Lib_Perks[Perk_ID]["name"] xalign 0.5

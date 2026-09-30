@@ -1,22 +1,21 @@
-2026-09-29 17:24:52 UTC
+2026-09-30 05:29:51 UTC
 Windows-11-10.0.26200-SP0
 Ren'Py 8.5.3.26051504
 
-Early init took 79 ms
-Loading error handling took 33 ms
-Loading script took 539 ms
-Loading save slot metadata took 47 ms
-Loading persistent took 0 ms
-Failed to initialize steam: Exception('steamapi.InitFlat returned 1 (No appID found.  Either launch the game from Steam, or put the file steam_appid.txt containing the correct appID in your game folder.)')
-Running init code took 289 ms
-Loading analysis data took 16 ms
-Analyze and compile ATL took 11 ms
-Reloading save slot metadata took 3 ms
+Early init took 78 ms
+Loading error handling took 34 ms
+Loading script took 542 ms
+Loading save slot metadata took 50 ms
+Loading persistent took 2 ms
+Running init code took 156 ms
+Loading analysis data took 22 ms
+Analyze and compile ATL took 13 ms
+Reloading save slot metadata took 4 ms
 Backing up script files to 'C:\\Users\\Fitz\\AppData\\Roaming/RenPy/backups\\DreamsOfCeleste':
-Dump and make backups took 13 ms
+Dump and make backups took 16 ms
 Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 50 ms
+Making clean stores took 2 ms
+Initial gc took 91 ms
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
@@ -24,12 +23,12 @@ Creating interface object took 2 ms
 Init translation took 1 ms
 Cleaning stores took 0 ms
 Load screen analysis took 1 ms
-Analyze screens took 26 ms
-Save screen analysis took 36 ms
-Save pyanalysis took 14 ms
-Save bytecode took 51 ms
-Running _start took 0 ms
-Interface start took 540 ms
+Analyze screens took 30 ms
+Save screen analysis took 37 ms
+Save pyanalysis took 16 ms
+Save bytecode took 50 ms
+Running _start took 2 ms
+Interface start took 570 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1600, 900)
@@ -41,40 +40,7 @@ Version: '4.6.0 Compatibility Profile Context 22.11.2.221130'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1600, 'current_h': 900, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1049, 590) drawable=(1049, 590)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/engine/locations/coreLoop.rpy", line 52, in script call
-    call expression Story_NavLoop_PotentialEventLabels[0] from _call_expression_4
-  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 664, in script
-    show father @sad at cright
-  File "renpy/ast.py", line 1364, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/ast.py", line 730, in show_imspec
-    renpy.config.show(
-    ~~~~~~~~~~~~~~~~~^
-        name, at_list=at_list, layer=layer, what=expression, zorder=zorder, tag=tag, behind=behind, atl=atl
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/exports/displayexports.py", line 486, in show
-    if not base.find_target() and renpy.config.missing_show:
-           ~~~~~~~~~~~~~~~~^^                               
-  File "renpy/display/image.py", line 444, in find_target
-    self.target = target._duplicate(a)
-                  ~~~~~~~~~~~~~~~~~^^^
-  File "renpy/display/displayable.py", line 278, in _duplicate
-    args.extraneous()
-    ~~~~~~~~~~~~~~~^^
-  File "renpy/display/displayable.py", line 118, in extraneous
-    raise Exception(
-    ...<4 lines>...
-    )
-Exception: Image 'father' does not accept attributes '@sad'.
-
-While running game code:
-  File "game/engine/locations/coreLoop.rpy", line 52, in script call
-    call expression Story_NavLoop_PotentialEventLabels[0] from _call_expression_4
-  File "game/data/world_quests/main/Prologue/scr_Prologue.rpy", line 664, in script
-    show father @sad at cright
-Exception: Image 'father' does not accept attributes '@sad'.
+Cleaning stores took 0 ms
+Load screen analysis took 57 ms
+Analyze screens took 0 ms
+Running _start took 3 ms

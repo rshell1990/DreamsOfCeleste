@@ -1,0 +1,22 @@
+{
+  "name": "DreamsOfCeleste",
+  "engine": "renpy",
+  "launch": {
+    "cmd": "${RENPY_SDK}/renpy.exe",
+    "args": [
+      "."
+    ]
+  },
+  "log": {
+    "stdout": true,
+    "paths": [
+      "log.txt"
+    ]
+  },
+  "sourceRoots": [
+    "game"
+  ],
+  "vars": {
+    "RENPY_SDK": "C:/Users/Fitz/Downloads/renpy-8.5.3-sdk"
+  }
+}

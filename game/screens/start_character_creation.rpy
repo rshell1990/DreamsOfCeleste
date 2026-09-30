@@ -3,10 +3,10 @@ screen StartCharacterMenu():
 
     modal True
 
-    default Char_ID = "mc"
+    default Char_ID = MC_ID
     # all the on-level-up-changes are done to char itself
     # on revert, leave, tab change - a stored copy overwrites a worldchar[id]
-    default CharCopy = copy.deepcopy(worldChars["mc"])
+    default CharCopy = copy.deepcopy(worldChars[MC_ID])
 
     default Input = None
 

@@ -35,7 +35,7 @@ init -1 python:
     def ItemRaiseAttStory(ItemID, char_ID, AttributeAndValue):
         AttributeToRaise = AttributeAndValue[0]
         ValueToRaiseBy = AttributeAndValue[1]
-        AddCharAttr(worldChars["mc"], AttributeToRaise, ValueToRaiseBy)
+        AddCharAttr(worldChars[MC_ID], AttributeToRaise, ValueToRaiseBy)
         RemItemFrom(player_inv, ItemID, 1, FromPlayer = True)
         AddNotif(tra(_("%s raised by %s!")) % (tra(GUI_STAT_NAME_MAP[AttributeToRaise]), ValueToRaiseBy), Kind = "attr_raised")
         TooltipClear()
@@ -46,9 +46,9 @@ init -1 python:
         RemItemFrom(player_inv, ItemID, 1, FromPlayer = True)
         TooltipClear()
         return
-    
+
 #############################################################################
-    
+
 
     def ItemCanBeDropped(ItemID):
         if all_items[ItemID]["cannot_lose"]:
@@ -130,7 +130,7 @@ init -1 python:
                 if item_dict["show_battle_desc_in_story_mode"] == True:
                     #text_strings.append("\n")
                     text_strings.append(tra(_("In battle:")))
-                    ItemActionInstance = ItemActionLib[item_dict["on_use_battle"]](ItemID = ItemID, Owner_PBCharID = "mc")
+                    ItemActionInstance = ItemActionLib[item_dict["on_use_battle"]](ItemID = ItemID, Owner_PBCharID = MC_ID)
                     text_strings.append(ItemActionInstance.GetDesc())
                 ## full on cheese mode
                 if "battle_perma_effects" in item_dict:
