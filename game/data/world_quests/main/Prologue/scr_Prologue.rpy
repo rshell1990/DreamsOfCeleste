@@ -495,7 +495,7 @@ label qst_prologue_primer:
     Father "you've done it now, girl"
     Celine "Let me go!"
     "Your protests fall on deaf ears, yet you still continue to scream and struggle against his grip."
-    Celeste "I haven't done anything!"
+    Celine "I haven't done anything!"
     play sound "audio/cfx/crowcaw.ogg"
     scene CG_NailedCrow with dissolve
     "...Well, that was a lie, wasn't it?"
@@ -507,7 +507,7 @@ label qst_prologue_primer:
     "With a loud thud, he kicks the door open and swings your small body forward."
     show celine_young at center
     "You crash onto the cold, dirty floor, grazing your knee as you try to stand back up."
-    show celeste_young at cleft
+    show celine_young at cleft
     show father at cright with easeinright
     "In his hands, Father grips the blood-stained stick --something you were all too familiar with by now."
     show father angry at cright
@@ -517,7 +517,7 @@ label qst_prologue_primer:
     hide celine_young
     hide father
     hide nashar
-    show celeste_young at left with easeinleft
+    show celine_young at left with easeinleft
     "As he raises his hand to strike you, there's a rush of feet behind you as your brother moves forward, wrestling the stick from Father's hardened hands."
     hide nashar
     hide father
@@ -528,7 +528,7 @@ label qst_prologue_primer:
     hide fatherandbrotherfight
     show father angry at cright
     show nashar angry at center
-    show celeste_young at cleft
+    show celine_young at cleft
     Nashar "What in the hells is going on?"
     Father "Again, I caught her torturing animals!"
     menu celinelieortruth:
@@ -565,7 +565,7 @@ label celineintro_result:
     "Your brother is furious, his teeth gnashing together as he moves closer toward your father."
     "A familiar, common sight in the Gwenovair household."
     "Behind you, you hear the soft wailing of Maize, your baby sister."
-    show celeste_young at center with dissolve
+    show celine_young at center with dissolve
     "In a moment your mother appears, Maize in her arms as she scowls at all of you."
     show motherwithbaby at left with easeinleft
     Mother "What in the seven hells is going on in here?"
