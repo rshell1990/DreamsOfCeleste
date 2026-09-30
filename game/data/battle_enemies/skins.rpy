@@ -933,8 +933,8 @@ init python:
     )
 
     skinLib["harlok_still"] = RegisterCharSkin("harlok_still",
-        Portrait = "images/characters/harlok/harlok.webp",
-        Sprite = Transform("images/characters/harlok/harlok.webp", zoom = 0.2, xzoom = -1.0),
+        Portrait = "images/characters/harlok/harlok_portrait.webp",
+        Sprite = Transform("images/characters/harlok/harlok.webp", zoom = 0.235, xzoom = -1.0),
         FocusRectSize = (219, 332)
     )
 
@@ -951,19 +951,19 @@ init python:
     )
 
     skinLib["orphanage_hara_still"] = RegisterCharSkin("orphanage_hara_still",
-        Portrait = "images/characters/nuns/v1.webp",
+        Portrait = "images/characters/nuns/v1_portrait.webp",
         Sprite = Transform("images/characters/nuns/v1.webp", zoom = 0.2, xzoom = -1.0),
         FocusRectSize = (219, 332)
     )
 
     skinLib["orphanage_sister1_still"] = RegisterCharSkin("orphanage_sister1_still",
-        Portrait = "images/characters/nuns/v2.webp",
+        Portrait = "images/characters/nuns/v2_portrait.webp",
         Sprite = Transform("images/characters/nuns/v2.webp", zoom = 0.2, xzoom = -1.0),
         FocusRectSize = (219, 332)
     )
 
     skinLib["orphanage_sister2_still"] = RegisterCharSkin("orphanage_sister2_still",
-        Portrait = "images/characters/nuns/v3.webp",
+        Portrait = "images/characters/nuns/v3_portrait.webp",
         Sprite = Transform("images/characters/nuns/v3.webp", zoom = 0.2, xzoom = -1.0),
         FocusRectSize = (219, 332)
     )

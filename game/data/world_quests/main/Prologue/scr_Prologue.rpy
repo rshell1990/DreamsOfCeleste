@@ -565,7 +565,7 @@ label celineintro_result:
     "Your brother is furious, his teeth gnashing together as he moves closer toward your father."
     "A familiar, common sight in the Gwenovair household."
     "Behind you, you hear the soft wailing of Maize, your baby sister."
-    show celine_young at center with dissolve
+    show celine_young at cleft with dissolve
     "In a moment your mother appears, Maize in her arms as she scowls at all of you."
     show motherwithbaby at left with easeinleft
     Mother "What in the seven hells is going on in here?"
@@ -573,6 +573,7 @@ label celineintro_result:
     Nashar "You've beaten her a hundred times before, and it hasn't fixed a damn thing!"
     Father "Bah! Enough of this, I'm heading to the damn tavern!"
     hide father with moveoutright
+    show nashar at right with move
     play sound "audio/cfx/door_slam.ogg"
     Mother "Dear!"
     Mother "DEAR!"
@@ -581,9 +582,9 @@ label celineintro_result:
     Mother "Now look what you've both done!"
     Mother "He won't be back for hours now! Who's gonna finish the field?"
     Celine "Father is always too drunk for it any--"
-    show motherwithbaby at right
+    show motherwithbaby at center
     play sound "audio/cfx/slap.ogg"
-    show motherwithbaby at right
+    show motherwithbaby at cleft with move
     "You feel the sting of a slap across your cheek."
     hide celine_young
     show motherwithbaby at left
@@ -864,8 +865,8 @@ label the_next_day:
     "The ornate stagecoach arrives outside, a small convoy of wagons covered in cloth following behind as the rain hammers down."
     "Even Father, already drunk, notices and snaps for your mother's attention."
     show father at left
-    show mother at center
-    show celine_young at right
+    show mother at cleft
+    show celine_young at center
     Father "She's here! Get the boy!"
     Mother "I thought she wouldn't arrive until after dark?"
     Father "Well, she's here now, so hurry."
