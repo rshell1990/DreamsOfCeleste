@@ -473,9 +473,11 @@ label qst_prologue_primer:
     Celeste "Let me go!"
     "Your protests fall on deaf ears, yet you still continue to scream and struggle against his grip."
     Celeste "I haven't done anything!"
+    play sound "audio/cfx/crowcaw.ogg"
     scene CG_NailedCrow with dissolve
     "...Well, that was a lie, wasn't it?"
     Father "LIAR!"
+    play sound "audio/cfx/door_slam.ogg"
     scene childhood_living_room_day
     "With a loud thud, he kicks the door open and swings your small body forward."
     "You crash onto the cold, dirty floor, grazing your knee as you try to stand back up."
