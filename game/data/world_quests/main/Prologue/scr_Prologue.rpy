@@ -503,7 +503,7 @@ label qst_prologue_primer:
     Father "LIAR!"
     play sound "audio/cfx/door_slam.ogg"
     scene childhood_living_room_day
-    play sound "audio/cfx/thud.ogg"
+    play sound "audio/cfx/little_thud.ogg"
     "With a loud thud, he kicks the door open and swings your small body forward."
     show celine_young at center
     "You crash onto the cold, dirty floor, grazing your knee as you try to stand back up."
@@ -526,9 +526,9 @@ label qst_prologue_primer:
     Nashar "FATHER, STOP!"
     "He stands as a barrier between you and your father's wrath, managing to knock the stick away as it thuds and rolls across the floor."
     hide fatherandbrotherfight
-    show father angry at cright
+    show father angry at right
     show nashar angry at center
-    show celine_young at cleft
+    show celine_young at left
     Nashar "What in the hells is going on?"
     Father "Again, I caught her torturing animals!"
     menu celinelieortruth:
@@ -581,9 +581,9 @@ label celineintro_result:
     Mother "Now look what you've both done!"
     Mother "He won't be back for hours now! Who's gonna finish the field?"
     Celine "Father is always too drunk for it any--"
-    show motherwithbaby at cleft
+    show motherwithbaby at right
     play sound "audio/cfx/slap.ogg"
-    show motherwithbaby at cleft
+    show motherwithbaby at right
     "You feel the sting of a slap across your cheek."
     hide celine_young
     show motherwithbaby at left
@@ -667,7 +667,7 @@ label farming_equipment:
 label qst_prologue_nashar_done:
     show nashar at center
     show celine_young at left
-    play sound "audio/sfx/yawn.ogg"
+    play sound "audio/cfx/yawn.ogg"
     Nashar "*Yawn*"
     Nashar "Alright, Thanks for the help, Celine"
     Nashar "Why don't you go play for a little while?"
@@ -864,8 +864,8 @@ label the_next_day:
     "The ornate stagecoach arrives outside, a small convoy of wagons covered in cloth following behind as the rain hammers down."
     "Even Father, already drunk, notices and snaps for your mother's attention."
     show father at left
-    show mother at cleft
-    show celine_young at center
+    show mother at center
+    show celine_young at right
     Father "She's here! Get the boy!"
     Mother "I thought she wouldn't arrive until after dark?"
     Father "Well, she's here now, so hurry."
@@ -1268,8 +1268,8 @@ label wantingtoleave:
     "The guard smacks you on the back of the head from behind, causing you to stumble forward."
     Guard "Be silent, girl."
     "Sister Ursula rushes to your side, raising her hand toward the guard."
-    show celine_young at cleft with move
-    show ursula at center_f with move
+    show celine_young at center with move
+    show ursula at right_f with move
     Ursula "Guard!"
     Ursula "Please... That will be all."
     "The guard, who seemed ready to hit you again, pulls back."
@@ -1502,8 +1502,8 @@ label middleofthenight:
     hide celine_teen with moveoutleft
     "You didn't even have time to put your shoes on!"
     $LocSet("orphanage_girls_hallway")
-    show celine_teen at cright with movein
-    show hara at center with movein
+    show celine_teen at right with movein
+    show hara at left with movein
     Celine "Sister!"
     Celine "Where are we going?"
     Hara "I told you, Celine---We're going to see your sister..."
