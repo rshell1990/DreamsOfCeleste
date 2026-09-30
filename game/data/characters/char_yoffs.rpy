@@ -10,7 +10,7 @@ init python in CHAR_OFFSET:
     ADARA   = (0, 50)
     ALYSHA  = (0, 125)
     CALLIE  = (0, 0)
-    CELESTE = (0, 150)
+    CELINE = (0, 150)
     DIVINE  = (0, 100)
     ELENA   = (0, 70)
     ERIKA   = (0, 120)

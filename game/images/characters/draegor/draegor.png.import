@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/characters/draegor/draegor.png"
+source_file="res://dreams_of_celine_vn/visuals/characters/draegor/draegor.png"
 dest_files=["res://.godot/imported/draegor.png-5e6c6bda343f9d6a79009c197d531beb.bptc.ctex"]
 
 [params]

@@ -2,8 +2,8 @@
 # keys unused anymore must be removed
 default tmpvar = {}
 
-# player character ID (Celeste is the protagonist)
-define MC_ID = "celeste"
+# player character ID (Celine is the protagonist)
+define MC_ID = "celine"
 
 default player_party = [MC_ID]
 

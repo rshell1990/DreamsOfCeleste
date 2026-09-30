@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/backgrounds/locations/hamun/zanzibat_house/zanzibat_interior_day.png"
+source_file="res://dreams_of_celine_vn/visuals/backgrounds/locations/hamun/zanzibat_house/zanzibat_interior_day.png"
 dest_files=["res://.godot/imported/zanzibat_interior_day.png-2a2684fdd4bd86bdd47e676f6e03f349.ctex"]
 
 [params]

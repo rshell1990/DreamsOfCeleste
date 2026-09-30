@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/characters/guard/guard_neutral.png"
+source_file="res://dreams_of_celine_vn/visuals/characters/guard/guard_neutral.png"
 dest_files=["res://.godot/imported/guard_neutral.png-055b5a34ce17d799a1fc3e1df985257a.bptc.ctex"]
 
 [params]

@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/characters/male_inquisitor/normal/male_inquisitor_happy.png"
+source_file="res://dreams_of_celine_vn/visuals/characters/male_inquisitor/normal/male_inquisitor_happy.png"
 dest_files=["res://.godot/imported/male_inquisitor_happy.png-daf502d517bed916c8b899b63aade8e2.bptc.ctex"]
 
 [params]

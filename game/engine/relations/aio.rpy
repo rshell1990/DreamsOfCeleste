@@ -74,7 +74,7 @@ init -1 python:
             "arwen",
             "borras",
             "callie",
-            "celeste",
+            "celine",
             "divine",
             "drax",
             "dros",

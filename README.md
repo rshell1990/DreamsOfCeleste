@@ -1,4 +1,4 @@
-# A Parasite Black: Dreams of Celeste game repo
+# A Parasite Black: Dreams of Celine game repo
 
 Clone into an empty folder, then open that folder as a Renpy project
 

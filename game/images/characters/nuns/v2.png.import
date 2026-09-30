@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/characters/nuns/v2.png"
+source_file="res://dreams_of_celine_vn/visuals/characters/nuns/v2.png"
 dest_files=["res://.godot/imported/v2.png-57fd08e933d01dc91abe7a08189e941a.bptc.ctex"]
 
 [params]

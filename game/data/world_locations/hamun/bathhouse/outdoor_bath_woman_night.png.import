@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/backgrounds/locations/hamun/bathhouse/outdoor_bath_woman_night.png"
+source_file="res://dreams_of_celine_vn/visuals/backgrounds/locations/hamun/bathhouse/outdoor_bath_woman_night.png"
 dest_files=["res://.godot/imported/outdoor_bath_woman_night.png-8b36a39bdd506ef036cff66f344b4b61.ctex"]
 
 [params]

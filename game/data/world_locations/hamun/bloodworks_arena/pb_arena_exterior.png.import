@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/backgrounds/locations/hamun/bloodworks_arena/pb_arena_exterior.png"
+source_file="res://dreams_of_celine_vn/visuals/backgrounds/locations/hamun/bloodworks_arena/pb_arena_exterior.png"
 dest_files=["res://.godot/imported/pb_arena_exterior.png-b2523321afa6cd4de2feae90a9c17964.ctex"]
 
 [params]

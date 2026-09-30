@@ -230,7 +230,7 @@ init 1 python:
         def GetDesc(self):
             return tra(_("Character will counter attack against any damaging ability with their basic attack."))
 ######################################################################
-    # celeste
+    # celine
     class BattleStatusEff_MadnessPara(BattleStatusEff):
         def __init__(self, Duration = -1):
             super().__init__(Duration = Duration, StatusEffectID = "madness_para")

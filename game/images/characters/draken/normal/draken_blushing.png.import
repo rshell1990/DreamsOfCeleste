@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/characters/draken/normal/draken_blushing.png"
+source_file="res://dreams_of_celine_vn/visuals/characters/draken/normal/draken_blushing.png"
 dest_files=["res://.godot/imported/draken_blushing.png-f1bea7a44197b3d52fdcc23b51de74b5.bptc.ctex"]
 
 [params]

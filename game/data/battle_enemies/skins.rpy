@@ -861,13 +861,13 @@ init python:
     )
 
     # transformed
-    skinLib["celeste_transformed"] = RegisterCharSkin("celeste_transformed",
-        Portrait = "game/images/characters/celeste/portrait.webp",
-        Sprite = "game/images/battle_skins/celeste/transformed/battle_sprite_celeste_tf_static.webp",
+    skinLib["celine_transformed"] = RegisterCharSkin("celine_transformed",
+        Portrait = "images/characters/celeste/portrait.webp",
+        Sprite = "game/images/battle_skins/celine/transformed/battle_sprite_celine_tf_static.webp",
 
         Anims = {
             "attack":BattleAnimation(
-                Displayable = "battle_anim_celeste_tf_attack",
+                Displayable = "battle_anim_celine_tf_attack",
                 LengthInSeconds = 0.7,
                 WarmupTo = 0.25,
                 Transform_AttackDelay = 0.2,
@@ -875,19 +875,19 @@ init python:
         },
 
         Sounds = {
-            "Char_BeenHit":         ["audio/battle/battle_chars/celeste_transformed/char/BeenHit.ogg"],
-            "Char_Die":             ["audio/battle/battle_chars/celeste_transformed/char/Die.ogg"],
-            "Char_UseSkill":        ["audio/battle/battle_chars/celeste_transformed/char/skilluse1.ogg",
-                                    "audio/battle/battle_chars/celeste_transformed/char/skilluse2.ogg",
-                                    "audio/battle/battle_chars/celeste_transformed/char/skilluse3.ogg",
-                                    "audio/battle/battle_chars/celeste_transformed/char/skilluse4.ogg",
-                                    "audio/battle/battle_chars/celeste_transformed/char/skilluse5.ogg"],
-            "BasicAttack_Swing":    ["audio/battle/battle_chars/celeste_transformed/basic_attack/swing.ogg"],
-            "BasicAttack_Impact":    ["audio/battle/battle_chars/celeste_transformed/basic_attack/impact1.ogg",
-                                    "audio/battle/battle_chars/celeste_transformed/basic_attack/impact2.ogg",
-                                    "audio/battle/battle_chars/celeste_transformed/basic_attack/impact3.ogg",
-                                    "audio/battle/battle_chars/celeste_transformed/basic_attack/impact4.ogg",
-                                    "audio/battle/battle_chars/celeste_transformed/basic_attack/impact5.ogg"],
+            "Char_BeenHit":         ["audio/battle/battle_chars/celine_transformed/char/BeenHit.ogg"],
+            "Char_Die":             ["audio/battle/battle_chars/celine_transformed/char/Die.ogg"],
+            "Char_UseSkill":        ["audio/battle/battle_chars/celine_transformed/char/skilluse1.ogg",
+                                    "audio/battle/battle_chars/celine_transformed/char/skilluse2.ogg",
+                                    "audio/battle/battle_chars/celine_transformed/char/skilluse3.ogg",
+                                    "audio/battle/battle_chars/celine_transformed/char/skilluse4.ogg",
+                                    "audio/battle/battle_chars/celine_transformed/char/skilluse5.ogg"],
+            "BasicAttack_Swing":    ["audio/battle/battle_chars/celine_transformed/basic_attack/swing.ogg"],
+            "BasicAttack_Impact":    ["audio/battle/battle_chars/celine_transformed/basic_attack/impact1.ogg",
+                                    "audio/battle/battle_chars/celine_transformed/basic_attack/impact2.ogg",
+                                    "audio/battle/battle_chars/celine_transformed/basic_attack/impact3.ogg",
+                                    "audio/battle/battle_chars/celine_transformed/basic_attack/impact4.ogg",
+                                    "audio/battle/battle_chars/celine_transformed/basic_attack/impact5.ogg"],
             "Transform":            ["audio/cfx/transform.ogg"]
         },
 
@@ -919,8 +919,8 @@ init python:
     )
 
     skinLib["mc_prologue"] = RegisterCharSkin("mc_prologue",
-        Portrait = "images/characters/celeste_teen/celeste_15_yrs_neutral_face.webp",
-        Sprite = Transform("images/characters/celeste_teen/celeste_15_yrs_neutral_face.webp", zoom = 0.2),
+        Portrait = "images/characters/celine_teen/celine_teen_portrait.webp",
+        Sprite = Transform("images/characters/celine_teen/celine_15_neutral_face.webp", zoom = 0.2),
 
         Sounds = {
             "Char_BeenHit":         ["audio/battle/battle_chars/mc/BeenHit.ogg"],

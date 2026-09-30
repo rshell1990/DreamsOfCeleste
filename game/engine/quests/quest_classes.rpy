@@ -11,7 +11,10 @@ init -2 python:
             Instances = getattr(store, "questObjs", None)
             if Instances is not None:
                 if cls.__name__ in Instances:
-                    return Instances[cls.__name__]
+                    Instance = Instances[cls.__name__]
+                    if Instance.__class__ is not cls:
+                        Instance.__class__ = cls
+                    return Instance
                 else:
                     Instances[cls.__name__] = super(SingletonQuestMeta, cls).__call__(*args, **kwargs)
                     return Instances[cls.__name__]

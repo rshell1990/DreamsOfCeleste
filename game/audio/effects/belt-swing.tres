@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://cca70er6dwx2o"]
 
-[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_im7eu"]
-[ext_resource type="AudioStream" uid="uid://c4y1vv6mywd7e" path="res://dreams_of_celeste_vn/audio/sfx/Arm Swing, Whoosh 7.wav" id="2_tt0uo"]
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celine_vn/scripts/sound/resources/sound_effect.gd" id="1_im7eu"]
+[ext_resource type="AudioStream" uid="uid://c4y1vv6mywd7e" path="res://dreams_of_celine_vn/audio/sfx/Arm Swing, Whoosh 7.wav" id="2_tt0uo"]
 
 [resource]
 script = ExtResource("1_im7eu")

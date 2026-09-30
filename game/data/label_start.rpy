@@ -39,7 +39,7 @@ label start:
     scene black with Dissolve(1.0)
 
     # init vars
-    $ CELESTE.image_tag = "images/characters/celeste_young/celeste_10_yrs_neutral_face.webp"
+    $ CELINE.image_tag = "images/characters/celine_young/celine_10_yrs_neutral_face.webp"
 
     # char creation
     scene black with dissolve

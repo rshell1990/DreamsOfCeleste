@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="SoundEffectResource" format=3 uid="uid://c6nymfnsf7nyj"]
 
-[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celeste_vn/scripts/sound/resources/sound_effect.gd" id="1_i227b"]
-[ext_resource type="AudioStream" uid="uid://d3y670c2l7evi" path="res://dreams_of_celeste_vn/audio/sfx/Heart beating 2.wav" id="2_7xjkj"]
+[ext_resource type="Script" uid="uid://co046u7gvxu0y" path="res://dreams_of_celine_vn/scripts/sound/resources/sound_effect.gd" id="1_i227b"]
+[ext_resource type="AudioStream" uid="uid://d3y670c2l7evi" path="res://dreams_of_celine_vn/audio/sfx/Heart beating 2.wav" id="2_7xjkj"]
 
 [resource]
 script = ExtResource("1_i227b")

@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/backgrounds/locations/hamun/manor_(corrupt_guy)/manor_gardens_day.png"
+source_file="res://dreams_of_celine_vn/visuals/backgrounds/locations/hamun/manor_(corrupt_guy)/manor_gardens_day.png"
 dest_files=["res://.godot/imported/manor_gardens_day.png-4367e218f9125d4c5ac3d9843dd05c54.ctex"]
 
 [params]

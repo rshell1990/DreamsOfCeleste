@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/characters/draegor/normal/angry.png"
+source_file="res://dreams_of_celine_vn/visuals/characters/draegor/normal/angry.png"
 dest_files=["res://.godot/imported/angry.png-cc2de8c2f29c1121fa510377010d569d.bptc.ctex"]
 
 [params]

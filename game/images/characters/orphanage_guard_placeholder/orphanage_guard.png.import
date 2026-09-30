@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/placeholder/character/orphanage_guard_placeholder/orphanage_guard.png"
+source_file="res://dreams_of_celine_vn/visuals/placeholder/character/orphanage_guard_placeholder/orphanage_guard.png"
 dest_files=["res://.godot/imported/orphanage_guard.png-89fa3bea280722e679e20a49ffbd2dbd.bptc.ctex"]
 
 [params]

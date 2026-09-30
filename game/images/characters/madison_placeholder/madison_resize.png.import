@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/placeholder/character/madison_placeholder/madison_resize.png"
+source_file="res://dreams_of_celine_vn/visuals/placeholder/character/madison_placeholder/madison_resize.png"
 dest_files=["res://.godot/imported/madison_resize.png-c95d24b7361c1c3401504ce197ba2b34.bptc.ctex"]
 
 [params]

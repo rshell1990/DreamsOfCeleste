@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/characters/harlok/harlok_smug.png"
+source_file="res://dreams_of_celine_vn/visuals/characters/harlok/harlok_smug.png"
 dest_files=["res://.godot/imported/harlok_smug.png-be838309861b65d0c5aef9c5362e3bac.bptc.ctex"]
 
 [params]

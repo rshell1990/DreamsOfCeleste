@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://dreams_of_celeste_vn/visuals/characters/harlok_goon_b/bully_2_sad.png"
+source_file="res://dreams_of_celine_vn/visuals/characters/harlok_goon_b/bully_2_sad.png"
 dest_files=["res://.godot/imported/bully_2_sad.png-6ee2f74f328707944c39dce5355c69bc.bptc.ctex"]
 
 [params]
