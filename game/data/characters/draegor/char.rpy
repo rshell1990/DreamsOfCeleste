@@ -11,3 +11,4 @@ init python:
     RelText["draegor"]["initial"] = {
         "order": 0,
         "text": _(""),  # TODO: Add the authored character description.
+    }
